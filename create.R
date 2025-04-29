@@ -13,18 +13,18 @@ args = commandArgs(trailingOnly=TRUE)   # Take command line arguments
 #  Test if there are two arguments if not, return an error
 if (length(args) < 1) {
   stop("The first argument is required, arguments 2 to 4 are optional: \ 
-       1) Name of the input folder 
-       2) Boolean indicating minimisation (1) or maximisation (0). If no argument is given, minimisation (i.e 1) is assumed.
-       3) The evaluation of the global optimum (or best-knwon solution). For continous optimisation a desired precision can be given. 
-       If no argument is given, the best evaluation in the set of input files is used.
-       4) The number of runs from the data filesto be used. This should be a number between 1 up to total number of runs within in the raw data files. 
-       If no argument is given, the largest run number in the input files is used."
-       , call.=FALSE)
+    1) Name of the input folder 
+    2) Boolean indicating minimisation (1) or maximisation (0). If no argument is given, minimisation (i.e 1) is assumed.
+    3) The evaluation of the global optimum (or best-knwon solution). For continous optimisation a desired precision can be given. 
+    If no argument is given, the best evaluation in the set of input files is used.
+    4) The number of runs from the data filesto be used. This should be a number between 1 up to total number of runs within in the raw data files. 
+    If no argument is given, the largest run number in the input files is used."
+    , call.=FALSE)
 }
 
 infolder <- args[1]
 
-if (!dir.exists(infolder) ){
+if (!dir.exists(infolder) ) {
   stop("Error: Input folder does not exist", call.=FALSE)
 }
 
@@ -33,14 +33,12 @@ bmin <- 1
 best <- NA   # Not given in command line, taken from data
 nruns <-NA   # Not given om command line, taken from data
 
-
 if (length(args) > 1){
   bmin <- as.integer(args[2])
   if (is.na(bmin)) {
     stop("Error: 2nd argument is not a number", call.=FALSE)
   }
 }
-
 
 if (length(args) > 2) {
   best <- as.numeric(args[3])
@@ -49,14 +47,12 @@ if (length(args) > 2) {
   }
 }
 
-
 if (length(args) > 3){
   nruns <- as.integer(args[4]) 
   if (is.na(nruns)) {
     stop("Error: 4th argument is not a number", call.=FALSE)
   }
 }
-
 
 # Create out-folder folder to save STN objects  -- rule append "-stn" to input folder
 
@@ -66,7 +62,6 @@ if (!dir.exists(outfolder) ){
   dir.create(outfolder)
 }
 cat("Output folder: ", outfolder, "\n")
-
 
 ## Packages required
 # igraph: tools handling graph objects
@@ -98,75 +93,46 @@ stn_create <- function(instance)  {
   print(fname)
   file_ext <- substr(fname, nchar(fname)-3, nchar(fname))
   mysep <- ifelse(file_ext == ".csv", ",","")
-  trace_all <- read.table(fname, header=T, sep = mysep,
-                          colClasses=c("integer", "numeric", "character", "character", "integer", "numeric", "character", "character", "integer"),
-                          stringsAsFactors = F)
+  trace_all <- read.table(fname, header=T, sep = mysep, colClasses=c("integer", "numeric", "character", "character", "character", "integer", "numeric", "character", "character", "character", "integer"), stringsAsFactors = F)
   trace_all <- trace_all[trace_all$Run <= nruns,]
   lnodes <- vector("list", nruns)
   ledges <- vector("list", nruns)
 
-  # Number of rows in the data
-  nrows <- nrow(trace_all)-1
-
-  # Store the last iteration for each run. Need to detect change of Run
-  run = 1
-  run_last_iteration <- vector()
-  for (row in (1:nrows)) {
-    if (trace_all$Run[row] != trace_all$Run[row+1]) { # when the run counter changes
-      run_last_iteration[run] <- trace_all$Iteration2[row]
-      run = run+1
-    }
-  }
-  run_last_iteration[run] <- trace_all$Iteration2[row+1] # last iteration of the last run
-
-  # Store the nodes on the last iteration for each run. Need to detect change of Run
-  run = 1
-  end_ids <- c()  # Vector inicial vacío
-  for (row in 1:nrows) {
-    if (trace_all$Iteration2[row] == run_last_iteration[run]) { # when the iteration is the last of the run
-      end_ids <- c(end_ids, trace_all$Solution2[row])  # Agregar el valor al final del vector
-    }
-    if (trace_all$Run[row] != trace_all$Run[row+1]) { # when the run counter changes
-      run = run + 1
-    }
-  }
-  end_ids <- c(end_ids, trace_all$Solution2[row+1]) # last node of the last iteration of the last run
-  end_ids <- unique(end_ids) # only unique nodes required
-  
   for (i in (1:nruns)) {  # combine all runs in a single network
     trace <- trace_all[which(trace_all$Run==i),c(-1)] # take by run and remove first column run number
-    colnames(trace) <- c("fit1", "node1", "elite1", "iteration1", "fit2", "node2", "elite2", "iteration2")  # set simpler names to column
-    lnodes[[i]] <- rbind(setNames(trace[,c("node1", "fit1", "elite1", "iteration1")], c("Node", "Fitness", "Elite", "Iteration")),
-                          setNames(trace[,c("node2", "fit2", "elite2", "iteration2")], c("Node", "Fitness", "Elite", "Iteration")))
+    colnames(trace) <- c("fit1", "node1", "elite1", "type1", "iteration1", "fit2", "node2", "elite2", "type2", "iteration2")
+    lnodes[[i]] <- rbind(setNames(trace[,c("node1", "fit1", "elite1", "type1", "iteration1")], c("Node", "Fitness", "Elite", "Type", "Iteration")), setNames(trace[,c("node2", "fit2", "elite2", "type2", "iteration2")], c("Node", "Fitness", "Elite", "Type", "Iteration")))
     ledges[[i]] <- trace[,c("node1", "node2")]
   }
-  
+
   # combine the list of nodes into one dataframe and
   # group by (Node,Fitness) to identify unique nodes and count them
-  nodes <- ddply((do.call("rbind", lnodes)), .(Node,Fitness,Elite,Iteration), nrow)
-  colnames(nodes) <- c("Node", "Fitness", "Elite", "Iteration", "Count")
+  nodes <- ddply((do.call("rbind", lnodes)), .(Node, Fitness, Elite, Type, Iteration), nrow)
+  colnames(nodes) <- c("Node", "Fitness", "Elite", "Type", "Iteration", "Count")
   nodesu<- nodes[!duplicated(nodes$Node), ]  # eliminate duplicates from dataframe, in case node ID us duplicated
   # combine the list of edges into one dataframe and
   # group by (node1,node2) to identify unique edges and count them
-  edges <- ddply(do.call("rbind", ledges), .(node1,node2), nrow)
-  colnames(edges) <- c("Start","End", "weight")
-  
+  edges <- ddply(do.call("rbind", ledges), .(node1, node2), nrow)
+  colnames(edges) <- c("Start", "End", "weight")
+
   STN <- graph_from_data_frame(d = edges, directed = T, vertices = nodesu) # Create graph
   STN <- simplify(STN,remove.multiple = F, remove.loops = TRUE)  # Remove self loops
-  
+
+  # Obtain the start, standard and end nodes ids
+  start_ids <- which(V(STN)$Type == "START")
+  standard_ids <- which(V(STN)$Type == "MIDDLE")
+  end_ids <- which(V(STN)$Type == "END")
+
+  # Obtain the elite nodes ids
+  elite_ids <- which(V(STN)$Elite == "TRUE")
+  regular_ids <- which(V(STN)$Elite == "FALSE")
   if (bmin) {  # minimisation problem 
     best_ids <- which(V(STN)$Fitness <= best)
   } else {    # maximisation  
     best_ids <- which(V(STN)$Fitness >= best)
   }
 
-  # Obtain the start nodes ids
-  start_ids <- which(V(STN)$Iteration == 1)
-
-  # Obtain the elite nodes ids
-  elite_ids <- which(V(STN)$Elite == "T")
-
-  # Four types of nodes, useful for visualisation: Start, End and Standard.
+  # Four types of nodes, useful for visualisation: Start, End and Middle
   V(STN)$Type <- "standard"
   V(STN)[start_ids]$Type <- "start"
   V(STN)[end_ids]$Type <- "end"
@@ -176,7 +142,7 @@ stn_create <- function(instance)  {
   V(STN)[elite_ids]$Quality <- "elite"
   V(STN)[best_ids]$Quality <- "best"
 
-  fname <-  gsub('.{4}$', '', instance) # removes  (last 4 characters, .ext) from file to use as name
+  fname <- gsub('.{4}$', '', instance) # removes  (last 4 characters, .ext) from file to use as name
   fname <- paste0(outfolder,"/",fname,"_stn.RData")
   save(STN,nruns, bmin, best, file=fname) # Store STN, wether it is a minimisation problem and the best-known given
   return(vcount(STN))
@@ -186,22 +152,17 @@ stn_create <- function(instance)  {
 # Extracts the required data fro the input file
 # Input:  String with name of file
 # Output: Data frame with trace data, 2) name of output file .Rdata
-
 get_data <- function(instance) {
   file_ext <- substr(instance, nchar(instance)-3, nchar(instance))
   mysep <- ifelse(file_ext == ".csv", ",", "")
-  trd <- read.table(paste0(infolder,"/",instance), header=T, sep = mysep,
-                    colClasses=c("integer", "numeric", "character", "character", "integer", "numeric", "character", "character", "integer"),
-                    stringsAsFactors = F)
+  trd <- read.table(paste0(infolder,"/",instance), header=T, sep = mysep, colClasses=c("integer", "numeric", "character", "character", "character", "integer", "numeric", "character", "character", "character", "integer"), stringsAsFactors = F)
   return (trd)
 }
-
 
 # ---- Process all data files in the given input folder ----------------
 data_files <- list.files(infolder)
 
 # This is only executed if the nruns or best parameters are not given
-
 if (is.na(best) | is.na(nruns))  {
   dfs <- lapply(data_files, get_data)  # Store data in a list, so is an argument to create function 
   # If best its not given, determine it from all files in the folder
@@ -210,8 +171,8 @@ if (is.na(best) | is.na(nruns))  {
     v <- unlist(l, recursive = T)   # Take all the fitness values
     best <- ifelse(bmin, min(v), max(v))
     cat("Best value in data:", best, "\n")
-  } 
-  
+  }
+
   # If nruns its not given, determine it from all files 
   if (is.na(nruns)) {
     l <- lapply(dfs, function(x) {x[c("Run")]})  # Extract Runs
@@ -221,9 +182,6 @@ if (is.na(best) | is.na(nruns))  {
   remove(dfs)
 } 
 
-
 nsizes <- lapply(data_files, stn_create)  # Applies stn_create function to all files
 print("Number of nodes in the STNs created:")
 print(as.numeric(nsizes))
-
-
