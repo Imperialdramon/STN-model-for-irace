@@ -120,12 +120,12 @@ stn_create <- function(instance)  {
 
   # Obtain the start, standard and end nodes ids
   start_ids <- which(V(STN)$Type == "START")
-  standard_ids <- which(V(STN)$Type == "MIDDLE")
+  standard_ids <- which(V(STN)$Type == "STANDARD")
   end_ids <- which(V(STN)$Type == "END")
 
   # Obtain the elite nodes ids
-  elite_ids <- which(V(STN)$Elite == "TRUE")
-  regular_ids <- which(V(STN)$Elite == "FALSE")
+  elite_ids <- which(V(STN)$Elite == "ELITE")
+  regular_ids <- which(V(STN)$Elite == "REGULAR")
   if (bmin) {  # minimisation problem 
     best_ids <- which(V(STN)$Fitness <= best)
   } else {    # maximisation  
