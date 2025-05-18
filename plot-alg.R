@@ -71,21 +71,18 @@ mytriangle <- function(coords, v=NULL, params) {
   if (length(vertex.size) != 1 && !is.null(v)) {
     vertex.size <- vertex.size[v]
   }
-  
   symbols(x=coords[,1], y=coords[,2], bg=vertex.color, col = vertex.color,
           stars=cbind(vertex.size, vertex.size, vertex.size),
           add=TRUE, inches=FALSE)
 }
 # clips as a circle
-add_shape("triangle", clip=shapes("circle")$clip,
-          plot=mytriangle)
+add_shape("triangle", clip=shapes("circle")$clip, plot=mytriangle)
 
 # Legends for the plot
-legend.txt <- c("Start", "End", "Standar", "Regular", "Elite", "Best", "Improve", "Equal", "Worse")
+legend.txt <- c("Start", "Standar", "End", "Regular", "Elite", "Best", "Improve", "Equal", "Worse")
 # Colors for legend
 legend.col <- c(shapes_ncol, shapes_ncol, shapes_ncol, regular_ncol, elite_ncol, best_ncol, impru_ecol, equal_ecol, worse_ecol)
-# Shapes for legend -> 15 = square, 17 = triangle, 21 = circle
-legend.shape <- c(15,17,21,21,21,21,NA,NA,NA)
+legend.shape <- c(15,21,17,21,21,21,NA,NA,NA)
 # Line style, NA for nodes, solid line for edges
 legend.lty <-  c(NA,NA,NA,NA,NA,NA,1,1,1)
 
@@ -195,6 +192,3 @@ print(dataf)
 nsizes <- lapply(dataf, stn_plot)  # plot all STNs in folder, return node sizes
 print("Numer of nodes in STNs ploted:")
 print(as.numeric(nsizes))
-
-
-

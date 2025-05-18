@@ -17,7 +17,7 @@ if (length(args) < 1) {
     2) Boolean indicating minimisation (1) or maximisation (0). If no argument is given, minimisation (i.e 1) is assumed.
     3) The evaluation of the global optimum (or best-knwon solution). For continous optimisation a desired precision can be given. 
     If no argument is given, the best evaluation in the set of input files is used.
-    4) The number of runs from the data filesto be used. This should be a number between 1 up to total number of runs within in the raw data files. 
+    4) The number of runs from the data files to be used. This should be a number between 1 up to total number of runs within in the raw data files. 
     If no argument is given, the largest run number in the input files is used."
     , call.=FALSE)
 }
@@ -124,8 +124,8 @@ stn_create <- function(instance)  {
   end_ids <- which(V(STN)$Type == "END")
 
   # Obtain the elite nodes ids
-  elite_ids <- which(V(STN)$Elite == "ELITE")
   regular_ids <- which(V(STN)$Elite == "REGULAR")
+  elite_ids <- which(V(STN)$Elite == "ELITE")
   if (bmin) {  # minimisation problem 
     best_ids <- which(V(STN)$Fitness <= best)
   } else {    # maximisation  
@@ -133,12 +133,12 @@ stn_create <- function(instance)  {
   }
 
   # Four types of nodes, useful for visualisation: Start, End and Middle
-  V(STN)$Type <- "standard"
   V(STN)[start_ids]$Type <- "start"
+  V(STN)[standard_ids]$Type <- "standard"
   V(STN)[end_ids]$Type <- "end"
 
   # Three types of quality: Elite, Best and Regular
-  V(STN)$Quality <- "regular"
+  V(STN)[regular_ids]$Quality <- "regular"
   V(STN)[elite_ids]$Quality <- "elite"
   V(STN)[best_ids]$Quality <- "best"
 
