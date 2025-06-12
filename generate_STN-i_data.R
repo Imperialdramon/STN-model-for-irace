@@ -16,6 +16,7 @@
 #                                [--best_known_solution=<numeric_value>]
 #                                [--number_of_runs=<integer_value>]
 #                                [--separator=<char>]
+#                                [--network_name=<name>]
 #
 # Arguments:
 # --input                : (Required) Path to the input file (.txt) containing trace data
@@ -39,6 +40,8 @@
 #
 # --separator            : (Optional) Separator used in the trace file (e.g., "," or "\t").
 #                          Default is "" which uses any whitespace.
+#
+# --network_name         : (Optional) Name for the network. If not provided, uses the input file name.
 #
 # Requirements:
 # - R with the following packages installed:
@@ -123,6 +126,11 @@ problem_type <- ifelse(!is.null(params$problem_type), params$problem_type, "min"
 best_known_solution <- ifelse(!is.null(params$best_known_solution), as.numeric(params$best_known_solution), NA)
 number_of_runs <- ifelse(!is.null(params$number_of_runs), as.integer(params$number_of_runs), NA)
 separator <- ifelse(!is.null(params$separator), params$separator, "")
+if (!is.null(params$network_name)) {
+  network_name <- as.character(params$network_name)
+} else {
+  network_name <- tools::file_path_sans_ext(basename(input_file))
+}
 
 # Check if output file name has a valid extension
 if (!grepl("\\.RData$", output_file_name)) {
@@ -152,7 +160,8 @@ stn_i_result <- stn_i_create(
   problem_type = problem_type,
   best_known_solution = best_known_solution,
   number_of_runs = number_of_runs,
-  separator = separator
+  separator = separator,
+  network_name = network_name
 )
 
 # ---------- Save result ----------

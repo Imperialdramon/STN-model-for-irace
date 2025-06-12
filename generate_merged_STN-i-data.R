@@ -112,6 +112,10 @@ if (!is.null(params$output_file)) {
 
 # ---------- Process input files ----------
 
+stns_i_data <- get_stns_i_data(input_folder)
+
+merged_stn_i_result <- merge_stns_i_data(stns_i_data)
+
 
 # TODO: Adjust the processing using the utility functions
 
@@ -140,7 +144,7 @@ save_merged_stn_i_data(merged_stn_i_result, output_file_path)
 
 # ----------------------------- Prioritize Node Type ----------------------
 
-prioritize_type <- function(types) {
+prioritize_topology <- function(types) {
   types <- unique(types[types != ""])
   if ("END" %in% types) return("END")
   if ("START" %in% types) return("START")
@@ -149,13 +153,7 @@ prioritize_type <- function(types) {
 
 # ----------------------------- Main Script -------------------------------
 
-args = commandArgs(trailingOnly=TRUE)
-if (length(args) < 1) stop("One argument is required: the input folder", call.=FALSE)
-infolder <- args[1]
-if (!dir.exists(infolder)) stop("Input folder does not exist", call.=FALSE)
 
-cat("Input folder:", infolder, "\n")
-data <- get_stns_i_data(infolder)
 alg <- data$graphs
 algn <- data$names
 bmin <- data$bmin
@@ -181,7 +179,7 @@ for (i in 1:num_alg) {
 
 # Assign unified attributes
 type_matrix <- do.call(cbind, lapply(1:num_alg, function(i) V(stnm)[[paste0("Type_", i)]]))
-V(stnm)$Type <- apply(type_matrix, 1, prioritize_type)
+V(stnm)$Type <- apply(type_matrix, 1, prioritize_topology)
 
 V(stnm)$Fitness <- Reduce(coalesce, lapply(1:num_alg, function(i) V(stnm)[[paste0("Fitness_", i)]]))
 V(stnm)$Count <- rowSums(do.call(cbind, lapply(1:num_alg, function(i) V(stnm)[[paste0("Count_", i)]])), na.rm = TRUE)

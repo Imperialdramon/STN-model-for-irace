@@ -103,14 +103,15 @@ add_loc_entry <- function(loc_trend, location, elite_val, type_val, origin_elite
 #' 
 #' @param number_of_runs An integer specifying the number of runs to consider from the trace file. Default is NA, which means it will use the maximum run number found in the data.
 #' @param separator A string specifying the separator used in the input file. Default is "".
+#' @param network_name A string specifying the name of the STN-i network. Default is "STN_i".
 #' 
 #' @return A list containing the STN-i graph, problem type, best known solution, number of runs, and summaries of elite and type origins.
 #' 
 #' @examples
 #' \dontrun{
-#' stn_i_result <- stn_i_create("path/to/trace_file.txt", problem_type = "min", best_known_solution = 0.5)
+#' stn_i_result <- stn_i_create("path/to/trace_file.txt", problem_type = "min", best_known_solution = 0.5, network_name = "My_STN_i")
 #' }
-stn_i_create <- function(input_file, problem_type = "min", best_known_solution = NA, number_of_runs = NA, separator = "") {
+stn_i_create <- function(input_file, problem_type = "min", best_known_solution = NA, number_of_runs = NA, separator = "", network_name = "STN_i") {
   # Load the input file data
   trace_all <- read.table(input_file, header=T, sep = separator, colClasses=c("integer", "logical", "numeric", "character", "character", "character", "character", "character", "integer", "numeric", "character", "character", "character", "character", "character", "integer"), stringsAsFactors = F)
 
@@ -247,6 +248,7 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
   # Return all data without save
   return(list(
     STN_i = STN_i,
+    network_name = network_name,
     problem_type = problem_type,
     best_known_solution = best_known_solution,
     number_of_runs = number_of_runs,
@@ -327,6 +329,7 @@ get_stn_i_data <- function(input_file) {
   # Validate structure
   expected_fields <- c(
     "STN_i",
+    "network_name",
     "problem_type",
     "best_known_solution",
     "number_of_runs",
@@ -661,17 +664,16 @@ get_stns_i_data <- function(input_folder) {
   for (i in seq_along(files)) {
     input_file <- files[i]
 
-    alg_name <- strsplit(basename(input_file), "_")[[1]][1]
-
     # Obtain the STN-i data from the file
     stn_i_result <- get_stn_i_data(input_file)
 
     STN_i <- stn_i_result$STN_i
-    V(STN_i)$Alg <- alg_name
-    E(STN_i)$Alg <- alg_name
+    alg_name <- stn_i_result$network_name
+    V(STN_i)$Network <- alg_name
+    E(STN_i)$Network <- alg_name
 
     graphs[[i]] <- STN_i
-    names[i] <- alg_name
+    names[i] <- stn_i_result$network_name
     problem_types <- c(problem_types, stn_i_result$problem_type)
     best_known_solutions <- c(best_known_solutions, stn_i_result$best_known_solution)
     number_of_runs_vec <- c(number_of_runs_vec, stn_i_result$number_of_runs)
@@ -683,11 +685,163 @@ get_stns_i_data <- function(input_folder) {
 
   return(list(
     graphs = graphs,
-    names = alg_names,
+    names = names,
     problem_type = unique(problem_types),
     best_known_solutions = best_known_solutions,
     number_of_runs = number_of_runs_vec
   ))
+}
+
+#' Merge multiple STN-i graphs into a single network
+#'
+#' This function takes a list of STN-i graphs and merges them into a unified graph,
+#' consolidating node and edge attributes, and resolving conflicts using the specified
+#' criterion for fitness values. It also classifies shared and elite nodes.
+#'
+#' @param stns_i_data A list returned by `get_stns_i_data`, containing:
+#'   - `graphs`: a list of STN-i igraph objects
+#'   - `names`: a character vector with identifiers for each network
+#'   - `problem_type`: "min" or "max"
+#'   - `best_known_solutions`: vector of best known solutions
+#'   - `number_of_runs`: vector of number of runs per network
+#' @param criteria A string indicating how to resolve fitness in shared nodes.
+#'   One of: "min", "max", "mean", or "median".
+#'
+#' @return A list with:
+#'   - `stnm`: the merged igraph object
+#'   - `num_networks`: number of merged networks
+#'   - `network_names`: names of the original networks
+#'   - `best_known_solutions`: vector of best known solutions
+#'
+#' @examples
+#' \dontrun{
+#' merged <- merge_stns_i_data(stns_i_data, criteria = "mean")
+#' }
+merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
+  # Check if criteria is valid
+  if (!criteria %in% c("min", "max", "mean", "median")) {
+    stop("Invalid criteria. Choose from: 'min', 'max', 'mean', 'median'.")
+  }
+
+  # Obtain the list of STN-i graphs and their metadata
+  snts_i <- stns_i_data$graphs
+  num_networks <- length(snts_i)
+  network_names <- stns_i_data$names
+  problem_type <- stns_i_data$problem_type
+  best_known_solutions <- stns_i_data$best_known_solutions
+  number_of_runs <- stns_i_data$number_of_runs
+
+  # Merge all networks into a single graph
+  merged_STN_i <- graph.union(snts_i)
+
+  # Initialize nodes and edges for each network if not present
+  for (i in 1:num_networks) {
+    for (attr in c("Topology", "Network", "Quality", "Fitness", "Count")) {
+      attr_name <- paste0(attr, "_", i)
+      if (!attr_name %in% vertex_attr_names(merged_STN_i)) {
+        V(merged_STN_i)[[attr_name]] <- NA
+      }
+    }
+    for (attr in c("weight", "Network")) {
+      attr_name <- paste0(attr, "_", i)
+      if (!attr_name %in% edge_attr_names(merged_STN_i)) {
+        E(merged_STN_i)[[attr_name]] <- NA
+      }
+    }
+  }
+
+  # Prioritize Topology types (e.g., START > END > STANDARD)
+  prioritize_topology <- function(topos) {
+    topos <- unique(na.omit(topos[which(topos != "")]))
+    if ("END" %in% topos) return("END")
+    if ("START" %in% topos) return("START")
+    return("STANDARD")
+  }
+  topology_matrix <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Topology_", i)]]))
+  V(merged_STN_i)$Topology <- apply(topology_matrix, 1, prioritize_topology)
+
+  # Resolve Fitness using criteria
+  fitness_matrix <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Fitness_", i)]]))
+  fitness_matrix[is.na(fitness_matrix)] <- NA
+  V(merged_STN_i)$Fitness <- apply(fitness_matrix, 1, function(x) {
+    vals <- x[!is.na(x)]
+    if (length(vals) == 0) return(NA)
+    switch(criteria,
+      "min" = min(vals),
+      "max" = max(vals),
+      "mean" = mean(vals),
+      "median" = median(vals)
+    )
+  })
+
+  V(merged_STN_i)$Count <- rowSums(do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Count_", i)]])), na.rm = TRUE)
+
+  alg_df <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Network_", i)]]))
+  V(merged_STN_i)$Network <- unite(as.data.frame(alg_df), "Network", sep = "", remove = TRUE)$Network
+
+  qual_df <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Quality_", i)]]))
+  V(merged_STN_i)$Quality <- unite(as.data.frame(qual_df), "Quality", sep = "", remove = TRUE)$Quality
+
+  # Remove old vertex attributes
+  old_vattr <- unlist(lapply(1:num_networks, function(i) paste0(c("Fitness_", "Count_", "Topology_", "Network_", "Quality_"), i)))
+  for (a in old_vattr) merged_STN_i <- delete_vertex_attr(merged_STN_i, name = a)
+
+  # Merge edge weights
+  E(merged_STN_i)$weight <- rowSums(do.call(cbind, lapply(1:num_networks, function(i) E(merged_STN_i)[[paste0("weight_", i)]])), na.rm = TRUE)
+  alg_df_e <- do.call(cbind, lapply(1:num_networks, function(i) E(merged_STN_i)[[paste0("Network_", i)]]))
+  E(merged_STN_i)$Network <- unite(as.data.frame(alg_df_e), "Network", sep = "", remove = TRUE)$Network
+  old_eattr <- unlist(lapply(1:num_networks, function(i) paste0(c("weight_", "Network_"), i)))
+  for (a in old_eattr) merged_STN_i <- delete_edge_attr(merged_STN_i, name = a)
+
+  # Detect shared nodes based on presence across networks
+  presence_matrix <- do.call(cbind, lapply(1:num_networks, function(i) {
+    !is.na(V(merged_STN_i)[[paste0("Fitness_", i)]])
+  }))
+  V(merged_STN_i)$Shared <- rowSums(presence_matrix) > 1
+
+  # Classify node categories
+  V(merged_STN_i)$Category <- NA
+  for (v in V(merged_STN_i)) {
+    q_parts <- unlist(strsplit(V(merged_STN_i)[v]$Quality, split = ""))
+    is_shared <- V(merged_STN_i)[v]$Shared
+    is_elite  <- grepl("ELITE", V(merged_STN_i)[v]$Quality)
+    elite_count <- sum(grepl("ELITE", unlist(strsplit(V(merged_STN_i)[v]$Quality, split = ""))))
+    if (is_shared && elite_count == 0) {
+      V(merged_STN_i)[v]$Category <- "shared-regular"
+    } else if (is_shared && elite_count == num_networks) {
+      V(merged_STN_i)[v]$Category <- "shared-elite"
+    } else if (is_shared && elite_count > 0 && elite_count < num_networks) {
+      V(merged_STN_i)[v]$Category <- "shared-mixed"
+    } else if (!is_shared && is_elite) {
+      V(merged_STN_i)[v]$Category <- "network-elite"
+    } else {
+      V(merged_STN_i)[v]$Category <- "network-regular"
+    }
+  }
+
+  return(list(
+    stnm = merged_STN_i,
+    num_networks = num_networks,
+    network_names = network_names,
+    problem_type = problem_type,
+    best_known_solutions = best_known_solutions
+  ))
+}
+
+# En esta función, se crea el gráfico de la STN-i combinada y se devuelve la data decorada.
+# Usar lo mismo que para el plot normal
+plot_merged_stn_i <- function(merged_stn_i, palette_colors = get_stn_i_palette_colors(1), layout = "fr", show_regular = TRUE) {
+  # Decorate the merged STN-i graph
+  STN_i <- stn_i_decorate(merged_stn_i$stnm, merged_stn_i$problem_type, show_regular, palette_colors)
+
+  # Get layout data
+  layout_data <- get_stn_i_layout_data(STN_i, layout)
+
+  # Save the plot to a PDF file
+  output_file_path <- paste0("merged_STN_i_plot_", Sys.Date(), ".pdf")
+  save_stn_i_plot(output_file_path, STN_i, layout_data, palette_colors)
+
+  return(STN_i)
 }
 
 # TODO: Add merged functions
