@@ -1,3 +1,5 @@
+# nolint start
+
 # Cambiar el título del script
 
 #########################################################################
@@ -92,3 +94,5 @@ metrics[i,"sh_elite"] <- length(shareids)
 ofname <- paste0(iname,"-metrics.csv")   # file name and -metrics
 cat ("Output file: ", ofname, "\n" )
 write.csv(metrics, file = outname)
+
+# nolint end

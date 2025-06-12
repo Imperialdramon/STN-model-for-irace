@@ -1,169 +1,178 @@
+# nolint start
+
 #########################################################################
-# Network Analysis of Search Trajectory Networks (STN)
-# Authors: Gabriela Ochoa, Katherine Malan, Christian Blum
-# Adapted to support merged STN-i visualization by Pablo Estobar
-# Input:  File name with merged STN graph object (RData file)
-# Output: Network plots (pdf) saved in current folder
+# Merged STN-i Plotting Script
+# Author: Pablo Estobar
+#
+# Description:
+# This script generates a visual representation of a merged Search Trajectory 
+# Network for irace (STN-i), built from multiple STN-i executions.
+# It decorates the network with node shapes, colors, and categories,
+# and saves the plot as a PDF file, including a legend.
+#
+# Usage:
+# Rscript plot_merged_STN-i.R --input=<input_file> --output=<output_folder> 
+#                              [--output_file=<output_file_name>] 
+#                              [--layout_type=<value>] 
+#                              [--show_shared_regular=<TRUE|FALSE>]
+#                              [--show_shared_mixed=<TRUE|FALSE>]
+#                              [--show_regular=<TRUE|FALSE>]
+#                              [--show_start_regular=<TRUE|FALSE>]
+#                              [--size_factor=<value>] 
+#                              [--palette=<value>]
+#
+# Arguments:
+# --input         : (Required) Path to the input file (.RData) containing the merged STN-i object.
+# --output        : (Required) Path to the output folder where the plot PDF will be saved.
+# --output_file   : (Optional) Name of the output PDF file. If not provided, defaults to the
+#                   input file name (without extension) + ".pdf".
+# --layout_type   : (Optional) Layout algorithm to position the nodes. Options:
+#                     - "fr"        : Fruchterman-Reingold (default)
+#                     - "kk"        : Kamada-Kawai
+#                     - "circle"    : Circular layout
+#                     - "grid"      : Grid layout
+#                     - "sphere"    : Spherical layout
+#                     - "random"    : Random layout
+#                     - "star"      : Star layout (centralized)
+#                     - "tree"      : Tree layout
+#                     - "reingold"  : Reingold-Tilford tree layout
+#                     - "mds"       : Multidimensional Scaling
+#                     - "drl"       : DrL (force-directed, scalable)
+#                     - "lgl"       : Large Graph Layout
+#                     - "graphopt"  : Force-directed using physics model
+#                     - "sugiyama"  : Layered layout for DAGs
+#                     - "dh"        : Davidson-Harel layout
+# --show_shared_regular : (Optional) Whether to include shared regular nodes in the plot.
+#                   TRUE or FALSE (default: TRUE).
+# --show_shared_mixed : (Optional) Whether to include shared mixed nodes in the plot.
+#                   TRUE or FALSE (default: TRUE).
+# --show_regular  : (Optional) Whether to include regular (non-elite) nodes in the plot.
+#                   TRUE or FALSE (default: TRUE).
+# --show_start_regular : (Optional) Whether to include start regular nodes in the plot.
+#                   TRUE or FALSE (default: FALSE).
+# --size_factor   : (Optional) Scaling factor for node sizes and edge widths (default: 1).
+# --palette       : (Optional) Integer value (1–5) specifying a color palette for nodes.
+#                   Each palette alters the visual distinction of node types (default: 1).
+#
+# Requirements:
+# - R with the `igraph` package installed.
+# - A merged STN-i object created using `merge_stns_i_data()`.
+#
+# Note:
+# - The input file must exist and contain a valid merged STN-i object.
+# - The PDF will include a legend showing node types and their visual representation.
 #########################################################################
 
+
+# ---------- Validate required packages ----------
+if (!requireNamespace("igraph", quietly = TRUE)) {
+  stop("Error: The igraph package is not installed. Please install it with 'install.packages(\"igraph\")'", call. = FALSE)
+}
+
+# ---------- Load the required packages ----------
 library(igraph)
 
-# ---------- Processing inputs ----------
-args = commandArgs(trailingOnly=TRUE)
-if (length(args) < 1) stop("Missing input merged STN .RData file")
-infile <- args[1]
-if (!file.exists(infile)) stop("Input file does not exist")
+# ---------- Load utility functions ----------
+source("utils.R")
 
-size_factor <- ifelse(length(args) > 1, as.integer(args[2]), 1)
-if (is.na(size_factor)) stop("2nd argument must be numeric")
+# ---------- Parse command line arguments ----------
+args <- commandArgs(trailingOnly = TRUE)
+params <- parse_arguments(args)
 
-# Colors & Styles
-start_ncol     <- "gold"
-end_run_ncol   <- "gray30"
-best_ncol      <- "red"
-shared_col     <- "black"
-shared_elite   <- "green"
-shared_mixed <- "purple"
-
-# Base palette for algorithms
-alg_base_col <- c("#fc8d62", "#377eb8", "#4daf4a", "#984ea3", "#a65628")
-
-# Load merged STN
-load(infile, verbose = F)
-stnm <- simplify(stnm, remove.multiple = FALSE, remove.loops = TRUE)
-
-# Considerar el caso donde no todos los algoritmos comparten nodos elite y son nodos shared-mixed nodes
-
-# Categorize nodes according to merged STN-i model
-V(stnm)$Category <- NA
-for (v in V(stnm)) {
-  q_parts <- unlist(strsplit(V(stnm)[v]$Quality, split = ""))
-  is_shared <- grepl(",", V(stnm)[v]$Alg)
-  is_elite  <- grepl("ELITE", V(stnm)[v]$Quality)
-  elite_count <- sum(grepl("ELITE", unlist(strsplit(V(stnm)[v]$Quality, split = ""))))
-
-  if (is_shared && elite_count == 0) {
-    V(stnm)[v]$Category <- "shared-regular"
-  } else if (is_shared && elite_count == num_alg) {
-    V(stnm)[v]$Category <- "shared-elite"
-  } else if (is_shared && elite_count > 0 && elite_count < num_alg) {
-    V(stnm)[v]$Category <- "shared-mixed"
-  } else if (!is_shared && is_elite) {
-    V(stnm)[v]$Category <- "algorithm-elite"
-  } else {
-    V(stnm)[v]$Category <- "algorithm-regular"
+# ---------- Validate required arguments ----------
+required_args <- c("input", "output")
+for (param_name in required_args) {
+  if (is.null(params[[param_name]])) {
+    stop(paste("Missing required argument: --", param_name, sep = ""), call. = FALSE)
   }
 }
 
-# Prepare dual color palette (regular/elite) per algorithm
-alg_colors <- list()
-for (i in 1:length(algn)) {
-  base <- alg_base_col[i]
-  elite <- adjustcolor(base, alpha.f = 0.6)
-  alg_colors[[algn[i]]] <- list(
-    elite = elite,
-    regular = base
-  )
+# ---------- Assign and normalize paths ----------
+input_file <- normalizePath(params$input, mustWork = TRUE)
+output_folder <- normalizePath(params$output, mustWork = TRUE)
+
+# Check if input file exists
+if (!file.exists(input_file)) {
+  stop(paste("Input file does not exist:", input_file), call. = FALSE)
 }
 
-# Triangle shape for END
-mytriangle <- function(coords, v=NULL, params) {
-  vertex.color <- params("vertex", "color")
-  vertex.size  <- 1/200 * params("vertex", "size")
-  if (length(vertex.color) != 1 && !is.null(v)) vertex.color <- vertex.color[v]
-  if (length(vertex.size) != 1 && !is.null(v)) vertex.size <- vertex.size[v]
-  symbols(x=coords[,1], y=coords[,2], bg=vertex.color, col=vertex.color,
-          stars=cbind(vertex.size, vertex.size, vertex.size), add=TRUE, inches=FALSE)
-}
-add_shape("triangle", clip=shapes("circle")$clip, plot=mytriangle)
-
-# Decoration function
-stn_decorate <- function(N) {
-  V(N)$color <- "gray80"
-
-  # Categoría compartida
-  V(N)[V(N)$Category == "shared-mixed"]$color <- shared_mixed
-  V(N)[V(N)$Category == "shared-regular"]$color <- shared_col
-  V(N)[V(N)$Category == "shared-elite"]$color   <- shared_elite
-
-  # Algoritmos exclusivos
-  for (alg in names(alg_colors)) {
-    elite_idx <- which(V(N)$Category == "algorithm-elite" & V(N)$Alg == alg)
-    reg_idx   <- which(V(N)$Category == "algorithm-regular" & V(N)$Alg == alg)
-    V(N)[elite_idx]$color  <- alg_colors[[alg]]$elite
-    V(N)[reg_idx]$color    <- alg_colors[[alg]]$regular
-  }
-
-  # Formas topológicas
-  V(N)$shape <- "circle"
-  V(N)[V(N)$Type == "START"]$shape <- "square"
-  V(N)[V(N)$Type == "END"]$shape   <- "triangle"
-
-  # Tamaño proporcional a fuerza entrante
-  V(N)$size <- strength(N, mode="in") + 1
-  V(N)[V(N)$Quality == "BEST"]$size <- V(N)[V(N)$Quality == "BEST"]$size + 1
-  V(N)[V(N)$Type == "END"]$size     <- V(N)[V(N)$Type == "END"]$size + 0.3
-
-  #V(N)[V(N)$Category == "shared-mixed"]$size <- 2
-
-  # Bordes
-  V(N)$frame.color <- V(N)$color
-  V(N)[V(N)$Quality == "BEST"]$frame.color <- "white"
-
-  # Aristas
-  E(N)$color <- shared_col
-  for (i in 1:num_alg) {
-    E(N)[E(N)$Alg == algn[i]]$color <- alg_base_col[i]
-  }
-  E(N)$width <- E(N)$weight
-
-  return(N)
+# Check if input file is a valid STN-i file
+if (!grepl("\\.RData$", input_file)) {
+  stop("Input file must be a .RData file containing an STN-i object.", call. = FALSE)
 }
 
-# Leyenda dinámica
-legend.txt <- c("Start", "Standard", "End", "Best")
-legend.col <- c("black", "black", "black", best_ncol)
-legend.shape <- c(15, 16, 17, 16)
-
-# Agrega algoritmo-regular / algoritmo-elite
-for (i in 1:num_alg) {
-  legend.txt   <- c(legend.txt, paste0(algn[i], "-regular"), paste0(algn[i], "-elite"))
-  legend.col   <- c(legend.col, alg_colors[[algn[i]]]$regular, alg_colors[[algn[i]]]$elite)
-  legend.shape <- c(legend.shape, 16, 16)
+# Check if the output folder exists, if not create it
+if (!dir.exists(output_folder)) {
+  dir.create(output_folder, recursive = TRUE)
 }
 
-# Agrega compartidos
-legend.txt   <- c(legend.txt, "Shared-Regular", "Shared-Elite", "Shared-Mixed")
-legend.col   <- c(legend.col, shared_col, shared_elite, shared_mixed)
-legend.shape <- c(legend.shape, 16, 16, 16)
+# ---------- Optional parameters ----------
 
-# Plotting function
-plotNet <- function(N, tit, nsizef, ewidthf, asize, ecurv, mylay, bleg = T) {
-  nsize <- nsizef * V(N)$size
-  ewidth <- ewidthf * E(N)$width
-  plot(N, layout = mylay, vertex.label = "", vertex.size = nsize,
-       edge.width = ewidth, main = tit,
-       edge.arrow.size = asize, edge.curved = ecurv)
-  if (bleg) {
-    legend("topleft", legend.txt, pch = legend.shape, col = legend.col,
-           cex = 0.7, pt.cex=1.4, bty = "n")
-  }
+if (!is.null(params$output_file)) {
+  output_file_name <- params$output_file
+} else {
+  input_basename <- tools::file_path_sans_ext(basename(input_file))
+  output_file_name <- paste0(input_basename, ".pdf")
+}
+layout_type <- ifelse(!is.null(params$layout_type), params$layout_type, "fr")
+show_shared_regular <- ifelse(!is.null(params$show_shared_regular), as.logical(params$show_shared_regular), TRUE)
+show_shared_mixed <- ifelse(!is.null(params$show_shared_mixed), as.logical(params$show_shared_mixed), TRUE)
+show_regular <- ifelse(!is.null(params$show_regular), as.logical(params$show_regular), TRUE)
+show_start_regular <- ifelse(!is.null(params$show_start_regular), as.logical(params$show_start_regular), FALSE)
+size_factor <- ifelse(!is.null(params$size_factor), as.numeric(params$size_factor), 1)
+palette     <- ifelse(!is.null(params$palette), as.integer(params$palette), 1)
+
+# Check if the output file name has a valid extension
+if (!grepl("\\.pdf$", output_file_name)) {
+  output_file_name <- paste0(output_file_name, ".pdf")
 }
 
-# Decorar y plotear
-stnm <- stn_decorate(stnm)
-lfr <- layout_with_fr(stnm)
-lkk <- layout_with_kk(stnm)
+# Check if layout is valid
+if (!layout_type %in% c(
+  "fr", "kk", "circle", "grid", "sphere",
+  "random", "star", "tree", "reingold", "mds",
+  "drl", "lgl", "graphopt", "sugiyama", "dh"
+)) {
+  stop("Invalid layout_type. Choose from: fr, kk, circle, grid, sphere, random, star, tree, reingold, mds, drl, lgl, graphopt, sugiyama, dh.", call. = FALSE)
+}
 
-ofname <- paste0(gsub('.{6}$', '', infile), "-plot.pdf")
-pdf(ofname)
+# Check if show_regular is a boolean
+if (!is.logical(show_regular)) {
+  stop("show_regular must be a boolean value (TRUE or FALSE).", call. = FALSE)
+}
 
-nf <- sqrt(sqrt(size_factor) * 0.3)
-ef <- sqrt(size_factor) * 0.5
+# Check if size_factor is numeric
+if (!is.numeric(size_factor)) {
+  stop("size_factor must be a numeric value.", call. = FALSE)
+}
 
-plotNet(stnm, tit="FR layout", nsizef=0.4, ewidthf=ef*0.1, asize=0.08, ecurv=0.15, mylay=lfr)
-plotNet(stnm, tit="KK layout", nsizef=0.5, ewidthf=ef*0.1, asize=0.08, ecurv=0.15, mylay=lkk)
+# Check if palette is valid
+if (!palette %in% c(1, 2, 3, 4, 5)) {
+  stop("Invalid palette. Choose from: 1, 2, 3, 4, 5.", call. = FALSE)
+}
 
-dev.off()
-cat("Merged STN number of nodes:\n")
-print(vcount(stnm))
+# TODO: Agregar parámetro asociado al zoom (o hacer plots de diferentes tamaños)
+
+# ---------- Process the input file ----------
+
+# Obtain the palette colors
+palette_colors <- get_merged_stn_i_palette_colors(palette)
+
+# Load the merged STN-i data
+merged_stn_i_data <- get_merged_stn_i_data(input_file)
+
+# Load the STN-i object decorated
+merged_STN_i <- merged_stn_i_plot_create(merged_stn_i_data, show_shared_regular, show_shared_mixed, show_regular, show_start_regular, palette_colors)
+
+# ---------- Save result ----------
+
+# Obtain layout data
+layout_data <- get_layout_data(merged_STN_i, layout_type)
+
+# Construct the full path for the output file
+output_file_path <- file.path(output_folder, output_file_name)
+
+# Save the STN-i plot as a PDF
+save_merged_stn_i_plot(output_file_path, merged_STN_i, merged_stn_i_data$network_names, layout_data, palette_colors, nsizef = size_factor, ewidthf = size_factor, asize = 0.3, ecurv = 0.3)
+
+# nolint end

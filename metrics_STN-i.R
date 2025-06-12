@@ -1,3 +1,5 @@
+# nolint start
+
 # Agregar métricas nuevas y cambiar cosas como el nombre 
 
 #########################################################################
@@ -97,3 +99,5 @@ for (inst in instances) {
 ofname <- paste0(name,"-metrics.csv")
 
 write.csv(metrics, file = ofname)
+
+# nolint end

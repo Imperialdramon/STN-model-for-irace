@@ -1,3 +1,5 @@
+# nolint start
+
 #########################################################################
 # STN-i File Processing Script
 # Author: Pablo Estobar
@@ -10,12 +12,12 @@
 # of runs to consider, and saves the resulting STN-i as a .RData file.
 #
 # Usage:
-# Rscript generate_STN-i_data.R --input=<input_file> --output=<output_folder>
-#                                [--output_file=<output_file_name>]
-#                                [--problem_type=<min|max>]
-#                                [--best_known_solution=<numeric_value>]
-#                                [--number_of_runs=<integer_value>]
-#                                [--separator=<char>]
+# Rscript generate_STN-i_data.R --input=<input_file> --output=<output_folder> /
+#                                [--output_file=<output_file_name>] /
+#                                [--problem_type=<min|max>] /
+#                                [--best_known_solution=<numeric_value>] /
+#                                [--number_of_runs=<integer_value>] /
+#                                [--separator=<char>] /
 #                                [--network_name=<name>]
 #
 # Arguments:
@@ -170,8 +172,6 @@ stn_i_result <- stn_i_create(
 output_file_path <- file.path(output_folder, output_file_name)
 
 # Save the STN-i result to the specified output file
-save_stn_i_data(
-  stn_i_result = stn_i_result,
-  output_folder = output_folder,
-  output_file = output_file_name
-)
+save_stn_i_data(stn_i_result = stn_i_result, output_file_path = output_file_path)
+
+# nolint end

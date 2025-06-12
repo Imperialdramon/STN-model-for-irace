@@ -1,3 +1,5 @@
+# nolint start
+
 #' Parse command line arguments
 #' 
 #' This function parses command line arguments in the format `--key=value` and returns a named list of parameters.
@@ -124,10 +126,13 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
     }
   }
 
+  # Filter the trace data to include only the specified number of runs
   trace_all <- trace_all[trace_all$Run <= number_of_runs,]
+
+  # Initialize lists to store nodes and edges for each run
   lnodes <- vector("list", number_of_runs)
   ledges <- vector("list", number_of_runs)
-  loc_trend <- list() # Initialize an empty list to store location trends
+  loc_trend <- list()
 
   for (i in (1:number_of_runs)) {  # combine all runs in a single network
     trace <- trace_all[which(trace_all$Run==i),c(-1)] # take by run and remove first column run number
@@ -197,7 +202,7 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
   colnames(nodes) <- c("Node", "Fitness", "Elite", "Type", "Count")
 
   # Delete duplicates from nodes dataframe based on Node
-  nodesu<- nodes[!duplicated(nodes$Node), ]
+  nodesu <- nodes[!duplicated(nodes$Node), ]
 
   # Combine the list of edges into one dataframe and
   # group by (node1, node2) to identify unique edges and count them
@@ -287,7 +292,6 @@ save_stn_i_data <- function(stn_i_result, output_file_path) {
   cat("Number of Elite Nodes:", sum(V(stn_i_result$STN_i)$Quality == "ELITE"), "\n")
   cat("Number of Regular Nodes:", sum(V(stn_i_result$STN_i)$Quality == "REGULAR"), "\n")
   cat("Number of Best Nodes:", sum(V(stn_i_result$STN_i)$Quality == "BEST"), "\n")
-
 
   cat("\nSummary of the STN-i graph:\n")
 
@@ -397,47 +401,113 @@ get_stn_i_palette_colors <- function(palette = 1) {
   return(palette_colors)
 }
 
-#' Get layout data for a given STN-i graph
+#' Get layout data for a given graph object
 #'
-#' This function retrieves layout data for a given STN-i graph object based on the specified layout type.
+#' This function retrieves layout data for a given graph object based on the specified layout type.
 #'
-#' @param STN_i A graph object of class igraph representing the STN-i.
-#' @param layout A string specifying the layout type. Options include "fr" (Fruchterman-Reingold), "kk" (Kamada-Kawai), "circle", "grid", and "sphere". Default is "fr".
+#' @param g A graph object of class igraph representing the STN-i.
+#' @param layout A string specifying the layout type. Options include:
+#'   "fr" (Fruchterman-Reingold),
+#'   "kk" (Kamada-Kawai),
+#'   "circle" (circular layout),
+#'   "grid" (nodes on a grid),
+#'   "sphere" (nodes on a sphere),
+#'   "random" (random placement),
+#'   "star" (star-shaped layout),
+#'   "tree" (tree layout),
+#'   "reingold" (Reingold-Tilford tree layout),
+#'   "mds" (multidimensional scaling),
+#'   "drl" (DrL force-directed layout),
+#'   "lgl" (Large Graph Layout),
+#'   "graphopt" (force-directed using physics model),
+#'   "sugiyama" (layered layout for DAGs),
+#'   "dh" (Davidson-Harel layout).
+#'   Default is "fr".
 #'
 #' @return A list containing the layout title, coordinates, and layout type.
 #'
 #' @examples
 #' \dontrun{
-#' layout_data <- get_stn_i_layout_data(STN_i, layout = "kk")
+#' layout_data <- get_layout_data(STN_i, layout = "kk")
 #' }
-get_stn_i_layout_data <- function(STN_i, layout = "fr") {
+get_layout_data <- function(g, layout = "fr") {
   layout_data <- switch(layout,
     "fr" = list(
       title = "Fruchterman-Reingold Layout",
-      coords = layout.fruchterman.reingold(STN_i),
+      coords = layout_with_fr(g),
       layout_type = "fr"
     ),
     "kk" = list(
       title = "Kamada-Kawai Layout",
-      coords = layout.kamada.kawai(STN_i),
+      coords = layout_with_kk(g),
       layout_type = "kk"
     ),
     "circle" = list(
       title = "Circle Layout",
-      coords = layout.circle(STN_i),
+      coords = layout_in_circle(g),
       layout_type = "circle"
     ),
     "grid" = list(
       title = "Grid Layout",
-      coords = layout.grid(STN_i),
+      coords = layout_on_grid(g),
       layout_type = "grid"
     ),
     "sphere" = list(
       title = "Sphere Layout",
-      coords = layout.sphere(STN_i),
+      coords = layout_on_sphere(g),
       layout_type = "sphere"
     ),
-    stop("Invalid layout option. Choose from: fr, kk, circle, grid, sphere.")
+    "random" = list(
+      title = "Random Layout",
+      coords = layout_randomly(g),
+      layout_type = "random"
+    ),
+    "star" = list(
+      title = "Star Layout",
+      coords = layout_as_star(g),
+      layout_type = "star"
+    ),
+    "tree" = list(
+      title = "Tree Layout",
+      coords = layout_as_tree(g),
+      layout_type = "tree"
+    ),
+    "reingold" = list(
+      title = "Reingold-Tilford Tree Layout",
+      coords = layout_reingold_tilford(g),
+      layout_type = "reingold"
+    ),
+    "mds" = list(
+      title = "Multidimensional Scaling Layout",
+      coords = layout_with_mds(g),
+      layout_type = "mds"
+    ),
+    "drl" = list(
+      title = "DrL Layout",
+      coords = layout_with_drl(g),
+      layout_type = "drl"
+    ),
+    "lgl" = list(
+      title = "LGL Layout",
+      coords = layout_with_lgl(g),
+      layout_type = "lgl"
+    ),
+    "graphopt" = list(
+      title = "Graphopt Layout",
+      coords = layout_with_graphopt(g),
+      layout_type = "graphopt"
+    ),
+    "sugiyama" = list(
+      title = "Sugiyama Layout",
+      coords = layout_with_sugiyama(g)$layout,
+      layout_type = "sugiyama"
+    ),
+    "dh" = list(
+      title = "Davidson-Harel Layout",
+      coords = layout_with_dh(g),
+      layout_type = "dh"
+    ),
+    stop("Invalid layout option. Choose from: fr, kk, circle, grid, sphere, random, star, tree, reingold, mds, drl, lgl, graphopt, sugiyama, dh.")
   )
 
   return(layout_data)
@@ -450,19 +520,29 @@ get_stn_i_layout_data <- function(STN_i, layout = "fr") {
 #' @param STN_i Graph object
 #' @param problem_type Boolean indicating minimisation or not
 #' @param show_regular Boolean indicating whether to show regular nodes
+#' @param show_start_regular Boolean indicating whether to show start regular nodes
 #' @param palette_colors List of colors for the different node and edge types
 #' 
 #' @return Decorated STN-i graph object
 #' 
 #' @examples
 #' \dontrun{
-#' STN_i <- stn_i_decorate(STN_i, problem_type = "min", show_regular = TRUE, palette_colors = get_stn_i_palette_colors(1))
+#' STN_i <- stn_i_decorate(STN_i, problem_type = "min", show_regular = TRUE, show_start_regular = TRUE, palette_colors = get_stn_i_palette_colors(1))
 #' }
-stn_i_decorate <- function(STN_i, problem_type = "min", show_regular = TRUE, palette_colors) {
-  # Optionally remove REGULAR nodes for visualization purposes
+stn_i_decorate <- function(STN_i, problem_type = "min", show_regular = TRUE, show_start_regular = TRUE, palette_colors) {
+
+  # Filter vertices according to settings
+  to_remove <- c()
   if (!show_regular) {
-    STN_i <- delete_vertices(STN_i, V(STN_i)[Quality == "REGULAR"])
+    to_remove <- c(to_remove, V(STN_i)[Quality == "REGULAR"]$name)
   }
+  if (!show_start_regular) {
+    to_remove <- c(to_remove, V(STN_i)[Topology == "START" & Quality == "REGULAR"]$name)
+  }
+
+  # Remove duplicates before deletion
+  to_remove <- unique(to_remove)
+  STN_i <- delete_vertices(STN_i, to_remove)
 
   # Retrieve edge list and corresponding fitness values
   edge_list <- as_edgelist(STN_i)
@@ -516,15 +596,16 @@ stn_i_decorate <- function(STN_i, problem_type = "min", show_regular = TRUE, pal
 #'
 #' @param input_file Path to the input STN-i file.
 #' @param show_regular Boolean indicating whether to show regular nodes in the plot (default is TRUE).
+#' @param show_start_regular Boolean indicating whether to show start regular nodes in the plot (default is TRUE).
 #' @param palette_colors List of colors for the different node and edge types.
 #'
 #' @return A decorated STN-i graph object ready for plotting.
 #'
 #' @examples
 #' \dontrun{
-#' result <- stn_i_plot_create("path/to/stn_i_file.RData", show_regular = TRUE, palette_colors = get_stn_i_palette_colors(1))
+#' result <- stn_i_plot_create("path/to/stn_i_file.RData", show_regular = TRUE, show_start_regular = TRUE, palette_colors = get_stn_i_palette_colors(1))
 #' }
-stn_i_plot_create <- function(input_file, show_regular = TRUE, palette_colors) {
+stn_i_plot_create <- function(input_file, show_regular = TRUE, show_start_regular = TRUE, palette_colors) {
 
   # Load the STN-i data
   stn_i_result <- get_stn_i_data(input_file)
@@ -534,7 +615,7 @@ stn_i_plot_create <- function(input_file, show_regular = TRUE, palette_colors) {
   problem_type <- stn_i_result$problem_type
 
   # Decorate the STN-i object
-  STN_i <- stn_i_decorate(STN_i, problem_type, show_regular, palette_colors)
+  STN_i <- stn_i_decorate(STN_i, problem_type, show_regular, show_start_regular, palette_colors)
 
   # Return everything needed for external plotting
   return(STN_i)
@@ -609,19 +690,10 @@ save_stn_i_plot <- function(output_file_path, STN_i, layout_data, palette_colors
   title <- paste(layout_data$title, "Nodes:", vcount(STN_i), "Edges:", ecount(STN_i), "Comp:", components(STN_i)$no)
 
   # Plot graph
-  plot(STN_i,
-       layout = layout_data$coords,
-       vertex.label = "",
-       vertex.size = nsize,
-       main = title,
-       edge.width = ewidth,
-       edge.arrow.size = asize,
-       edge.curved = ecurv)
+  plot(STN_i, layout = layout_data$coords, vertex.label = "", vertex.size = nsize, main = title, edge.width = ewidth, edge.arrow.size = asize, edge.curved = ecurv)
 
   # Add legend
-  legend("topleft", legend.txt, pch = legend.shape, col = legend.col,
-         pt.bg = legend.col, lty = legend.lty,
-         cex = 0.7, pt.cex = 1.35, bty = "n")
+  legend("topleft", legend.txt, pch = legend.shape, col = legend.col, pt.bg = legend.col, lty = legend.lty, cex = 0.7, pt.cex = 1.35, bty = "n")
 
   # Close PDF device
   dev.off()
@@ -692,135 +764,130 @@ get_stns_i_data <- function(input_folder) {
   ))
 }
 
-#' Merge multiple STN-i graphs into a single network
+#' Merge multiple STN-i graphs into a single network (manual method)
 #'
-#' This function takes a list of STN-i graphs and merges them into a unified graph,
-#' consolidating node and edge attributes, and resolving conflicts using the specified
-#' criterion for fitness values. It also classifies shared and elite nodes.
+#' This function builds a unified STN graph from multiple STN-i graphs,
+#' resolving conflicts in node attributes (Fitness, Topology) using specified criteria,
+#' and classifies shared and elite nodes. Unlike the union approach, it manually
+#' constructs the graph from extracted nodes and edges.
 #'
 #' @param stns_i_data A list returned by `get_stns_i_data`, containing:
-#'   - `graphs`: a list of STN-i igraph objects
-#'   - `names`: a character vector with identifiers for each network
+#'   - `graphs`: list of STN-i igraph objects
+#'   - `names`: character vector of network names
 #'   - `problem_type`: "min" or "max"
 #'   - `best_known_solutions`: vector of best known solutions
-#'   - `number_of_runs`: vector of number of runs per network
-#' @param criteria A string indicating how to resolve fitness in shared nodes.
-#'   One of: "min", "max", "mean", or "median".
+#'   - `number_of_runs`: vector with number of runs per network
+#' @param criteria One of: "min", "max", "mean", "median", "mode" to resolve Fitness conflicts
 #'
 #' @return A list with:
 #'   - `stnm`: the merged igraph object
 #'   - `num_networks`: number of merged networks
 #'   - `network_names`: names of the original networks
-#'   - `best_known_solutions`: vector of best known solutions
+#'   - `best_known_solutions`: best known solutions
 #'
 #' @examples
 #' \dontrun{
-#' merged <- merge_stns_i_data(stns_i_data, criteria = "mean")
+#' merged_data <- merge_stns_i_data(stns_i_data, criteria = "mean")
 #' }
 merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
-  # Check if criteria is valid
-  if (!criteria %in% c("min", "max", "mean", "median")) {
-    stop("Invalid criteria. Choose from: 'min', 'max', 'mean', 'median'.")
+
+  # Check if the criteria is valid
+  if (!criteria %in% c("min", "max", "mean", "median", "mode")) {
+    stop("Invalid criteria. Choose from: 'min', 'max', 'mean', 'median', 'mode'.")
   }
 
-  # Obtain the list of STN-i graphs and their metadata
   snts_i <- stns_i_data$graphs
   num_networks <- length(snts_i)
   network_names <- stns_i_data$names
   problem_type <- stns_i_data$problem_type
   best_known_solutions <- stns_i_data$best_known_solutions
-  number_of_runs <- stns_i_data$number_of_runs
 
-  # Merge all networks into a single graph
-  merged_STN_i <- graph.union(snts_i)
-
-  # Initialize nodes and edges for each network if not present
-  for (i in 1:num_networks) {
-    for (attr in c("Topology", "Network", "Quality", "Fitness", "Count")) {
-      attr_name <- paste0(attr, "_", i)
-      if (!attr_name %in% vertex_attr_names(merged_STN_i)) {
-        V(merged_STN_i)[[attr_name]] <- NA
-      }
-    }
-    for (attr in c("weight", "Network")) {
-      attr_name <- paste0(attr, "_", i)
-      if (!attr_name %in% edge_attr_names(merged_STN_i)) {
-        E(merged_STN_i)[[attr_name]] <- NA
-      }
-    }
-  }
-
-  # Prioritize Topology types (e.g., START > END > STANDARD)
-  prioritize_topology <- function(topos) {
-    topos <- unique(na.omit(topos[which(topos != "")]))
-    if ("END" %in% topos) return("END")
-    if ("START" %in% topos) return("START")
-    return("STANDARD")
-  }
-  topology_matrix <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Topology_", i)]]))
-  V(merged_STN_i)$Topology <- apply(topology_matrix, 1, prioritize_topology)
-
-  # Resolve Fitness using criteria
-  fitness_matrix <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Fitness_", i)]]))
-  fitness_matrix[is.na(fitness_matrix)] <- NA
-  V(merged_STN_i)$Fitness <- apply(fitness_matrix, 1, function(x) {
-    vals <- x[!is.na(x)]
-    if (length(vals) == 0) return(NA)
-    switch(criteria,
-      "min" = min(vals),
-      "max" = max(vals),
-      "mean" = mean(vals),
-      "median" = median(vals)
+  # Collect all nodes
+  node_df_list <- list()
+  for (i in seq_along(snts_i)) {
+    g <- snts_i[[i]]
+    node_df <- data.frame(
+      Node = V(g)$name,
+      Fitness = V(g)$Fitness,
+      Topology = V(g)$Topology,
+      Count = V(g)$Count,
+      Quality = V(g)$Quality,
+      Network = V(g)$Network,
+      stringsAsFactors = FALSE
     )
-  })
-
-  V(merged_STN_i)$Count <- rowSums(do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Count_", i)]])), na.rm = TRUE)
-
-  alg_df <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Network_", i)]]))
-  V(merged_STN_i)$Network <- unite(as.data.frame(alg_df), "Network", sep = "", remove = TRUE)$Network
-
-  qual_df <- do.call(cbind, lapply(1:num_networks, function(i) V(merged_STN_i)[[paste0("Quality_", i)]]))
-  V(merged_STN_i)$Quality <- unite(as.data.frame(qual_df), "Quality", sep = "", remove = TRUE)$Quality
-
-  # Remove old vertex attributes
-  old_vattr <- unlist(lapply(1:num_networks, function(i) paste0(c("Fitness_", "Count_", "Topology_", "Network_", "Quality_"), i)))
-  for (a in old_vattr) merged_STN_i <- delete_vertex_attr(merged_STN_i, name = a)
-
-  # Merge edge weights
-  E(merged_STN_i)$weight <- rowSums(do.call(cbind, lapply(1:num_networks, function(i) E(merged_STN_i)[[paste0("weight_", i)]])), na.rm = TRUE)
-  alg_df_e <- do.call(cbind, lapply(1:num_networks, function(i) E(merged_STN_i)[[paste0("Network_", i)]]))
-  E(merged_STN_i)$Network <- unite(as.data.frame(alg_df_e), "Network", sep = "", remove = TRUE)$Network
-  old_eattr <- unlist(lapply(1:num_networks, function(i) paste0(c("weight_", "Network_"), i)))
-  for (a in old_eattr) merged_STN_i <- delete_edge_attr(merged_STN_i, name = a)
-
-  # Detect shared nodes based on presence across networks
-  presence_matrix <- do.call(cbind, lapply(1:num_networks, function(i) {
-    !is.na(V(merged_STN_i)[[paste0("Fitness_", i)]])
-  }))
-  V(merged_STN_i)$Shared <- rowSums(presence_matrix) > 1
-
-  # Classify node categories
-  V(merged_STN_i)$Category <- NA
-  for (v in V(merged_STN_i)) {
-    q_parts <- unlist(strsplit(V(merged_STN_i)[v]$Quality, split = ""))
-    is_shared <- V(merged_STN_i)[v]$Shared
-    is_elite  <- grepl("ELITE", V(merged_STN_i)[v]$Quality)
-    elite_count <- sum(grepl("ELITE", unlist(strsplit(V(merged_STN_i)[v]$Quality, split = ""))))
-    if (is_shared && elite_count == 0) {
-      V(merged_STN_i)[v]$Category <- "shared-regular"
-    } else if (is_shared && elite_count == num_networks) {
-      V(merged_STN_i)[v]$Category <- "shared-elite"
-    } else if (is_shared && elite_count > 0 && elite_count < num_networks) {
-      V(merged_STN_i)[v]$Category <- "shared-mixed"
-    } else if (!is_shared && is_elite) {
-      V(merged_STN_i)[v]$Category <- "network-elite"
-    } else {
-      V(merged_STN_i)[v]$Category <- "network-regular"
-    }
+    node_df$graph_id <- i
+    node_df_list[[i]] <- node_df
   }
+  nodes_all <- bind_rows(node_df_list)
+
+  # Merge nodes
+  merged_nodes <- nodes_all %>%
+    group_by(Node) %>%
+    summarise(
+      Fitness = {
+        vals <- Fitness[!is.na(Fitness)]
+        if (length(vals) == 0) NA else switch(criteria,
+          "min" = min(vals),
+          "max" = max(vals),
+          "mean" = mean(vals),
+          "median" = median(vals),
+          "mode" = as.numeric(names(sort(table(vals), decreasing = TRUE)[1]))
+        )
+      },
+      Topology = {
+        types <- unique(na.omit(Topology[Topology != ""]))
+        if ("END" %in% types) "END" else if ("START" %in% types) "START" else "STANDARD"
+      },
+      Count = sum(Count, na.rm = TRUE),
+      Quality = paste(Quality[!is.na(Quality) & Quality != ""], collapse = ""),
+      Network = paste(Network[!is.na(Network) & Network != ""], collapse = ""),
+      n_networks = n(),
+      .groups = "drop"
+    )
+
+  merged_nodes$Shared <- merged_nodes$n_networks > 1
+  merged_nodes$Category <- mapply(function(q, shared) {
+    elite_count <- sum(grepl("ELITE", unlist(strsplit(q, ""))))
+    if (shared && elite_count == 0) "shared-regular"
+    else if (shared && elite_count == num_networks) "shared-elite"
+    else if (shared && elite_count > 0) "shared-mixed"
+    else if (!shared && grepl("ELITE", q)) "network-elite"
+    else "network-regular"
+  }, merged_nodes$Quality, merged_nodes$Shared)
+
+  # Rename for igraph compatibility
+  names(merged_nodes)[names(merged_nodes) == "Node"] <- "name"
+
+  # Build edge list
+  edge_df_list <- list()
+  for (i in seq_along(snts_i)) {
+    g <- snts_i[[i]]
+    edf <- data.frame(
+      from = as.character(ends(g, es = E(g), names = TRUE)[,1]),
+      to = as.character(ends(g, es = E(g), names = TRUE)[,2]),
+      weight = E(g)$weight,
+      Network = E(g)$Network,
+      stringsAsFactors = FALSE
+    )
+    edf$weight <- E(g)$weight
+    edf$Network <- E(g)$Network
+    edge_df_list[[i]] <- edf
+  }
+  edges_all <- bind_rows(edge_df_list)
+
+  merged_edges <- edges_all %>%
+    group_by(from, to) %>%
+    summarise(
+      weight = sum(weight, na.rm = TRUE),
+      Network = paste(Network[!is.na(Network) & Network != ""], collapse = ""),
+      .groups = "drop"
+    )
+
+  # Create final graph
+  merged_STN_i <- graph_from_data_frame(d = merged_edges, vertices = merged_nodes, directed = TRUE)
 
   return(list(
-    stnm = merged_STN_i,
+    merged_STN_i = merged_STN_i,
     num_networks = num_networks,
     network_names = network_names,
     problem_type = problem_type,
@@ -828,20 +895,374 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
   ))
 }
 
-# En esta función, se crea el gráfico de la STN-i combinada y se devuelve la data decorada.
-# Usar lo mismo que para el plot normal
-plot_merged_stn_i <- function(merged_stn_i, palette_colors = get_stn_i_palette_colors(1), layout = "fr", show_regular = TRUE) {
-  # Decorate the merged STN-i graph
-  STN_i <- stn_i_decorate(merged_stn_i$stnm, merged_stn_i$problem_type, show_regular, palette_colors)
+#' Save the merged STN-i data to a file
+#' 
+#'  This function saves the merged STN-i data to a specified output file path.
+#' 
+#'  @param merged_stn_i_data A list containing the merged STN-i data, typically returned by `merge_stns_i_data()`.
+#'  @param output_file_path A string specifying the path to the output file where the merged data will be saved.
+#' 
+#'  @return NULL
+#' 
+#' @examples
+#' \dontrun{
+#' save_merged_stn_i_data(merged_STN_i, "path/to/output.RData")
+#' }
+save_merged_stn_i_data <- function(merged_stn_i_data, output_file_path) {
+  # Ensure the file name ends in .RData
+  if (!grepl("\\.RData$", output_file_path)) {
+    output_file_path <- paste0(output_file_path, ".RData")
+  }
 
-  # Get layout data
-  layout_data <- get_stn_i_layout_data(STN_i, layout)
+  # Print summary metrics before saving
+  g <- merged_stn_i_data$merged_STN_i
+  cat("\nSaving merged STN-i with summary metrics:\n")
+  cat(" - Total nodes:", vcount(g), "\n")
+  cat(" - Total edges:", ecount(g), "\n")
+  cat(" - Shared nodes:", sum(V(g)$Shared), "\n")
+  cat(" - shared-elite:", sum(V(g)$Category == "shared-elite"), "\n")
+  cat(" - shared-regular:", sum(V(g)$Category == "shared-regular"), "\n")
+  cat(" - shared-mixed:", sum(V(g)$Category == "shared-mixed"), "\n")
+  cat(" - network-elite:", sum(V(g)$Category == "network-elite"), "\n")
+  cat(" - network-regular:", sum(V(g)$Category == "network-regular"), "\n")
 
-  # Save the plot to a PDF file
-  output_file_path <- paste0("merged_STN_i_plot_", Sys.Date(), ".pdf")
-  save_stn_i_plot(output_file_path, STN_i, layout_data, palette_colors)
-
-  return(STN_i)
+  save(merged_stn_i_data, file = output_file_path)
+  message(paste("Merged STN-i data saved to:", output_file_path))
 }
 
-# TODO: Add merged functions
+#' Load merged STN-i data from a file
+#' 
+#' This function loads merged STN-i data from a specified input file and validates its structure.
+#' 
+#' @param input_file A string specifying the path to the input file containing the merged STN-i data.
+#' 
+#' @return A list containing the loaded merged STN-i data, including the merged graph, number of networks, network names, problem type, and best known solutions.
+#' 
+#' @examples
+#' \dontrun{
+#'  get_merged_stn_i_data("path/to/merged_stn_i_file.RData")
+#' }
+get_merged_stn_i_data <- function(input_file) {
+  # Check if file exists
+  if (!file.exists(input_file)) {
+    stop(paste("Input file does not exist:", input_file), call. = FALSE)
+  }
+
+  # Load the object and retrieve its name
+  loaded_name <- load(input_file)
+  merged_stn_i_data <- get(loaded_name)
+
+  # Validate structure
+  expected_fields <- c(
+    "merged_STN_i",
+    "num_networks",
+    "network_names",
+    "problem_type",
+    "best_known_solutions"
+  )
+
+  if (!is.list(merged_stn_i_data) || !all(expected_fields %in% names(merged_stn_i_data))) {
+    stop("The loaded file does not contain a valid merged STN-i result structure.", call. = FALSE)
+  }
+
+  return(merged_stn_i_data)
+}
+
+#' Get the palette colors for merged STN-i visualization
+#'
+#' This function returns a flat list of colors for merged STN-i visualization,
+#' including shared categories, algorithm-specific elite/regular colors, and best node color.
+#'
+#' @param palette A numeric value specifying the color palette option (1 to 4).
+#'
+#' @return A named list of color values.
+#'
+#' @examples
+#' \dontrun{
+#' get_merged_stn_i_palette_colors(2)
+#' }
+get_merged_stn_i_palette_colors <- function(palette = 1) {
+  palette_colors <- switch(as.character(palette),
+    "1" = list(
+      shapes = "black",
+      shared_elite = "#FFD700",     # Gold
+      shared_regular = "#CCCCCC",   # Light Gray
+      shared_mixed = "#DA70D6",     # Orchid
+      best = "red",             # Dark Orange
+      algorithm_elite = c("#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",
+                          "#9467bd", "#8c564b", "#e377c2", "#7f7f7f",
+                          "#bcbd22", "#17becf"),
+      algorithm_regular = c("#aec7e8", "#ffbb78", "#98df8a", "#ff9896",
+                            "#c5b0d5", "#c49c94", "#f7b6d2", "#c7c7c7",
+                            "#dbdb8d", "#9edae5")
+    ),
+    "2" = list(
+      shapes = "black",
+      shared_elite = "#DAA520",     # Goldenrod
+      shared_regular = "#D3D3D3",   # Light Gray
+      shared_mixed = "#BA55D3",     # Medium Orchid
+      best = "#FF6347",             # Tomato
+      algorithm_elite = c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3",
+                          "#ff7f00", "#ffff33", "#a65628", "#f781bf",
+                          "#999999", "#66c2a5"),
+      algorithm_regular = c("#fbb4ae", "#b3cde3", "#ccebc5", "#decbe4",
+                            "#fed9a6", "#ffffcc", "#e5d8bd", "#fddaec",
+                            "#f2f2f2", "#b2df8a")
+    ),
+    "3" = list(
+      shapes = "black",
+      shared_elite = "#FFA500",     # Orange
+      shared_regular = "#E0E0E0",   # Gray 88
+      shared_mixed = "#DDA0DD",     # Plum
+      best = "#B22222",             # Firebrick
+      algorithm_elite = c("#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3",
+                          "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3",
+                          "#a1d99b", "#9ecae1"),
+      algorithm_regular = c("#ccece6", "#fdd0a2", "#bcbddc", "#fbb4b9",
+                            "#c2e699", "#fff7bc", "#d9d9d9", "#e5f5e0",
+                            "#edf8fb", "#f0f0f0")
+    ),
+    "4" = list(
+      shapes = "black",
+      shared_elite = "#C71585",     # Medium Violet Red
+      shared_regular = "#B0C4DE",   # Light Steel Blue
+      shared_mixed = "#9370DB",     # Medium Purple
+      best = "#DC143C",             # Crimson
+      algorithm_elite = c("#003f5c", "#2f4b7c", "#665191", "#a05195",
+                          "#d45087", "#f95d6a", "#ff7c43", "#ffa600",
+                          "#7a5195", "#ef5675"),
+      algorithm_regular = c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c",
+                            "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00",
+                            "#cab2d6", "#6a3d9a")
+    ),
+    stop("Invalid palette option. Choose from: 1, 2, 3, 4.")
+  )
+
+  return(palette_colors)
+}
+
+#' Decorate the merged STN-i graph with colors and shapes
+#'
+#' This function decorates the merged STN-i graph by assigning colors and shapes to nodes
+#' based on their category (shared, elite, regular, etc.) and topology (START, STANDARD, END).
+#'
+#' @param merged_STN_i The merged STN-i igraph object.
+#' @param network_names A character vector of network names, used to assign algorithm colors.
+#' @param problem_type A string indicating the problem type ("min" or "max").
+#' @param show_shared_regular Logical; whether to show shared-regular nodes (default TRUE).
+#' @param show_shared_mixed Logical; whether to show shared-mixed nodes (default TRUE).
+#' @param show_regular Logical; whether to show network-regular (non-shared) nodes (default TRUE).
+#' @param show_start_regular Logical; whether to show start regular nodes (default TRUE).
+#' @param palette_colors A palette list returned from get_merged_stn_i_palette_colors().
+#'
+#' @return The decorated igraph object.
+#' 
+#' @examples
+#' \dontrun{
+#' merged_STN_i <- merged_stn_i_decorate(merged_STN_i, network_names, problem_type = "min", show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors = get_merged_stn_i_palette_colors(1))
+#' }
+merged_stn_i_decorate <- function(merged_STN_i, network_names, problem_type = "min", show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors) {
+
+  # Filter vertices according to settings
+  to_remove <- c()
+  if (!show_shared_regular) {
+    to_remove <- c(to_remove, V(merged_STN_i)[Category == "shared-regular"]$name)
+  }
+  if (!show_shared_mixed) {
+    to_remove <- c(to_remove, V(merged_STN_i)[Category == "shared-mixed"]$name)
+  }
+  if (!show_regular) {
+    to_remove <- c(to_remove, V(merged_STN_i)[Category == "network-regular"]$name)
+  }
+  if (!show_start_regular) {
+    to_remove <- c(to_remove, V(merged_STN_i)[Topology == "START" & (Category == "network-regular" | Category == "shared-regular")]$name)
+  }
+
+  # Remove duplicates before deletion
+  to_remove <- unique(to_remove)
+  merged_STN_i <- delete_vertices(merged_STN_i, to_remove)
+
+  # Set default color to NA
+  V(merged_STN_i)$color <- NA
+
+  # Assign colors based on category
+  V(merged_STN_i)[Category == "shared-regular"]$color <- palette_colors$shared_regular
+  V(merged_STN_i)[Category == "shared-elite"]$color <- palette_colors$shared_elite
+  V(merged_STN_i)[Category == "shared-mixed"]$color <- palette_colors$shared_mixed
+
+  for (i in seq_along(network_names)) {
+    network_name <- network_names[i]
+    elite_color <- palette_colors$algorithm_elite[i]
+    regular_color <- palette_colors$algorithm_regular[i]
+
+    V(merged_STN_i)[Category == "network-elite" & Network == network_name]$color <- elite_color
+    V(merged_STN_i)[Category == "network-regular" & Network == network_name]$color <- regular_color
+  }
+
+  # Identify and assign BEST node(s)
+  fitness_vals <- V(merged_STN_i)$Fitness
+  best_known_solution <- if (problem_type == "min") {
+    best_known_solution <- min(fitness_vals)
+  } else {
+    best_known_solution <- max(fitness_vals)
+  }
+  best_ids <- if (problem_type == "min") {
+    which(fitness_vals <= best_known_solution)
+  } else {
+    which(fitness_vals >= best_known_solution)
+  }
+  V(merged_STN_i)[best_ids]$Category <- "BEST"
+  V(merged_STN_i)[best_ids]$color <- palette_colors$best
+
+  # Set node shapes by topology
+  V(merged_STN_i)$shape <- "circle"
+  V(merged_STN_i)[Topology == "START"]$shape <- "square"
+  V(merged_STN_i)[Topology == "END"]$shape <- "triangle"
+
+  # Set node size proportional to in-degree (number of incoming visits)
+  V(merged_STN_i)$size <- strength(merged_STN_i, mode = "in") + 1
+
+  # Set edge width proportional to weight
+  E(merged_STN_i)$width <- E(merged_STN_i)$weight
+
+  # Set edge colors based on node colors
+  # If both nodes have the same color, use that color for the edge;
+  # otherwise, use the color of the "from" node
+  edge_ends <- ends(merged_STN_i, es = E(merged_STN_i), names = FALSE)
+  edge_colors <- apply(edge_ends, 1, function(e) {
+    from_color <- V(merged_STN_i)$color[e[1]]
+    to_color <- V(merged_STN_i)$color[e[2]]
+    if (!is.na(from_color) && !is.na(to_color) && from_color == to_color) {
+      return(from_color)
+    } else {
+      return(from_color)
+    }
+  })
+  E(merged_STN_i)$color <- edge_colors
+
+  return(merged_STN_i)
+}
+
+#' Create a plot for merged STN-i data
+#' 
+#' This function processes the input merged STN-i file, decorates the STN object,
+#' and creates a plot.
+#' 
+#' @param merged_stn_i_data A list containing the merged STN-i data, typically returned by `merge_stns_i_data()`.
+#' @param show_shared Logical; whether to show shared nodes (default TRUE).
+#' @param show_regular Logical; whether to show regular nodes (default TRUE).
+#' @param show_elite Logical; whether to show elite nodes (default TRUE).
+#' @param show_start_regular Logical; whether to show start regular nodes (default TRUE).
+#' @param palette_colors A palette list returned from get_merged_stn_i_palette_colors().
+#'
+#' @return A decorated STN-i graph object ready for plotting.
+#'
+#' @examples
+#' \dontrun{
+#'  merged_stn_i_plot_create(merged_stn_i_data, show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors = my_palette_colors)
+#' }
+merged_stn_i_plot_create <- function(merged_stn_i_data, show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors) {
+
+  # Obtain the merged STN-i object, network names, and problem type
+  merged_STN_i <- merged_stn_i_data$merged_STN_i
+  network_names = merged_stn_i_data$network_names
+  problem_type <- merged_stn_i_data$problem_type
+
+  # Decorate the STN-i object
+  merged_STN_i <- merged_stn_i_decorate(merged_STN_i, network_names, problem_type, show_shared_regular, show_shared_mixed, show_regular, show_start_regular, palette_colors)
+
+  # Return everything needed for external plotting
+  return(merged_STN_i)
+}
+
+#' Save a plot of the merged STN-i graph
+#'
+#' This function saves a decorated merged STN-i graph to a PDF file,
+#' including legends for shared and network-specific nodes, using a given layout.
+#'
+#' @param output_file_path Output path for the PDF plot.
+#' @param merged_STN_i A decorated igraph object of the merged STN-i.
+#' @param network_names A character vector of network names, used for legend labels.
+#' @param layout_data A list with layout coordinates and title.
+#' @param palette_colors A palette list returned from get_merged_stn_i_palette_colors().
+#' @param nsizef Numeric factor for node sizes.
+#' @param ewidthf Numeric factor for edge widths.
+#' @param asize Arrow size for edges.
+#' @param ecurv Curvature of edges.
+#'
+#' @return None. Saves a PDF to the specified path.
+#' 
+#' @examples
+#' \dontrun{
+#' save_merged_stn_i_plot("output/merged_stn_i_plot.pdf", merged_STN_i, network_names, layout_data, palette_colors, nsizef = 1, ewidthf = 0.5, asize = 0.3, ecurv = 0.3)
+#' }
+save_merged_stn_i_plot <- function(output_file_path, merged_STN_i, network_names, layout_data, palette_colors, nsizef = 1, ewidthf = 0.5, asize = 0.3, ecurv = 0.3) {
+
+  # Ensure the file name ends in .pdf
+  if (!grepl("\\.pdf$", output_file_path)) {
+    output_file_path <- paste0(output_file_path, ".pdf")
+  }
+
+  # Triangle shape for END nodes
+  mytriangle <- function(coords, v = NULL, params) {
+    vertex.color <- params("vertex", "color")
+    if (length(vertex.color) != 1 && !is.null(v)) {
+      vertex.color <- vertex.color[v]
+    }
+    vertex.size <- 1 / 200 * params("vertex", "size")
+    if (length(vertex.size) != 1 && !is.null(v)) {
+      vertex.size <- vertex.size[v]
+    }
+    symbols(x = coords[, 1], y = coords[, 2], bg = vertex.color, col = vertex.color,
+            stars = cbind(vertex.size, vertex.size, vertex.size),
+            add = TRUE, inches = FALSE)
+  }
+  add_shape("triangle", clip = shapes("circle")$clip, plot = mytriangle)
+
+  # Legend setup
+  legend.txt <- c("Start", "Standard", "End", "Best")
+  legend.col <- c(palette_colors$shapes, palette_colors$shapes, palette_colors$shapes, palette_colors$best)
+  legend.shape <- c(15, 16, 17, 16)
+
+  # Shared node categories
+  legend.txt <- c(legend.txt, "Shared-Regular", "Shared-Elite", "Shared-Mixed")
+  legend.col <- c(legend.col, palette_colors$shared_regular, palette_colors$shared_elite, palette_colors$shared_mixed)
+  legend.shape <- c(legend.shape, 16, 16, 16)
+
+  # Network-specific categories
+  for (i in seq_along(network_names)) {
+    legend.txt <- c(legend.txt,
+                    paste0(network_names[i], "-Regular"),
+                    paste0(network_names[i], "-Elite"))
+    legend.col <- c(legend.col,
+                    palette_colors$algorithm_regular[i],
+                    palette_colors$algorithm_elite[i])
+    legend.shape <- c(legend.shape, 16, 16)
+  }
+
+  # Open PDF device
+  pdf(output_file_path)
+
+  # Compute node sizes
+  maxns <- max(V(merged_STN_i)$size)
+  if (maxns > 100) {
+    nsize <- nsizef * sqrt(V(merged_STN_i)$size) + 1
+  } else if (maxns > 10) {
+    nsize <- nsizef * 0.5 * V(merged_STN_i)$size + 1
+  } else {
+    nsize <- nsizef * V(merged_STN_i)$size
+  }
+
+  ewidth <- ewidthf * E(merged_STN_i)$width
+  title <- paste(layout_data$title, "Nodes:", vcount(merged_STN_i), "Edges:", ecount(merged_STN_i))
+
+  # Plot
+  plot(merged_STN_i, layout = layout_data$coords, vertex.label = "", vertex.size = nsize, main = title, edge.width = ewidth, edge.arrow.size = asize, edge.curved = ecurv)
+
+  legend("topleft", legend.txt, pch = legend.shape, col = legend.col, pt.bg = legend.col, cex = 0.7, pt.cex = 1.35, bty = "n")
+
+  dev.off()
+}
+
+
+# nolint end

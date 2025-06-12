@@ -1,3 +1,5 @@
+# nolint start
+
 #########################################################################
 # STN-i Plotting Script
 # Author: Pablo Estobar
@@ -10,7 +12,8 @@
 # Rscript plot_STN-i.R --input=<input_file> --output=<output_folder> 
 #                      [--output_file=<output_file_name>] 
 #                      [--layout_type=<value>] 
-#                      [--show_regular=<TRUE|FALSE>] 
+#                      [--show_regular=<TRUE|FALSE>]
+#                      [--show_start_regular=<TRUE|FALSE>]
 #                      [--size_factor=<value>] 
 #                      [--palette=<value>]
 #
@@ -20,13 +23,25 @@
 # --output_file   : (Optional) Name of the output PDF file. If not provided, defaults to the
 #                   input file name (without extension) + ".pdf".
 # --layout_type   : (Optional) Layout algorithm to position the nodes. Options:
-#                     - "fr"      : Fruchterman-Reingold (default)
-#                     - "kk"      : Kamada-Kawai
-#                     - "circle"  : Circular layout
-#                     - "grid"    : Grid layout
-#                     - "sphere"  : Spherical layout
+#                     - "fr"        : Fruchterman-Reingold (default)
+#                     - "kk"        : Kamada-Kawai
+#                     - "circle"    : Circular layout
+#                     - "grid"      : Grid layout
+#                     - "sphere"    : Spherical layout
+#                     - "random"    : Random layout
+#                     - "star"      : Star layout (centralized)
+#                     - "tree"      : Tree layout
+#                     - "reingold"  : Reingold-Tilford tree layout
+#                     - "mds"       : Multidimensional Scaling
+#                     - "drl"       : DrL (force-directed, scalable)
+#                     - "lgl"       : Large Graph Layout
+#                     - "graphopt"  : Force-directed using physics model
+#                     - "sugiyama"  : Layered layout for DAGs
+#                     - "dh"        : Davidson-Harel layout
 # --show_regular  : (Optional) Whether to include REGULAR nodes in the plot.
 #                   TRUE or FALSE (default: TRUE).
+# --show_start_regular : (Optional) Whether to include START REGULAR nodes in the plot.
+#                   TRUE or FALSE (default: FALSE).
 # --size_factor   : (Optional) Scaling factor for node sizes and edge widths (default: 1).
 # --palette       : (Optional) Integer value (1–5) specifying a color palette for nodes and edges.
 #                   Each palette alters the visual distinction of node types (default: 1).
@@ -91,8 +106,9 @@ if (!is.null(params$output_file)) {
 }
 layout_type <- ifelse(!is.null(params$layout_type), params$layout_type, "fr")
 show_regular <- ifelse(!is.null(params$show_regular), as.logical(params$show_regular), TRUE)
-size_factor <- ifelse(!is.null(params$size_factor), params$size_factor, 1)
-palette <- ifelse(!is.null(params$palette), params$palette, 1)
+show_start_regular <- ifelse(!is.null(params$show_start_regular), as.logical(params$show_start_regular), FALSE)
+size_factor <- ifelse(!is.null(params$size_factor), as.numeric(params$size_factor), 1)
+palette     <- ifelse(!is.null(params$palette), as.integer(params$palette), 1)
 
 # Check if the output file name has a valid extension
 if (!grepl("\\.pdf$", output_file_name)) {
@@ -100,8 +116,12 @@ if (!grepl("\\.pdf$", output_file_name)) {
 }
 
 # Check if layout is valid
-if (!layout_type %in% c("fr", "kk", "circle", "grid", "sphere")) {
-  stop("Invalid layout_type. Choose from: fr, kk, circle, grid, sphere.", call. = FALSE)
+if (!layout_type %in% c(
+  "fr", "kk", "circle", "grid", "sphere",
+  "random", "star", "tree", "reingold", "mds",
+  "drl", "lgl", "graphopt", "sugiyama", "dh"
+)) {
+  stop("Invalid layout_type. Choose from: fr, kk, circle, grid, sphere, random, star, tree, reingold, mds, drl, lgl, graphopt, sugiyama, dh.", call. = FALSE)
 }
 
 # Check if show_regular is a boolean
@@ -127,15 +147,17 @@ if (!palette %in% c(1, 2, 3, 4, 5)) {
 palette_colors <- get_stn_i_palette_colors(palette)
 
 # Load the STN-i object decorated
-STN_i <- stn_i_plot_create(input_file, show_regular, palette_colors)
+STN_i <- stn_i_plot_create(input_file, show_regular, show_start_regular, palette_colors)
 
 # ---------- Save result ----------
 
 # Obtain layout data
-layout_data <- get_stn_i_layout_data(STN_i, layout_type)
+layout_data <- get_layout_data(STN_i, layout_type)
 
 # Construct the full path for the output file
 output_file_path <- file.path(output_folder, output_file_name)
 
 # Save the STN-i plot as a PDF
 save_stn_i_plot(output_file_path, STN_i, layout_data, palette_colors, nsizef = size_factor, ewidthf = size_factor, asize = 0.3, ecurv = 0.3)
+
+# nolint end
