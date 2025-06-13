@@ -16,6 +16,7 @@
 #                      [--show_start_regular=<TRUE|FALSE>]
 #                      [--size_factor=<value>] 
 #                      [--palette=<value>]
+#                      [--zoom_quantile=<value>]
 #
 # Arguments:
 # --input         : (Required) Path to the input file (.RData) containing the STN-i object.
@@ -45,6 +46,7 @@
 # --size_factor   : (Optional) Scaling factor for node sizes and edge widths (default: 1).
 # --palette       : (Optional) Integer value (1–5) specifying a color palette for nodes and edges.
 #                   Each palette alters the visual distinction of node types (default: 1).
+# --zoom_quantile : (Optional) Numeric value between 0 and 1 to define a zoom level for the plot.
 #
 # Requirements:
 # - R with the `igraph` package installed.
@@ -109,6 +111,7 @@ show_regular <- ifelse(!is.null(params$show_regular), as.logical(params$show_reg
 show_start_regular <- ifelse(!is.null(params$show_start_regular), as.logical(params$show_start_regular), FALSE)
 size_factor <- ifelse(!is.null(params$size_factor), as.numeric(params$size_factor), 1)
 palette     <- ifelse(!is.null(params$palette), as.integer(params$palette), 1)
+zoom_quantile <- ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile), NA)
 
 # Check if the output file name has a valid extension
 if (!grepl("\\.pdf$", output_file_name)) {
@@ -139,7 +142,10 @@ if (!palette %in% c(1, 2, 3, 4, 5)) {
   stop("Invalid palette. Choose from: 1, 2, 3, 4, 5.", call. = FALSE)
 }
 
-# TODO: Agregar parámetro asociado al zoom (o hacer plots de diferentes tamaños)
+# Check if zoom_quantile is numeric and within the valid range
+if (!is.na(zoom_quantile) && (zoom_quantile <= 0 || zoom_quantile >= 1)) {
+  stop("zoom_quantile must be a numeric value between 0 and 1 (exclusive).", call. = FALSE)
+}
 
 # ---------- Process the input file ----------
 
@@ -150,6 +156,11 @@ palette_colors <- get_stn_i_palette_colors(palette)
 STN_i <- stn_i_plot_create(input_file, show_regular, show_start_regular, palette_colors)
 
 # ---------- Save result ----------
+
+# If zooming is enabled, extract subgraph
+if (!is.na(zoom_quantile)) {
+  STN_i <- get_zoomed_graph(STN_i, zoom_quantile)
+}
 
 # Obtain layout data
 layout_data <- get_layout_data(STN_i, layout_type)

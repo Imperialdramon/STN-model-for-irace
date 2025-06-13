@@ -697,6 +697,8 @@ save_stn_i_plot <- function(output_file_path, STN_i, layout_data, palette_colors
 
   # Close PDF device
   dev.off()
+
+  message("STN-i plot saved successfully to: ", output_file_path)
 }
 
 #' Load and merge multiple STN-i data files from a specified folder.
@@ -1254,7 +1256,7 @@ save_merged_stn_i_plot <- function(output_file_path, merged_STN_i, network_names
   }
 
   ewidth <- ewidthf * E(merged_STN_i)$width
-  title <- paste(layout_data$title, "Nodes:", vcount(merged_STN_i), "Edges:", ecount(merged_STN_i))
+  title <- paste(layout_data$title, "\nNodes:", vcount(merged_STN_i), "Edges:", ecount(merged_STN_i))
 
   # Plot
   plot(merged_STN_i, layout = layout_data$coords, vertex.label = "", vertex.size = nsize, main = title, edge.width = ewidth, edge.arrow.size = asize, edge.curved = ecurv)
@@ -1262,6 +1264,32 @@ save_merged_stn_i_plot <- function(output_file_path, merged_STN_i, network_names
   legend("topleft", legend.txt, pch = legend.shape, col = legend.col, pt.bg = legend.col, cex = 0.7, pt.cex = 1.35, bty = "n")
 
   dev.off()
+
+  message("Merged STN-i plot saved successfully to: ", output_file_path)
+}
+
+#' Get zoomed subgraph of STN-i based on fitness quantile
+#' 
+#' This function extracts a subgraph from the given STN-i graph where the vertex fitness values are below a specified quantile threshold.
+#' 
+#' @param graph An igraph object representing the STN-i graph or merged STN-i graph.
+#' 
+#' @param quantile_value A numeric value between 0 and 1 indicating the quantile threshold for filtering vertices based on their fitness values (default is 0.25).
+#' 
+#' @return An igraph object representing the zoomed subgraph containing only vertices with fitness values below the specified quantile threshold.
+#' 
+#' @examples
+#' \dontrun{
+#' zoomed_graph <- get_zoomed_graph(my_stn_i_graph, quantile_value = 0.25)
+#' }
+get_zoomed_graph <- function(graph, quantile_value = 0.25) {
+  if (!"Fitness" %in% vertex_attr_names(graph)) {
+    stop("Graph must have a 'Fitness' vertex attribute for zooming.")
+  }
+  threshold <- quantile(V(graph)$Fitness, probs = quantile_value, na.rm = TRUE)
+  subgraph <- induced_subgraph(graph, V(graph)$Fitness <= threshold)
+  subgraph <- delete_vertices(subgraph, degree(subgraph) == 0)
+  return(subgraph)
 }
 
 
