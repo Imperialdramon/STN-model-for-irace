@@ -29,72 +29,6 @@ parse_arguments <- function(args) {
   return(parsed)
 }
 
-#' Add an entry to the location trend
-#' 
-#' This function adds an entry to the location trend list, ensuring that the elite and type values are valid and accumulating origin values.
-#' 
-#' @param loc_trend A list representing the location trend.
-#' @param location A string representing the location key.
-#' @param elite_val A string representing the elite value (e.g., "ELITE", "REGULAR").
-#' @param type_val A string representing the type value (e.g., "START", "STANDARD", "END").
-#' @param origin_elite_val A string representing the origin elite value.
-#' @param origin_type_val A string representing the origin type value.
-#' 
-#' @return A modified list with the new entry added or updated.
-#' 
-#' @examples
-#' \dontrun{
-#' loc_trend <- list()
-#' loc_trend <- add_loc_entry(loc_trend, "Location1", "ELITE", "START", "REGULAR", "STANDARD")
-#' }
-add_loc_entry <- function(loc_trend, location, elite_val, type_val, origin_elite_val, origin_type_val) {
-  location <- as.character(location)  # Asegura que la clave sea string
-
-  # Validación opcional (puedes omitirla si estás seguro de que siempre son válidos)
-  valid_elites <- c("ELITE", "REGULAR")
-  valid_types  <- c("START", "STANDARD", "END")
-  
-  if (!(elite_val %in% valid_elites)) {
-    warning(paste("Invalid elite value:", elite_val, "in node", location))
-    elite_val <- "REGULAR"
-  }
-  
-  if (!(type_val %in% valid_types)) {
-    warning(paste("Invalid type value:", type_val, "in node", location))
-    type_val <- "STANDARD"
-  }
-
-  if (!(origin_elite_val %in% valid_elites)) {
-    warning(paste("Invalid origin elite value:", origin_elite_val, "in node", location))
-    origin_elite_val <- "REGULAR"
-  }
-
-  if (!(origin_type_val %in% valid_types)) {
-    warning(paste("Invalid origin type value:", origin_type_val, "in node", location))
-    origin_type_val <- "STANDARD"
-  }
-
-  # If the location is not already in the list, initialize it
-  if (!(location %in% names(loc_trend))) {
-    loc_trend[[location]] <- list(
-      Elite = elite_val,
-      Type = type_val,
-      Origin_Elite = c(origin_elite_val),
-      Origin_Type  = c(origin_type_val)
-    )
-  } else {
-    # Ensure that Elite and Type are defined
-    if (is.null(loc_trend[[location]]$Elite)) loc_trend[[location]]$Elite <- elite_val
-    if (is.null(loc_trend[[location]]$Type))  loc_trend[[location]]$Type  <- type_val
-
-    # Accumulate the origin values
-    loc_trend[[location]]$Origin_Elite <- c(loc_trend[[location]]$Origin_Elite, origin_elite_val)
-    loc_trend[[location]]$Origin_Type  <- c(loc_trend[[location]]$Origin_Type, origin_type_val)
-  }
-
-  return(loc_trend)
-}
-
 #' Create a STN-i from a trace file
 #' 
 #' This function reads a trace file and creates a STN-i (Solution Trace Network) graph.
@@ -132,10 +66,28 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
   # Initialize lists to store nodes and edges for each run
   lnodes <- vector("list", number_of_runs)
   ledges <- vector("list", number_of_runs)
-  loc_trend <- list()
 
-  for (i in (1:number_of_runs)) {  # combine all runs in a single network
-    trace <- trace_all[which(trace_all$Run==i),c(-1)] # take by run and remove first column run number
+  # Initialize a summary data frame for elite and type classifications
+  elite_values <- c("ELITE", "REGULAR")
+  type_values <- c("START", "STANDARD", "END")
+  classification_summary <- expand.grid(
+    Elite = elite_values,
+    Type = type_values,
+    Origin_Elite = elite_values,
+    Origin_Type = type_values,
+    stringsAsFactors = FALSE
+  )
+
+  # Add a Count column to the classification summary (initially set to 0)
+  classification_summary$Count <- 0
+
+  # Initialize a list to store survival rates for each configuration for all runs
+  configurations_survival_rates <- list()
+
+  # Combine all runs in a single network
+  for (i in (1:number_of_runs)) {
+    # Take by run and remove first column run number
+    trace <- trace_all[which(trace_all$Run==i),c(-1)]
     colnames(trace) <- c("path",
                         "fit1", "node1", "elite1", "origin_elite1", "type1", "origin_type1", "iteration1",
                         "fit2", "node2", "elite2", "origin_elite2", "type2", "origin_type2", "iteration2")
@@ -146,14 +98,6 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
     for (j in 1:nrow(trace)) {
       # Add only the right node (node2) to the location trend
       # because it's to avoid over-representing the left node (node1) in the network
-      loc_trend <- add_loc_entry(
-        loc_trend,
-        trace$node2[j],
-        trace$elite2[j],
-        trace$type2[j],
-        trace$origin_elite2[j],
-        trace$origin_type2[j]
-      )
       lnodes_run[[length(lnodes_run) + 1]] <- data.frame(
         Node = trace$node2[j],
         Fitness = trace$fit2[j],
@@ -161,40 +105,37 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
         Type = trace$type2[j],
         stringsAsFactors = FALSE
       )
+
+      # Search for the classification_summary
+      idx <- with(classification_summary, which(Elite == trace$elite2[j] & Type == trace$type2[j] & Origin_Elite == trace$origin_elite2[j] & Origin_Type == trace$origin_type2[j]))
+      if (length(idx) == 1) {
+        classification_summary$Count[idx] <- classification_summary$Count[idx] + 1
+      }
     }
 
     # Remove self loops with path information
     lnodes[[i]] <- do.call(rbind, lnodes_run)
     ledges[[i]] <- trace[trace$path == TRUE, c("node1", "node2")]
+
+
+    # Initalize a list to store survival rates for each configuration
+    max_iter <- max(trace$iteration2)
+    run_survival_rates <- numeric(max_iter)
+
+    for (iter in 1:max_iter) {
+      iteration_rows <- trace[trace$iteration2 == iter, ]
+      total_iteration_nodes <- nrow(iteration_rows)
+      elite_iteration_nodes <- sum(iteration_rows$origin_elite2 == "ELITE")
+      if (total_iteration_nodes == 0) {
+        run_survival_rates[iter] <- NA
+      } else {
+        run_survival_rates[iter] <- elite_iteration_nodes / total_iteration_nodes
+      }
+    }
+
+    # Store the survival rates for the current run
+    configurations_survival_rates[[i]] <- run_survival_rates
   }
-
-  # Create a data frame for the location trends with the elite and type information
-  loc_flat <- do.call(rbind, lapply(names(loc_trend), function(n) {
-    data.frame(
-    Node = n,
-    Elite = loc_trend[[n]]$Elite,
-    Type = loc_trend[[n]]$Type,
-    Origin_Elite = loc_trend[[n]]$Origin_Elite,
-    Origin_Type  = loc_trend[[n]]$Origin_Type,
-    stringsAsFactors = FALSE
-    )
-  }))
-
-  # Calculate global origin proportions for elite and type
-  origin_elite_global <- prop.table(table(loc_flat$Origin_Elite))
-  origin_type_global <- prop.table(table(loc_flat$Origin_Type))
-
-  # Create summaries for elite and type by location
-  elite_summary <- as.data.frame(table(Elite_Real = loc_flat$Elite, Origen = loc_flat$Origin_Elite))
-  elite_summary <- elite_summary %>%
-    group_by(Elite_Real) %>%
-    mutate(Proporcion = round(Freq / sum(Freq), 4))
-
-  # Create a summary for type by location
-  type_summary <- as.data.frame(table(Type_Real = loc_flat$Type, Origen = loc_flat$Origin_Type))
-  type_summary <- type_summary %>%
-    group_by(Type_Real) %>%
-    mutate(Proporcion = round(Freq / sum(Freq), 4))
 
   # Combine the list of nodes into one dataframe and
   # group by (Node, Fitness) to identify unique nodes and count them
@@ -257,10 +198,8 @@ stn_i_create <- function(input_file, problem_type = "min", best_known_solution =
     problem_type = problem_type,
     best_known_solution = best_known_solution,
     number_of_runs = number_of_runs,
-    origin_elite_global = origin_elite_global,
-    origin_type_global = origin_type_global,
-    elite_summary = elite_summary,
-    type_summary = type_summary
+    classification_summary = classification_summary,
+    configurations_survival_rates = configurations_survival_rates
   ))
 }
 
@@ -293,16 +232,15 @@ save_stn_i_data <- function(stn_i_result, output_file_path) {
   cat("Number of Regular Nodes:", sum(V(stn_i_result$STN_i)$Quality == "REGULAR"), "\n")
   cat("Number of Best Nodes:", sum(V(stn_i_result$STN_i)$Quality == "BEST"), "\n")
 
-  cat("\nSummary of the STN-i graph:\n")
+  # Print the classification summary
+  cat("\nClassification Summary:\n")
+  print(stn_i_result$classification_summary)
 
-  cat("Global summary elite origin:\n")
-  print(round(stn_i_result$origin_elite_global, 4))
-  cat("Global summary type origin:\n")
-  print(round(stn_i_result$origin_type_global, 4))
-  cat("\nSummary by location elite status:\n")
-  print(stn_i_result$elite_summary)
-  cat("\nSummary by location type:\n")
-  print(stn_i_result$type_summary)
+  # Print the survival rates for each configuration
+  cat("\nConfigurations Survival Rates:\n")
+  for (i in seq_along(stn_i_result$configurations_survival_rates)) {
+    cat(paste("Run", i, ":", paste(stn_i_result$configurations_survival_rates[[i]], collapse = ", "), "\n"))
+  }
 
   # Print a message indicating where the file was saved
   message(paste("STN-i data saved to:", output_file_path))
@@ -337,10 +275,8 @@ get_stn_i_data <- function(input_file) {
     "problem_type",
     "best_known_solution",
     "number_of_runs",
-    "origin_elite_global",
-    "origin_type_global",
-    "elite_summary",
-    "type_summary"
+    "classification_summary",
+    "configurations_survival_rates"
   )
 
   if (!is.list(stn_i_result) || !all(expected_fields %in% names(stn_i_result))) {
@@ -573,13 +509,13 @@ stn_i_decorate <- function(STN_i, problem_type = "min", show_regular = TRUE, sho
 
   # Assign node shapes based on Topology type
   V(STN_i)[V(STN_i)$Topology == "STANDARD"]$shape <- "circle"
-  V(STN_i)[V(STN_i)$Topology == "START"]   $shape <- "square"
-  V(STN_i)[V(STN_i)$Topology == "END"]     $shape <- "triangle"
+  V(STN_i)[V(STN_i)$Topology == "START"]$shape <- "square"
+  V(STN_i)[V(STN_i)$Topology == "END"]$shape <- "triangle"
 
   # Assign node colors based on Quality
   V(STN_i)[V(STN_i)$Quality == "REGULAR"]$color <- palette_colors$node$regular
-  V(STN_i)[V(STN_i)$Quality == "ELITE"]  $color <- palette_colors$node$elite
-  V(STN_i)[V(STN_i)$Quality == "BEST"]   $color <- palette_colors$node$best
+  V(STN_i)[V(STN_i)$Quality == "ELITE"]$color <- palette_colors$node$elite
+  V(STN_i)[V(STN_i)$Quality == "BEST"]$color <- palette_colors$node$best
 
   # Set node size proportional to in-degree (number of incoming visits)
   V(STN_i)$size <- strength(STN_i, mode = "in") + 1
@@ -1292,5 +1228,346 @@ get_zoomed_graph <- function(graph, quantile_value = 0.25) {
   return(subgraph)
 }
 
+#' Get metrics from a single STN-i result
+#'
+#' This function extracts various metrics from a single STN-i result object, including node and edge counts, fitness comparisons, and configuration rates.
+#'
+#' @param stn_i_result A list containing the STN-i result, including the graph object and metadata.
+#'
+#' @return A list of metrics extracted from the STN-i result, including node and edge counts, fitness comparisons, and configuration rates.
+#'
+#' @examples
+#'
+#' \dontrun{
+#' stn_i_result <- get_stn_i_data("path/to/stn_i_file.RData")
+#' metrics <- get_stn_i_metrics(stn_i_result)
+#' }
+get_stn_i_metrics <- function(stn_i_result) {
+
+  # Initialize an empty list to store metrics
+  metrics <- list()
+
+  # Obtain the STN-i and metadata
+  STN_i <- stn_i_result$STN_i
+  network_name <- stn_i_result$network_name
+  problem_type <- stn_i_result$problem_type
+  best_known_solution <- stn_i_result$best_known_solution
+  number_of_runs <- stn_i_result$number_of_runs
+  survival_rates <- stn_i_result$survival_rates
+  classification_summary <- stn_i_result$classification_summary
+  total_configurations <- sum(classification_summary$Count)
+  configurations_survival_rates <- stn_i_result$configurations_survival_rates
+
+  # Retrieve edge list and corresponding fitness values
+  edge_list <- as_edgelist(STN_i)
+  node_fitness <- V(STN_i)$Fitness
+  node_names <- V(STN_i)$name
+
+  # Extract fitness of origin and destination nodes for each edge
+  fitness_from <- node_fitness[match(edge_list[, 1], node_names)]
+  fitness_to   <- node_fitness[match(edge_list[, 2], node_names)]
+
+  # Assign edge types based on fitness comparison
+  if (problem_type == "min") {
+    E(STN_i)[fitness_to < fitness_from]$Type <- "IMPROVING"
+    E(STN_i)[fitness_to > fitness_from]$Type <- "WORSENING"
+  } else {
+    E(STN_i)[fitness_to > fitness_from]$Type <- "IMPROVING"
+    E(STN_i)[fitness_to < fitness_from]$Type <- "WORSENING"
+  }
+  E(STN_i)[fitness_to == fitness_from]$Type <- "EQUAL"
+
+  # Assign STN-i direct data
+  metrics$network_name <- network_name
+  metrics$problem_type <- problem_type
+  metrics$best_known_solution <- best_known_solution
+  metrics$number_of_runs <- number_of_runs
+
+  # Compute nodes quantity metrics
+  metrics$nodes <- vcount(STN_i)
+  metrics$regular_nodes <- sum(V(STN_i)$Quality == "REGULAR")
+  metrics$elite_nodes <- sum(V(STN_i)$Quality == "ELITE")
+  metrics$start_nodes <- sum(V(STN_i)$Topology == "START")
+  metrics$standard_nodes <- sum(V(STN_i)$Topology == "STANDARD")
+  metrics$end_nodes <- sum(V(STN_i)$Topology == "END")
+
+  # Compute edges quantity metrics
+  metrics$edges <- ecount(STN_i)
+  metrics$worsening_edges <- sum(E(STN_i)$Type == "WORSENING")
+  metrics$equal_edges <- sum(E(STN_i)$Type == "EQUAL")
+  metrics$improving_edges <- sum(E(STN_i)$Type == "IMPROVING")
+  metrics$global_edges_tendency <- metrics$improving_edges / (metrics$improving_edges + metrics$worsening_edges)
+
+  # Compute initialization process metrics
+  metrics$regular_start_nodes <- sum(V(STN_i)$Topology == "START" & V(STN_i)$Quality == "REGULAR")
+  metrics$elite_start_nodes <- sum(V(STN_i)$Topology == "START" & V(STN_i)$Quality == "ELITE")
+  if (total_configurations > 0) {
+    metrics$regular_start_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "REGULAR" & classification_summary$Origin_Type == "START"]) / total_configurations
+    metrics$elite_start_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "ELITE" & classification_summary$Origin_Type == "START"]) / total_configurations
+  } else {
+    metrics$regular_start_configuration_rate <- NA
+    metrics$elite_start_configuration_rate <- NA
+  }
+
+  # Compute global configuration distribution metrics
+  if (total_configurations > 0) {
+    metrics$regular_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "REGULAR"]) / total_configurations
+    metrics$elite_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "ELITE"]) / total_configurations
+  } else {
+    metrics$regular_configuration_rate <- NA
+    metrics$elite_configuration_rate <- NA
+  }
+
+  # Compute structure metrics
+  metrics$best_nodes <- sum(V(STN_i)$Quality == "BEST")
+  metrics$average_degree <- mean(degree(STN_i))
+  metrics$average_in_degree <- mean(degree(STN_i, mode = "in"))
+  metrics$average_out_degree <- mean(degree(STN_i, mode = "out"))
+  regular_nodes <- V(STN_i)[V(STN_i)$Quality == "REGULAR"]
+  if (length(regular_nodes) > 0) {
+    metrics$average_regular_in_degree  <- mean(degree(STN_i, v = regular_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_regular_out_degree <- mean(degree(STN_i, v = regular_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_regular_in_degree  <- NA
+    metrics$average_regular_out_degree <- NA
+  }
+  elite_nodes <- V(STN_i)[V(STN_i)$Quality == "ELITE"]
+  if (length(elite_nodes) > 0) {
+    metrics$average_elite_in_degree  <- mean(degree(STN_i, v = elite_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_elite_out_degree <- mean(degree(STN_i, v = elite_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_elite_in_degree  <- NA
+    metrics$average_elite_out_degree <- NA
+  }
+  start_ids <- which(V(STN_i)$Topology == "START")
+  best_ids <- which(V(STN_i)$Quality == "BEST")
+  if (length(best_ids) > 0 & length(start_ids) > 0) {
+    metrics$best_strength <- sum(strength(STN_i, vids = best_ids,  mode="in"))
+    dist_matrix <- distances(STN_i, v = start_ids, to = best_ids, mode = "out", weights = NULL)
+    finite_distances <- dist_matrix[is.finite(dist_matrix)]
+    metrics$average_path_length <- mean(finite_distances)
+    metrics$paths <- length(finite_distances)
+  } else {
+    metrics$best_strength <- NA
+    metrics$average_path_length <- NA
+    metrics$paths <- 0
+  }
+  metrics$components <- components(STN_i)$no
+
+  # Compute supervivence metrics
+  run_averages <- sapply(configurations_survival_rates, function(run) mean(run, na.rm = TRUE))
+  metrics$average_configurations_survival_rates <- mean(run_averages, na.rm = TRUE)
+
+  return(metrics)
+}
+
+#' Save STN-i metrics to a CSV file
+#'
+#' This function saves a list of STN-i metrics to a CSV file.
+#'
+#' @param stn_i_metrics A list of metrics extracted from STN-i results, typically returned by `get_stn_i_metrics()`.
+#' @param output_file_path A string specifying the path to the output CSV file where the metrics will be saved.
+#'
+#' @return NULL
+#'
+#' @examples
+#' \dontrun{
+#' save_stn_i_metrics(stn_i_metrics, "path/to/stn_i_metrics.csv")
+#' }
+save_stn_i_metrics <- function(stn_i_metrics, output_file_path) {
+  # Ensure the file name ends in .csv
+  if (!grepl("\\.csv$", output_file_path)) {
+    output_file_path <- paste0(output_file_path, ".csv")
+  }
+
+  # Convert the named list to a data frame: names as columns, values as first row
+  metrics_df <- as.data.frame(stn_i_metrics, stringsAsFactors = FALSE)
+  # Ensure it's a single row
+  if (is.list(metrics_df) && nrow(metrics_df) != 1) {
+    metrics_df <- as.data.frame(t(unlist(stn_i_metrics)), stringsAsFactors = FALSE)
+  }
+
+  # Save the data frame to a CSV file with semicolon separator and header
+  write.table(
+    metrics_df,
+    file = output_file_path,
+    sep = ";",
+    row.names = FALSE,
+    col.names = TRUE,
+    quote = FALSE,
+    dec = "."
+  )
+
+  message(paste("STN-i metrics saved to:", output_file_path))
+}
+
+#' Get metrics from a merged STN-i object
+#'
+#' This function computes various metrics from a merged STN-i graph object, including node and edge counts, fitness comparisons, and configuration rates.
+#'
+#' @param merged_stn_i_data A list containing the merged STN-i data, typically returned by `merge_stns_i_data()`.
+#'
+#' @return A list of metrics extracted from the merged STN-i object, including node and edge counts, fitness comparisons, and configuration rates.
+#'
+#' @examples
+#' \dontrun{
+#' merged_stn_i_data <- get_merged_stn_i_data("path/to/merged_stn_i_file.RData")
+#' metrics <- get_merged_stn_i_metrics(merged_stn_i_data)
+#' }
+get_merged_stn_i_metrics <- function(merged_stn_i_data) {
+
+  # Initialize an empty list to store metrics
+  metrics <- list()
+
+  # Obtain the merged STN-i object and metadata
+  merged_STN_i <- merged_stn_i_data$merged_STN_i
+  num_networks <- merged_stn_i_data$num_networks
+  network_names <- merged_stn_i_data$network_names
+  problem_type <- merged_stn_i_data$problem_type
+
+  # Identify and assign BEST node(s)
+  fitness_vals <- V(merged_STN_i)$Fitness
+  best_known_solution <- if (problem_type == "min") {
+    best_known_solution <- min(fitness_vals)
+  } else {
+    best_known_solution <- max(fitness_vals)
+  }
+  best_ids <- if (problem_type == "min") {
+    which(fitness_vals <= best_known_solution)
+  } else {
+    which(fitness_vals >= best_known_solution)
+  }
+  V(merged_STN_i)[best_ids]$Category <- "BEST"
+
+  # General metrics
+  metrics$network_names <- paste(network_names, collapse = ", ")
+  metrics$problem_type <- problem_type
+  metrics$best_known_solution <- best_known_solution
+  metrics$number_of_networks <- num_networks
+
+  # Compute normal metrics
+  metrics$nodes <- vcount(merged_STN_i)
+  metrics$start_nodes <- sum(V(merged_STN_i)$Topology == "START")
+  metrics$standard_nodes <- sum(V(merged_STN_i)$Topology == "STANDARD")
+  metrics$end_nodes <- sum(V(merged_STN_i)$Topology == "END")
+  metrics$edges <- ecount(merged_STN_i)
+  metrics$best_nodes <- sum(V(merged_STN_i)$Category == "BEST")
+  metrics$average_degree <- mean(degree(merged_STN_i))
+  metrics$average_in_degree <- mean(degree(merged_STN_i, mode = "in"))
+  metrics$average_out_degree <- mean(degree(merged_STN_i, mode = "out"))
+  start_ids <- which(V(merged_STN_i)$Topology == "START")
+  best_ids <- which(V(merged_STN_i)$Category == "BEST")
+  if (length(best_ids) > 0 & length(start_ids) > 0) {
+    metrics$best_strength <- sum(strength(merged_STN_i, vids = best_ids,  mode="in"))
+    dist_matrix <- distances(merged_STN_i, v = start_ids, to = best_ids, mode = "out", weights = NULL)
+    finite_distances <- dist_matrix[is.finite(dist_matrix)]
+    metrics$average_path_length <- mean(finite_distances)
+    metrics$paths <- length(finite_distances)
+  } else {
+    metrics$best_strength <- NA
+    metrics$average_path_length <- NA
+    metrics$paths <- 0
+  }
+  metrics$components <- components(merged_STN_i)$no
+
+  # Compute node categories (only merged metrics)
+  metrics$shared_nodes <- sum(V(merged_STN_i)$Shared == TRUE)
+  metrics$shared_regular_nodes <- sum(V(merged_STN_i)$Category == "shared-regular")
+  metrics$shared_elite_nodes <- sum(V(merged_STN_i)$Category == "shared-elite")
+  metrics$shared_mixed_nodes <- sum(V(merged_STN_i)$Category == "shared-mixed")
+  metrics$network_regular_nodes <- sum(V(merged_STN_i)$Category == "network-regular")
+  metrics$network_elite_nodes <- sum(V(merged_STN_i)$Category == "network-elite")
+
+  # Compute shared percentage metrics (only merged metrics)
+  if (metrics$nodes > 0) {
+    metrics$shared_regular_rate <- metrics$shared_regular_nodes / metrics$nodes
+    metrics$shared_elite_rate <- metrics$shared_elite_nodes / metrics$nodes
+    metrics$shared_mixed_rate <- metrics$shared_mixed_nodes / metrics$nodes
+    metrics$network_regular_rate <- metrics$network_regular_nodes / metrics$nodes
+    metrics$network_elite_rate <- metrics$network_elite_nodes / metrics$nodes
+  } else {
+    metrics$shared_regular_rate <- NA
+    metrics$shared_elite_rate <- NA
+    metrics$shared_mixed_rate <- NA
+    metrics$network_regular_rate <- NA
+    metrics$network_elite_rate <- NA
+  }
+
+  # Compute degrees for shared nodes (only merged metrics)
+  shared_regular_nodes <- V(merged_STN_i)[V(merged_STN_i)$Category == "shared-regular"]
+  if (length(shared_regular_nodes) > 0) {
+    metrics$average_shared_regular_in_degree <- mean(degree(merged_STN_i, v = shared_regular_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_shared_regular_out_degree <- mean(degree(merged_STN_i, v = shared_regular_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_shared_regular_in_degree <- NA
+    metrics$average_shared_regular_out_degree <- NA
+  }
+  shared_elite_nodes <- V(merged_STN_i)[V(merged_STN_i)$Category == "shared-elite"]
+  if (length(shared_elite_nodes) > 0) {
+    metrics$average_shared_elite_in_degree <- mean(degree(merged_STN_i, v = shared_elite_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_shared_elite_out_degree <- mean(degree(merged_STN_i, v = shared_elite_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_shared_elite_in_degree <- NA
+    metrics$average_shared_elite_out_degree <- NA
+  }
+  shared_mixed_nodes <- V(merged_STN_i)[V(merged_STN_i)$Category == "shared-mixed"]
+  if (length(shared_mixed_nodes) > 0) {
+    metrics$average_shared_mixed_in_degree <- mean(degree(merged_STN_i, v = shared_mixed_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_shared_mixed_out_degree <- mean(degree(merged_STN_i, v = shared_mixed_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_shared_mixed_in_degree <- NA
+    metrics$average_shared_mixed_out_degree <- NA
+  }
+  shared_nodes <- V(merged_STN_i)[V(merged_STN_i)$Shared == TRUE]
+  if (length(shared_nodes) > 0) {
+    metrics$average_shared_in_degree <- mean(degree(merged_STN_i, v = shared_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_shared_out_degree <- mean(degree(merged_STN_i, v = shared_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_shared_in_degree <- NA
+    metrics$average_shared_out_degree <- NA
+  }
+
+  return(metrics)
+}
+
+#' Save merged STN-i metrics to a CSV file
+#'
+#' This function saves a list of merged STN-i metrics to a CSV file.
+#'
+#' @param merged_stn_i_metrics A list of metrics extracted from merged STN-i results, typically returned by `get_merged_stn_i_metrics()`.
+#' @param output_file_path A string specifying the path to the output CSV file where the metrics will be saved.
+#'
+#' @return NULL
+#'
+#' @examples
+#' \dontrun{
+#' save_merged_stn_i_metrics(merged_stn_i_metrics, "output/merged_stn_i_metrics.csv")
+#' }
+save_merged_stn_i_metrics <- function(merged_stn_i_metrics, output_file_path) {
+  # Ensure the file name ends in .csv
+  if (!grepl("\\.csv$", output_file_path)) {
+    output_file_path <- paste0(output_file_path, ".csv")
+  }
+
+  # Convert the named list to a data frame: names as columns, values as first row
+  metrics_df <- as.data.frame(merged_stn_i_metrics, stringsAsFactors = FALSE)
+  # Ensure it's a single row
+  if (is.list(metrics_df) && nrow(metrics_df) != 1) {
+    metrics_df <- as.data.frame(t(unlist(merged_stn_i_metrics)), stringsAsFactors = FALSE)
+  }
+
+  # Save the data frame to a CSV file with semicolon separator and header
+  write.table(
+    metrics_df,
+    file = output_file_path,
+    sep = ";",
+    row.names = FALSE,
+    col.names = TRUE,
+    quote = FALSE,
+    dec = "."
+  )
+
+  message(paste("Merged STN-i metrics saved to:", output_file_path))
+}
 
 # nolint end

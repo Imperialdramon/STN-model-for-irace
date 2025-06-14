@@ -1,103 +1,114 @@
 # nolint start
 
-# Agregar métricas nuevas y cambiar cosas como el nombre 
-
 #########################################################################
-# Network Analysis of Search Trajectory Networks (STN)
-# Authors: Gabriela Ochoa, Katherine Malan, Christian Blum
-# Date: May 2021
-# Computing metrics of STN networks given on a folder 
-# Input:  Folder name with files containing STN graph object (RData file)s
-# Output: CSV file with metrics saved in current folder
+# STN-i Metrics Calculation Script
+# Author: Pablo Estobar
+#
+# Description:
+# This script processes a Search Trajectory Network (STN-i) object
+# and computes various metrics such as the number of nodes, edges,
+# best nodes, end nodes, connected components, strength of best nodes,
+# average path length, and number of paths to best optima.
+#
+# Usage:
+# Rscript generate_STN-i_data.R --input=<input_file> --output=<output_folder> /
+#                                [--output_file=<output_file_name>] /
+# Arguments:
+# --input                : (Required) Path to the input file (.RData) containing STN-i data.
+#
+# --output               : (Required) Path to the output folder where the resulting metrics for STN-i object will be saved.
+#
+# --output_file          : (Optional)  Name of the output file (default: input file name without extension + "_metrics.csv").
+#
+# Requirements:
+# - R with the following packages installed:
+#     - igraph
+#
+# Notes:
+# - The input file must exist and be formatted as a .RData file containing STN-i data.
+# - The output will be saved as a CSV file containing the STN-i metrics.
+# - Designed for execution from command line using named arguments.
 #########################################################################
 
-library(igraph)  # assume it is already installed for producing STNs
-
-# ---------- Processing inputs from command line ----------
-args = commandArgs(trailingOnly=TRUE)   # Take command line arguments
-
-if (length(args) < 1) { #  Test if there are two arguments if not, return an error
-  stop("One rgument is required: the input folder with STN objects.", call.=FALSE)
+# ---------- Validate required packages ----------
+if (!requireNamespace("igraph", quietly = TRUE)) {
+  stop("Error: The igraph package is not installed. Please install it with 'install.packages(\"igraph\")'", call. = FALSE)
 }
 
-infolder <- args[1]
-name <- args[2]
+# ---------- Load the required packages ----------
+library(igraph)
 
-if (!dir.exists(infolder) ){
-  stop("Input folder does not exist", call.=FALSE)
-}
+# ---------- Load utility functions ----------
+source("utils.R")
 
-#--------------------------------------------------------------------------
-# Create dataframe with metrics
-# instance: Name of the file 
-# nodes:   Total number of nodes
-# edges:   Total number of edges
-# nbest:   Number of best nodes (nodes with equal or lower than given best evaluation), zero if none exist
-# nend:    Number of nodes at the end of trajectories (excluding the best nodes)
-# components: Number of connected components
-# The following metrics only apply if the number of best > 0, otherwise they are NA
-# strength: Normalised strength (incoming weighted degree) of best nodes - normalised with the number of runs
-# plength:  verage of the shortest path length from start nodes to the best node, NA if non best exist
-# npaths:  Number of shortest paths to best optima
-
-col_types =  c("character", "integer", "integer", "integer", "integer", "integer", 
-               "numeric", "integer", "integer")
-
-col_names =  c("instance", "nodes", "edges", "nbest", "nend", "components", 
-               "strength","plength", 'npaths')
-
-metrics  <- read.table(text = "", colClasses = col_types, col.names = col_names)
-
-
-# ---- Process all datasets in the given inpath folder ----------------
-instances <- list.files(infolder)
-
-i = 1    # index to store in dataframe
-for (inst in instances) {
-  print(inst)
-  fname <- paste0(infolder,"/",inst)
-  load(fname, verbose = F)
-  iname <-  gsub('.{6}$', '', inst) # removes  (last 5 characters, .RData) from file to use as name
-  metrics[i,"instance"] <- iname
-  metrics[i,"nodes"] <- vcount(STN)
-  metrics[i,"edges"] <- ecount(STN)
-  best_ids <- which(V(STN)$Quality == "best")  # ids of best nodes
-  metrics[i,"nbest"] <- length(best_ids)
-  start_ids <- which(V(STN)$Type == "start")  # ids of start nodes
-  end_ids <- which(V(STN)$Type == "end")  # ids of end  nodes, which are not best
-  metrics[i,"nend"] <- length(end_ids)
-  metrics[i,"components"] <- components(STN)$no
-  if (length(best_ids) > 0)  { # if there are nodes with best-known evaluation
-    best_str <-  sum(strength(STN, vids = best_ids,  mode="in"))  #  incoming strength of best
-    metrics[i,"strength"] <- round(best_str/nruns,4)
-    dg <- distances(STN, v=start_ids, to = best_ids, mode ="out", weights = NULL)
-    d<- dg[is.finite(dg)] # Remove Inf values from distance matrix d
-    metrics[i,"plength"] <- round(mean(d),4) # average length of shortest path to best
-    metrics[i,"npaths"] <- length(d)      # Number of shortest paths to best
-  } else {
-    metrics[i,"plength"] <- NA   # average length of shortest path to best
-    metrics[i,"npaths"] <-0      # Number of shortest paths to best
+# ---------- Parse command line arguments ----------
+parse_arguments <- function(args) {
+  parsed <- list()
+  for (arg in args) {
+    if (grepl("^--", arg)) {
+      parts <- strsplit(sub("^--", "", arg), "=")[[1]]
+      if (length(parts) == 2) {
+        parsed[[parts[1]]] <- parts[2]
+      } else {
+        stop(paste("Invalid argument format:", arg), call. = FALSE)
+      }
+    }
   }
-  #elite_ids <- which(V(STN)$Quality == "elite") #The best node are also elite
-  elite_ids <- which(V(STN)$Elite == "T")
-  numelites <- length(elite_ids)
-  #metrics[i,"numelites"] <- numelites
-  metrics[i,"porc-elites"] <- numelites*100/vcount(STN)
-  instr <- strength(STN,vids=elite_ids,mode="in",loops=FALSE)
-  metrics[i,"avg_incedges_elites"] <- sum(instr)/numelites
-  outstr <- strength(STN,vids=elite_ids,mode="out",loops=FALSE)
-  metrics[i,"avg_outedges_elites"] <- sum(outstr)/numelites
-  Top <- induced.subgraph(STN, V(STN)$Elite == 'T')
-  Top2 <- simplify(Top)
-  #metrics[i,"edges-consec-elites"] <- ecount(Top2)
-  metrics[i,"porc_edges-consec-elites"] <- ecount(Top2)*100/ecount(STN)
-  i = i+1
+  return(parsed)
 }
 
-# Save metrics as .csv file
-# Create outfolder folder to save STN objects  -- rule append "-plot" to input folder
-ofname <- paste0(name,"-metrics.csv")
+args <- commandArgs(trailingOnly = TRUE)
+params <- parse_arguments(args)
 
-write.csv(metrics, file = ofname)
+# ---------- Validate required arguments ----------
+required_args <- c("input", "output")
+for (param_name in required_args) {
+  if (is.null(params[[param_name]])) {
+    stop(paste("Missing required argument: --", param_name, sep = ""), call. = FALSE)
+  }
+}
+
+# ---------- Assign and normalize paths ----------
+input_file <- normalizePath(params$input, mustWork = TRUE)
+output_folder <- normalizePath(params$output, mustWork = TRUE)
+
+# Check if input file exists
+if (!file.exists(input_file)) {
+  stop(paste("Input file does not exist:", input_file), call. = FALSE)
+}
+
+# Check if the output folder exists, if not create it
+if (!dir.exists(output_folder)) {
+  dir.create(output_folder, recursive = TRUE)
+}
+
+# ---------- Optional parameters ----------
+if (!is.null(params$output_file)) {
+  output_file_name <- params$output_file
+} else {
+  input_basename <- tools::file_path_sans_ext(basename(input_file))
+  output_file_name <- paste0(input_basename, "_metrics.csv")
+}
+
+# Check if output file name has a valid extension
+if (!grepl("\\.csv$", output_file_name)) {
+  output_file_name <- paste0(output_file_name, ".csv")
+}
+
+# ---------- Obtain the STN-i metrics ----------
+
+# Load the STN-i object from the input file
+stn_i_result <- get_stn_i_data(input_file)
+
+# Obtain the metrics from the STN-i result
+stn_i_metrics <- get_stn_i_metrics(stn_i_result)
+
+# ---------- Save result ----------
+
+# Construct the full path for the output file
+output_file_path <- file.path(output_folder, output_file_name)
+
+# Save the STN-i result to the specified output file
+save_stn_i_metrics(stn_i_metrics, output_file_path)
 
 # nolint end

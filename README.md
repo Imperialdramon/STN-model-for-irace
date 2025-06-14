@@ -77,3 +77,16 @@ Rscript plot_merged_STN-i.R --input=Examples/ACOTSP/E1-E2/Merged/merged_E1-E2-L0
   --show_elite=TRUE \
   --size_factor=1 \
   --palette=1
+
+#### Metrics STN-i
+
+Rscript metrics_STN-i.R --input=Examples/ACOTSP/E1/STNs/E1_L0.RData \
+  --output=Examples/ACOTSP/E1/Metrics \
+  --output_file="E1_L0.csv"
+
+#### Metrics merged STN-i
+
+Rscript metrics_merged_STN-i.R --input=Examples/ACOTSP/E1-E2/Merged/merged_E1-E2-L0.RData \
+  --output=Examples/ACOTSP/E1-E2/Metrics \
+  --output_file="E1-E2-L.csv"
+

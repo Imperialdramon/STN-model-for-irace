@@ -121,8 +121,10 @@ criteria <- ifelse(!is.null(params$criteria), params$criteria, "mean")
 
 # ---------- Process input files ----------
 
+# Get the STNs-i data from the input folder
 stns_i_data <- get_stns_i_data(input_folder)
 
+# Merge the STN-i data based on the specified criteria
 merged_stn_i_result <- merge_stns_i_data(stns_i_data, criteria)
 
 # ---------- Save output file ----------

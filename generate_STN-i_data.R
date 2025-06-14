@@ -157,14 +157,7 @@ if (!is.na(number_of_runs) && !is.numeric(number_of_runs)) {
 # ---------- Process the STN-i file ----------
 
 # Create the STN-i object from the input file and parameters
-stn_i_result <- stn_i_create(
-  input_file = input_file,
-  problem_type = problem_type,
-  best_known_solution = best_known_solution,
-  number_of_runs = number_of_runs,
-  separator = separator,
-  network_name = network_name
-)
+stn_i_result <- stn_i_create(input_file, problem_type, best_known_solution, number_of_runs, separator, network_name)
 
 # ---------- Save result ----------
 
