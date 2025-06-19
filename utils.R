@@ -785,12 +785,21 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
 
   merged_nodes$Shared <- merged_nodes$n_networks > 1
   merged_nodes$Category <- mapply(function(q, shared) {
-    elite_count <- sum(grepl("ELITE", unlist(strsplit(q, ""))))
-    if (shared && elite_count == 0) "shared-regular"
-    else if (shared && elite_count == num_networks) "shared-elite"
-    else if (shared && elite_count > 0) "shared-mixed"
-    else if (!shared && grepl("ELITE", q)) "network-elite"
-    else "network-regular"
+    tags <- unlist(strsplit(q, "(?<=REGULAR)|(?<=ELITE)", perl = TRUE))
+    elite_count <- sum(tags == "ELITE")
+    regular_count <- sum(tags == "REGULAR")
+
+    if (shared && elite_count > 0 && regular_count == 0) {
+      "shared-elite"
+    } else if (shared && elite_count > 0 && regular_count > 0) {
+      "shared-mixed"
+    } else if (shared && elite_count == 0) {
+      "shared-regular"
+    } else if (!shared && elite_count > 0) {
+      "network-elite"
+    } else {
+      "network-regular"
+    }
   }, merged_nodes$Quality, merged_nodes$Shared)
 
   # Rename for igraph compatibility
