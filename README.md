@@ -51,7 +51,7 @@ Processes irace trace files to build a Search Trajectory Network (STN-i) for a s
 **Example usage:**
 
 ```sh
-Rscript generate_STN-i_data.R --input=trace.txt --output=results/ --problem_type=min --network_name=MyNetwork
+Rscript R/generate_STN-i_data.R --input=trace.txt --output=results/ --problem_type=min --network_name=MyNetwork
 ```
 
 ---
@@ -85,7 +85,7 @@ Generates a PDF visualization of a single STN-i network.
 **Example usage:**
 
 ```sh
-Rscript plot_STN-i.R --input=results/my_stn_i.RData --output=plots/ --layout_type=kk --palette=2
+Rscript R/plot_STN-i.R --input=results/my_stn_i.RData --output=plots/ --layout_type=kk --palette=2
 ```
 
 ---
@@ -115,7 +115,7 @@ Extracts various metrics from a single STN-i network.
 **Example usage:**
 
 ```sh
-Rscript metrics_STN-i.R --input=results/my_stn_i.RData --output=metrics/
+Rscript R/metrics_STN-i.R --input=results/my_stn_i.RData --output=metrics/
 ```
 
 ---
@@ -139,7 +139,7 @@ Combines multiple STN-i networks into one unified representation.
 **Example usage:**
 
 ```sh
-Rscript generate_merged_STN-i_data.R --input=results/ --output=merged/ --criteria=mean
+Rscript R/generate_merged_STN-i_data.R --input=results/ --output=merged/ --criteria=mean
 ```
 
 ---
@@ -172,7 +172,7 @@ Same as in [Plotting STN-i](#2-plotting-stn-i-plot_stn-ir)
 **Example usage:**
 
 ```sh
-Rscript plot_merged_STN-i.R --input=merged/merged_stn_i.RData --output=plots/ --layout_type=sugiyama
+Rscript R/plot_merged_STN-i.R --input=merged/merged_stn_i.RData --output=plots/ --layout_type=sugiyama
 ```
 
 ---
@@ -200,7 +200,7 @@ Computes metrics for a merged STN-i object.
 **Example usage:**
 
 ```sh
-Rscript metrics_merged_STN-i.R --input=merged/merged_stn_i.RData --output=metrics/
+Rscript R/metrics_merged_STN-i.R --input=merged/merged_stn_i.RData --output=metrics/
 ```
 
 ---

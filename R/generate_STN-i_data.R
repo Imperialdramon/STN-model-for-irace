@@ -74,7 +74,7 @@ library(plyr)
 library(dplyr)
 
 # ---------- Load utility functions ----------
-source("utils.R")
+source("R/utils.R")
 
 # ---------- Parse command line arguments ----------
 parse_arguments <- function(args) {

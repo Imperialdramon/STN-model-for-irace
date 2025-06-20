@@ -1,29 +1,25 @@
 # nolint start
 
 #########################################################################
-# Merged STN-i Plotting Script
+# STN-i Plotting Script
 # Author: Pablo Estobar
 #
 # Description:
-# This script generates a visual representation of a merged Search Trajectory 
-# Network for irace (STN-i), built from multiple STN-i executions.
-# It decorates the network with node shapes, colors, and categories,
-# and saves the plot as a PDF file, including a legend.
+# This script generates a visual representation of a Search Trajectory Network 
+# for irace (STN-i) from a single STN-i file in .RData format.
 #
 # Usage:
-# Rscript plot_merged_STN-i.R --input=<input_file> --output=<output_folder> 
-#                              [--output_file=<output_file_name>] 
-#                              [--layout_type=<value>] 
-#                              [--show_shared_regular=<TRUE|FALSE>]
-#                              [--show_shared_mixed=<TRUE|FALSE>]
-#                              [--show_regular=<TRUE|FALSE>]
-#                              [--show_start_regular=<TRUE|FALSE>]
-#                              [--size_factor=<value>] 
-#                              [--palette=<value>]
-#                              [--zoom_quantile=<value>]
+# Rscript plot_STN-i.R --input=<input_file> --output=<output_folder> 
+#                      [--output_file=<output_file_name>] 
+#                      [--layout_type=<value>] 
+#                      [--show_regular=<TRUE|FALSE>]
+#                      [--show_start_regular=<TRUE|FALSE>]
+#                      [--size_factor=<value>] 
+#                      [--palette=<value>]
+#                      [--zoom_quantile=<value>]
 #
 # Arguments:
-# --input         : (Required) Path to the input file (.RData) containing the merged STN-i object.
+# --input         : (Required) Path to the input file (.RData) containing the STN-i object.
 # --output        : (Required) Path to the output folder where the plot PDF will be saved.
 # --output_file   : (Optional) Name of the output PDF file. If not provided, defaults to the
 #                   input file name (without extension) + ".pdf".
@@ -43,28 +39,22 @@
 #                     - "graphopt"  : Force-directed using physics model
 #                     - "sugiyama"  : Layered layout for DAGs
 #                     - "dh"        : Davidson-Harel layout
-# --show_shared_regular : (Optional) Whether to include shared regular nodes in the plot.
+# --show_regular  : (Optional) Whether to include REGULAR nodes in the plot.
 #                   TRUE or FALSE (default: TRUE).
-# --show_shared_mixed : (Optional) Whether to include shared mixed nodes in the plot.
-#                   TRUE or FALSE (default: TRUE).
-# --show_regular  : (Optional) Whether to include regular (non-elite) nodes in the plot.
-#                   TRUE or FALSE (default: TRUE).
-# --show_start_regular : (Optional) Whether to include start regular nodes in the plot.
+# --show_start_regular : (Optional) Whether to include START REGULAR nodes in the plot.
 #                   TRUE or FALSE (default: FALSE).
 # --size_factor   : (Optional) Scaling factor for node sizes and edge widths (default: 1).
-# --palette       : (Optional) Integer value (1–5) specifying a color palette for nodes.
+# --palette       : (Optional) Integer value (1–5) specifying a color palette for nodes and edges.
 #                   Each palette alters the visual distinction of node types (default: 1).
 # --zoom_quantile : (Optional) Numeric value between 0 and 1 to define a zoom level for the plot.
 #
 # Requirements:
 # - R with the `igraph` package installed.
-# - A merged STN-i object created using `merge_stns_i_data()`.
 #
 # Note:
-# - The input file must exist and contain a valid merged STN-i object.
-# - The PDF will include a legend showing node types and their visual representation.
+# - The input file must exist and contain a valid STN-i object.
+# - Plots are saved as PDF files using the specified or default name.
 #########################################################################
-
 
 # ---------- Validate required packages ----------
 if (!requireNamespace("igraph", quietly = TRUE)) {
@@ -75,7 +65,7 @@ if (!requireNamespace("igraph", quietly = TRUE)) {
 library(igraph)
 
 # ---------- Load utility functions ----------
-source("utils.R")
+source("R/utils.R")
 
 # ---------- Parse command line arguments ----------
 args <- commandArgs(trailingOnly = TRUE)
@@ -117,8 +107,6 @@ if (!is.null(params$output_file)) {
   output_file_name <- paste0(input_basename, ".pdf")
 }
 layout_type <- ifelse(!is.null(params$layout_type), params$layout_type, "fr")
-show_shared_regular <- ifelse(!is.null(params$show_shared_regular), as.logical(params$show_shared_regular), TRUE)
-show_shared_mixed <- ifelse(!is.null(params$show_shared_mixed), as.logical(params$show_shared_mixed), TRUE)
 show_regular <- ifelse(!is.null(params$show_regular), as.logical(params$show_regular), TRUE)
 show_start_regular <- ifelse(!is.null(params$show_start_regular), as.logical(params$show_start_regular), FALSE)
 size_factor <- ifelse(!is.null(params$size_factor), as.numeric(params$size_factor), 1)
@@ -162,28 +150,20 @@ if (!is.na(zoom_quantile) && (zoom_quantile <= 0 || zoom_quantile >= 1)) {
 # ---------- Process the input file ----------
 
 # Obtain the palette colors
-palette_colors <- get_merged_stn_i_palette_colors(palette)
-
-# Load the merged STN-i data
-merged_stn_i_data <- get_merged_stn_i_data(input_file)
+palette_colors <- get_stn_i_palette_colors(palette)
 
 # Load the STN-i object decorated
-merged_STN_i <- merged_stn_i_plot_create(merged_stn_i_data, show_shared_regular, show_shared_mixed, show_regular, show_start_regular, palette_colors)
+STN_i <- stn_i_plot_create(input_file, show_regular, show_start_regular, palette_colors, zoom_quantile)
 
 # ---------- Save result ----------
 
-# If zooming is enabled, extract subgraph
-if (!is.na(zoom_quantile)) {
-  merged_STN_i <- get_zoomed_graph(merged_STN_i, zoom_quantile)
-}
-
 # Obtain layout data
-layout_data <- get_layout_data(merged_STN_i, layout_type)
+layout_data <- get_layout_data(STN_i, layout_type)
 
 # Construct the full path for the output file
 output_file_path <- file.path(output_folder, output_file_name)
 
 # Save the STN-i plot as a PDF
-save_merged_stn_i_plot(output_file_path, merged_STN_i, merged_stn_i_data$network_names, layout_data, palette_colors, nsizef = size_factor, ewidthf = size_factor, asize = 0.3, ecurv = 0.3)
+save_stn_i_plot(output_file_path, STN_i, layout_data, palette_colors, nsizef = size_factor, ewidthf = size_factor, asize = 0.3, ecurv = 0.3)
 
 # nolint end

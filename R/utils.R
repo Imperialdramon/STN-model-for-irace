@@ -534,15 +534,15 @@ stn_i_decorate <- function(STN_i, problem_type = "min", show_regular = TRUE, sho
 #' @param show_regular Boolean indicating whether to show regular nodes in the plot (default is TRUE).
 #' @param show_start_regular Boolean indicating whether to show start regular nodes in the plot (default is TRUE).
 #' @param palette_colors List of colors for the different node and edge types.
+#' @param zoom_quantile Numeric value between 0 and 1 to define a zoom level for the plot (default is NA, meaning no zoom).
 #'
 #' @return A decorated STN-i graph object ready for plotting.
 #'
 #' @examples
 #' \dontrun{
-#' result <- stn_i_plot_create("path/to/stn_i_file.RData", show_regular = TRUE, show_start_regular = TRUE, palette_colors = get_stn_i_palette_colors(1))
+#' result <- stn_i_plot_create("path/to/stn_i_file.RData", show_regular = TRUE, show_start_regular = TRUE, palette_colors = get_stn_i_palette_colors(1), zoom_quantile = 0.5)
 #' }
-stn_i_plot_create <- function(input_file, show_regular = TRUE, show_start_regular = TRUE, palette_colors) {
-
+stn_i_plot_create <- function(input_file, show_regular = TRUE, show_start_regular = TRUE, palette_colors, zoom_quantile = NA) {
   # Load the STN-i data
   stn_i_result <- get_stn_i_data(input_file)
 
@@ -552,6 +552,11 @@ stn_i_plot_create <- function(input_file, show_regular = TRUE, show_start_regula
 
   # Decorate the STN-i object
   STN_i <- stn_i_decorate(STN_i, problem_type, show_regular, show_start_regular, palette_colors)
+
+  # If zooming is enabled, extract subgraph
+  if (!is.na(zoom_quantile) && zoom_quantile > 0 && zoom_quantile < 1) {
+    STN_i <- get_zoomed_graph(STN_i, zoom_quantile, problem_type)
+  }
 
   # Return everything needed for external plotting
   return(STN_i)
@@ -1101,6 +1106,7 @@ merged_stn_i_decorate <- function(merged_STN_i, network_names, problem_type = "m
 #' @param show_elite Logical; whether to show elite nodes (default TRUE).
 #' @param show_start_regular Logical; whether to show start regular nodes (default TRUE).
 #' @param palette_colors A palette list returned from get_merged_stn_i_palette_colors().
+#' @param zoom_quantile Numeric value between 0 and 1 to define a zoom level for the plot (default is NA, meaning no zoom).
 #'
 #' @return A decorated STN-i graph object ready for plotting.
 #'
@@ -1108,7 +1114,7 @@ merged_stn_i_decorate <- function(merged_STN_i, network_names, problem_type = "m
 #' \dontrun{
 #'  merged_stn_i_plot_create(merged_stn_i_data, show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors = my_palette_colors)
 #' }
-merged_stn_i_plot_create <- function(merged_stn_i_data, show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors) {
+merged_stn_i_plot_create <- function(merged_stn_i_data, show_shared_regular = TRUE, show_shared_mixed = TRUE, show_regular = TRUE, show_start_regular = TRUE, palette_colors, zoom_quantile = NA) {
 
   # Obtain the merged STN-i object, network names, and problem type
   merged_STN_i <- merged_stn_i_data$merged_STN_i
@@ -1117,6 +1123,11 @@ merged_stn_i_plot_create <- function(merged_stn_i_data, show_shared_regular = TR
 
   # Decorate the STN-i object
   merged_STN_i <- merged_stn_i_decorate(merged_STN_i, network_names, problem_type, show_shared_regular, show_shared_mixed, show_regular, show_start_regular, palette_colors)
+
+  # If zooming is enabled, extract subgraph
+  if (!is.na(zoom_quantile) && zoom_quantile > 0 && zoom_quantile < 1) {
+    merged_STN_i <- get_zoomed_graph(merged_STN_i, zoom_quantile, problem_type)
+  }
 
   # Return everything needed for external plotting
   return(merged_STN_i)
@@ -1215,24 +1226,38 @@ save_merged_stn_i_plot <- function(output_file_path, merged_STN_i, network_names
 
 #' Get zoomed subgraph of STN-i based on fitness quantile
 #' 
-#' This function extracts a subgraph from the given STN-i graph where the vertex fitness values are below a specified quantile threshold.
+#' This function extracts a subgraph from the given STN-i graph where the vertex fitness values are
+#' either below or above a quantile threshold depending on the problem type.
 #' 
 #' @param graph An igraph object representing the STN-i graph or merged STN-i graph.
+#' @param quantile_value A numeric value between 0 and 1 indicating the quantile threshold.
+#' @param problem_type Either "min" (default) or "max" to define optimization direction.
 #' 
-#' @param quantile_value A numeric value between 0 and 1 indicating the quantile threshold for filtering vertices based on their fitness values (default is 0.25).
-#' 
-#' @return An igraph object representing the zoomed subgraph containing only vertices with fitness values below the specified quantile threshold.
+#' @return An igraph object representing the zoomed subgraph.
 #' 
 #' @examples
-#' \dontrun{
-#' zoomed_graph <- get_zoomed_graph(my_stn_i_graph, quantile_value = 0.25)
-#' }
-get_zoomed_graph <- function(graph, quantile_value = 0.25) {
+#' zoomed_graph <- get_zoomed_graph(my_graph, quantile_value = 0.25, problem_type = "min")
+get_zoomed_graph <- function(graph, quantile_value = 0.25, problem_type = "min") {
+
   if (!"Fitness" %in% vertex_attr_names(graph)) {
     stop("Graph must have a 'Fitness' vertex attribute for zooming.")
   }
-  threshold <- quantile(V(graph)$Fitness, probs = quantile_value, na.rm = TRUE)
-  subgraph <- induced_subgraph(graph, V(graph)$Fitness <= threshold)
+
+  if (!(problem_type %in% c("min", "max"))) {
+    stop("Invalid problem_type. Must be 'min' or 'max'.")
+  }
+
+  fitness_values <- V(graph)$Fitness
+  threshold <- quantile(fitness_values, probs = quantile_value, na.rm = TRUE)
+
+  # Select nodes based on the threshold and problem type
+  if (problem_type == "min") {
+    selected_nodes <- V(graph)[fitness_values <= threshold]
+  } else {
+    selected_nodes <- V(graph)[fitness_values >= threshold]
+  }
+
+  subgraph <- induced_subgraph(graph, selected_nodes)
   subgraph <- delete_vertices(subgraph, degree(subgraph) == 0)
   return(subgraph)
 }

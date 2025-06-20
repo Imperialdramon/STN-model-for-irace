@@ -67,7 +67,7 @@ library(dplyr)
 library(tidyr)
 
 # ---------- Load utility functions ----------
-source("utils.R")
+source("R/utils.R")
 
 # ---------- Parse command line arguments ----------
 parse_arguments <- function(args) {

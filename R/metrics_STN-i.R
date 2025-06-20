@@ -39,7 +39,7 @@ if (!requireNamespace("igraph", quietly = TRUE)) {
 library(igraph)
 
 # ---------- Load utility functions ----------
-source("utils.R")
+source("R/utils.R")
 
 # ---------- Parse command line arguments ----------
 parse_arguments <- function(args) {
@@ -95,20 +95,20 @@ if (!grepl("\\.csv$", output_file_name)) {
   output_file_name <- paste0(output_file_name, ".csv")
 }
 
-# ---------- Obtain the merged STN-i metrics ----------
+# ---------- Obtain the STN-i metrics ----------
 
-# Load the merged STN-i object from the input file
-merged_stn_i_result <- get_merged_stn_i_data(input_file)
+# Load the STN-i object from the input file
+stn_i_result <- get_stn_i_data(input_file)
 
-# Obtain the metrics from the merged STN-i result
-merged_stn_i_metrics <- get_merged_stn_i_metrics(merged_stn_i_result)
+# Obtain the metrics from the STN-i result
+stn_i_metrics <- get_stn_i_metrics(stn_i_result)
 
 # ---------- Save result ----------
 
 # Construct the full path for the output file
 output_file_path <- file.path(output_folder, output_file_name)
 
-# Save the merged STN-i result to the specified output file
-save_merged_stn_i_metrics(merged_stn_i_metrics, output_file_path)
+# Save the STN-i result to the specified output file
+save_stn_i_metrics(stn_i_metrics, output_file_path)
 
 # nolint end
