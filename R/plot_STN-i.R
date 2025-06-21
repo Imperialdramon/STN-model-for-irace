@@ -30,15 +30,8 @@
 #                     - "grid"      : Grid layout
 #                     - "sphere"    : Spherical layout
 #                     - "random"    : Random layout
-#                     - "star"      : Star layout (centralized)
-#                     - "tree"      : Tree layout
-#                     - "reingold"  : Reingold-Tilford tree layout
-#                     - "mds"       : Multidimensional Scaling
 #                     - "drl"       : DrL (force-directed, scalable)
-#                     - "lgl"       : Large Graph Layout
 #                     - "graphopt"  : Force-directed using physics model
-#                     - "sugiyama"  : Layered layout for DAGs
-#                     - "dh"        : Davidson-Harel layout
 # --show_regular  : (Optional) Whether to include REGULAR nodes in the plot.
 #                   TRUE or FALSE (default: TRUE).
 # --show_start_regular : (Optional) Whether to include START REGULAR nodes in the plot.
@@ -143,7 +136,7 @@ if (!palette %in% c(1, 2, 3, 4, 5)) {
 }
 
 # Check if zoom_quantile is numeric and within the valid range
-if (!is.na(zoom_quantile) && (zoom_quantile <= 0 || zoom_quantile >= 1)) {
+if (!is.na(zoom_quantile) && (zoom_quantile < 0 || zoom_quantile > 1)) {
   stop("zoom_quantile must be a numeric value between 0 and 1 (exclusive).", call. = FALSE)
 }
 

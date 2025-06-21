@@ -35,7 +35,7 @@ run_metrics_rscript() {
 
   echo ">> Generating metrics: $output_file" | tee -a "$LOG_FILE"
 
-  if ! Rscript R/generate_STN-i_metrics.R "${args[@]}" >> "$LOG_FILE" 2>&1; then
+  if ! Rscript R/metrics_STN-i.R "${args[@]}" >> "$LOG_FILE" 2>&1; then
     echo "❌ Error: Failed to generate $output_file" | tee -a "$LOG_FILE"
   else
     echo "✅ Success: Generated $output_file" | tee -a "$LOG_FILE"

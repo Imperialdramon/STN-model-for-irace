@@ -77,10 +77,14 @@ Generates a PDF visualization of a single STN-i network.
 
 **Available layout types (`--layout_type`):**
 
-- `fr` – Fruchterman-Reingold (default)  
-- `kk` – Kamada-Kawai  
-- `circle`, `grid`, `sphere`, `random`, `star`, `tree`, `reingold`  
-- `mds`, `drl`, `lgl`, `graphopt`, `sugiyama`, `dh`
+- `fr` – Fruchterman-Reingold (default)
+- `kk` – Kamada-Kawai
+- `circle` – Circular layout
+- `grid` – Grid layout
+- `sphere` – Spherical layout
+- `random` – Random node placement
+- `drl` – DrL (force-directed, scalable)
+- `graphopt` – Force-directed using physics model
 
 **Example usage:**
 

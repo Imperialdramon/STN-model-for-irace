@@ -34,15 +34,8 @@
 #                     - "grid"      : Grid layout
 #                     - "sphere"    : Spherical layout
 #                     - "random"    : Random layout
-#                     - "star"      : Star layout (centralized)
-#                     - "tree"      : Tree layout
-#                     - "reingold"  : Reingold-Tilford tree layout
-#                     - "mds"       : Multidimensional Scaling
 #                     - "drl"       : DrL (force-directed, scalable)
-#                     - "lgl"       : Large Graph Layout
 #                     - "graphopt"  : Force-directed using physics model
-#                     - "sugiyama"  : Layered layout for DAGs
-#                     - "dh"        : Davidson-Harel layout
 # --show_shared_regular : (Optional) Whether to include shared regular nodes in the plot.
 #                   TRUE or FALSE (default: TRUE).
 # --show_shared_mixed : (Optional) Whether to include shared mixed nodes in the plot.

@@ -12,7 +12,7 @@
 #        ./run_all_generate_STN-i_data.sh
 #
 #   Output:
-#     - Log file: Logs/run_all_generate_STN-i_data.log
+#     - Log file: Logs/run_generate_STN-i.log
 #     - RData outputs: one per experiment/level
 # ==============================================================================
 
@@ -21,7 +21,7 @@ LOG_DIR="./Logs"
 mkdir -p "$LOG_DIR"
 
 # Set log file path
-LOG_FILE="$LOG_DIR/run_all_generate_STN-i_data.log"
+LOG_FILE="$LOG_DIR/run_generate_STN-i.log"
 echo "=== STN-i data generation started at $(date) ===" > "$LOG_FILE"
 
 # Function to run the Rscript and log output

@@ -23,10 +23,10 @@ LOG_FILE="$LOG_DIR/run_plot_merged_stn_logs.log"
 echo "=== Merged STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
 # Layouts to use
-layouts=("fr" "kk" "circle" "grid" "sphere" "random" "star" "tree" "reingold" "mds" "drl" "lgl" "graphopt" "sugiyama" "dh")
+layouts=("fr" "kk" "random" "drl" "graphopt")
 
 # Zoom quantile values
-zoom_levels=("0" "0.25" "0.5" "0.75" "1")
+zoom_levels=("NA" "0.25" "0.5" "0.75")
 
 # Boolean combinations for merged plotting
 show_combinations=(

@@ -1,0 +1,845 @@
+=== STN-i metrics generation started at Fri Jun 20 20:02:45 -04 2025 ===
+=== Processing algorithm: ACOTSP ===
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-2000-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Metrics/metrics-STN-i-E1-BL-WSR-2000-L1.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-2000-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Metrics/metrics-STN-i-E1-BL-WSR-2000-L2.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-2000-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Metrics/metrics-STN-i-E1-BL-WSR-2000-L3.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-2000-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E2-BL-SR-2000/Metrics/metrics-STN-i-E2-BL-SR-2000-L1.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-2000-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E2-BL-SR-2000/Metrics/metrics-STN-i-E2-BL-SR-2000-L2.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-2000-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E2-BL-SR-2000/Metrics/metrics-STN-i-E2-BL-SR-2000-L3.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-2000-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Metrics/metrics-STN-i-E3-BH-WSR-2000-L1.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-2000-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Metrics/metrics-STN-i-E3-BH-WSR-2000-L2.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-2000-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Metrics/metrics-STN-i-E3-BH-WSR-2000-L3.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-2000-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Metrics/metrics-STN-i-E4-BH-SR-2000-L1.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-2000-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Metrics/metrics-STN-i-E4-BH-SR-2000-L2.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-2000-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Metrics/metrics-STN-i-E4-BH-SR-2000-L3.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-2000-L3.csv
+=== Processing algorithm: PSO-X ===
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-Mix-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E1-BL-WSR-Mix/Metrics/metrics-STN-i-E1-BL-WSR-Mix-L1.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-Mix-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E1-BL-WSR-Mix/Metrics/metrics-STN-i-E1-BL-WSR-Mix-L2.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-Mix-L2.csv
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-Mix-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E1-BL-WSR-Mix/Metrics/metrics-STN-i-E1-BL-WSR-Mix-L3.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-Mix-L3.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-Mix-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E2-BL-SR-Mix/Metrics/metrics-STN-i-E2-BL-SR-Mix-L1.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-Mix-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E2-BL-SR-Mix/Metrics/metrics-STN-i-E2-BL-SR-Mix-L2.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-Mix-L2.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-Mix-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E2-BL-SR-Mix/Metrics/metrics-STN-i-E2-BL-SR-Mix-L3.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-Mix-L3.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-Mix-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E3-BH-WSR-Mix/Metrics/metrics-STN-i-E3-BH-WSR-Mix-L1.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-Mix-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E3-BH-WSR-Mix/Metrics/metrics-STN-i-E3-BH-WSR-Mix-L2.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-Mix-L2.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-Mix-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E3-BH-WSR-Mix/Metrics/metrics-STN-i-E3-BH-WSR-Mix-L3.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-Mix-L3.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-Mix-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E4-BH-SR-Mix/Metrics/metrics-STN-i-E4-BH-SR-Mix-L1.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-Mix-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E4-BH-SR-Mix/Metrics/metrics-STN-i-E4-BH-SR-Mix-L2.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-Mix-L2.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-Mix-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E4-BH-SR-Mix/Metrics/metrics-STN-i-E4-BH-SR-Mix-L3.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-Mix-L3.csv
+>> Generating metrics: metrics-STN-i-E5-BL-WSR-Mul-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E5-BL-WSR-Mul/Metrics/metrics-STN-i-E5-BL-WSR-Mul-L1.csv
+✅ Success: Generated metrics-STN-i-E5-BL-WSR-Mul-L1.csv
+>> Generating metrics: metrics-STN-i-E5-BL-WSR-Mul-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E5-BL-WSR-Mul/Metrics/metrics-STN-i-E5-BL-WSR-Mul-L2.csv
+✅ Success: Generated metrics-STN-i-E5-BL-WSR-Mul-L2.csv
+>> Generating metrics: metrics-STN-i-E5-BL-WSR-Mul-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E5-BL-WSR-Mul/Metrics/metrics-STN-i-E5-BL-WSR-Mul-L3.csv
+✅ Success: Generated metrics-STN-i-E5-BL-WSR-Mul-L3.csv
+>> Generating metrics: metrics-STN-i-E6-BL-SR-Mul-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E6-BL-SR-Mul/Metrics/metrics-STN-i-E6-BL-SR-Mul-L1.csv
+✅ Success: Generated metrics-STN-i-E6-BL-SR-Mul-L1.csv
+>> Generating metrics: metrics-STN-i-E6-BL-SR-Mul-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E6-BL-SR-Mul/Metrics/metrics-STN-i-E6-BL-SR-Mul-L2.csv
+✅ Success: Generated metrics-STN-i-E6-BL-SR-Mul-L2.csv
+>> Generating metrics: metrics-STN-i-E6-BL-SR-Mul-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E6-BL-SR-Mul/Metrics/metrics-STN-i-E6-BL-SR-Mul-L3.csv
+✅ Success: Generated metrics-STN-i-E6-BL-SR-Mul-L3.csv
+>> Generating metrics: metrics-STN-i-E7-BH-WSR-Mul-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E7-BH-WSR-Mul/Metrics/metrics-STN-i-E7-BH-WSR-Mul-L1.csv
+✅ Success: Generated metrics-STN-i-E7-BH-WSR-Mul-L1.csv
+>> Generating metrics: metrics-STN-i-E7-BH-WSR-Mul-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E7-BH-WSR-Mul/Metrics/metrics-STN-i-E7-BH-WSR-Mul-L2.csv
+✅ Success: Generated metrics-STN-i-E7-BH-WSR-Mul-L2.csv
+>> Generating metrics: metrics-STN-i-E7-BH-WSR-Mul-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E7-BH-WSR-Mul/Metrics/metrics-STN-i-E7-BH-WSR-Mul-L3.csv
+✅ Success: Generated metrics-STN-i-E7-BH-WSR-Mul-L3.csv
+>> Generating metrics: metrics-STN-i-E8-BH-SR-Mul-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E8-BH-SR-Mul/Metrics/metrics-STN-i-E8-BH-SR-Mul-L1.csv
+✅ Success: Generated metrics-STN-i-E8-BH-SR-Mul-L1.csv
+>> Generating metrics: metrics-STN-i-E8-BH-SR-Mul-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E8-BH-SR-Mul/Metrics/metrics-STN-i-E8-BH-SR-Mul-L2.csv
+✅ Success: Generated metrics-STN-i-E8-BH-SR-Mul-L2.csv
+>> Generating metrics: metrics-STN-i-E8-BH-SR-Mul-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E8-BH-SR-Mul/Metrics/metrics-STN-i-E8-BH-SR-Mul-L3.csv
+✅ Success: Generated metrics-STN-i-E8-BH-SR-Mul-L3.csv
+>> Generating metrics: metrics-STN-i-E9-BL-WSR-Uni-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E9-BL-WSR-Uni/Metrics/metrics-STN-i-E9-BL-WSR-Uni-L1.csv
+✅ Success: Generated metrics-STN-i-E9-BL-WSR-Uni-L1.csv
+>> Generating metrics: metrics-STN-i-E9-BL-WSR-Uni-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E9-BL-WSR-Uni/Metrics/metrics-STN-i-E9-BL-WSR-Uni-L2.csv
+✅ Success: Generated metrics-STN-i-E9-BL-WSR-Uni-L2.csv
+>> Generating metrics: metrics-STN-i-E9-BL-WSR-Uni-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E9-BL-WSR-Uni/Metrics/metrics-STN-i-E9-BL-WSR-Uni-L3.csv
+✅ Success: Generated metrics-STN-i-E9-BL-WSR-Uni-L3.csv
+>> Generating metrics: metrics-STN-i-E10-BL-SR-Uni-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E10-BL-SR-Uni/Metrics/metrics-STN-i-E10-BL-SR-Uni-L1.csv
+✅ Success: Generated metrics-STN-i-E10-BL-SR-Uni-L1.csv
+>> Generating metrics: metrics-STN-i-E10-BL-SR-Uni-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E10-BL-SR-Uni/Metrics/metrics-STN-i-E10-BL-SR-Uni-L2.csv
+✅ Success: Generated metrics-STN-i-E10-BL-SR-Uni-L2.csv
+>> Generating metrics: metrics-STN-i-E10-BL-SR-Uni-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E10-BL-SR-Uni/Metrics/metrics-STN-i-E10-BL-SR-Uni-L3.csv
+✅ Success: Generated metrics-STN-i-E10-BL-SR-Uni-L3.csv
+>> Generating metrics: metrics-STN-i-E11-BH-WSR-Uni-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E11-BH-WSR-Uni/Metrics/metrics-STN-i-E11-BH-WSR-Uni-L1.csv
+✅ Success: Generated metrics-STN-i-E11-BH-WSR-Uni-L1.csv
+>> Generating metrics: metrics-STN-i-E11-BH-WSR-Uni-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E11-BH-WSR-Uni/Metrics/metrics-STN-i-E11-BH-WSR-Uni-L2.csv
+✅ Success: Generated metrics-STN-i-E11-BH-WSR-Uni-L2.csv
+>> Generating metrics: metrics-STN-i-E11-BH-WSR-Uni-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E11-BH-WSR-Uni/Metrics/metrics-STN-i-E11-BH-WSR-Uni-L3.csv
+✅ Success: Generated metrics-STN-i-E11-BH-WSR-Uni-L3.csv
+>> Generating metrics: metrics-STN-i-E12-BH-SR-Uni-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E12-BH-SR-Uni/Metrics/metrics-STN-i-E12-BH-SR-Uni-L1.csv
+✅ Success: Generated metrics-STN-i-E12-BH-SR-Uni-L1.csv
+>> Generating metrics: metrics-STN-i-E12-BH-SR-Uni-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E12-BH-SR-Uni/Metrics/metrics-STN-i-E12-BH-SR-Uni-L2.csv
+✅ Success: Generated metrics-STN-i-E12-BH-SR-Uni-L2.csv
+>> Generating metrics: metrics-STN-i-E12-BH-SR-Uni-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E12-BH-SR-Uni/Metrics/metrics-STN-i-E12-BH-SR-Uni-L3.csv
+✅ Success: Generated metrics-STN-i-E12-BH-SR-Uni-L3.csv
+=== Processing algorithm: MMASQAP ===
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-60-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E1-BL-WSR-60/Metrics/metrics-STN-i-E1-BL-WSR-60-L1.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-60-L1.csv
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-60-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E1-BL-WSR-60/Metrics/metrics-STN-i-E1-BL-WSR-60-L2.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-60-L2.csv
+>> Generating metrics: metrics-STN-i-E1-BL-WSR-60-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E1-BL-WSR-60/Metrics/metrics-STN-i-E1-BL-WSR-60-L3.csv
+✅ Success: Generated metrics-STN-i-E1-BL-WSR-60-L3.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-60-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E2-BL-SR-60/Metrics/metrics-STN-i-E2-BL-SR-60-L1.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-60-L1.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-60-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E2-BL-SR-60/Metrics/metrics-STN-i-E2-BL-SR-60-L2.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-60-L2.csv
+>> Generating metrics: metrics-STN-i-E2-BL-SR-60-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E2-BL-SR-60/Metrics/metrics-STN-i-E2-BL-SR-60-L3.csv
+✅ Success: Generated metrics-STN-i-E2-BL-SR-60-L3.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-60-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E3-BH-WSR-60/Metrics/metrics-STN-i-E3-BH-WSR-60-L1.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-60-L1.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-60-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E3-BH-WSR-60/Metrics/metrics-STN-i-E3-BH-WSR-60-L2.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-60-L2.csv
+>> Generating metrics: metrics-STN-i-E3-BH-WSR-60-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E3-BH-WSR-60/Metrics/metrics-STN-i-E3-BH-WSR-60-L3.csv
+✅ Success: Generated metrics-STN-i-E3-BH-WSR-60-L3.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-60-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E4-BH-SR-60/Metrics/metrics-STN-i-E4-BH-SR-60-L1.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-60-L1.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-60-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E4-BH-SR-60/Metrics/metrics-STN-i-E4-BH-SR-60-L2.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-60-L2.csv
+>> Generating metrics: metrics-STN-i-E4-BH-SR-60-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E4-BH-SR-60/Metrics/metrics-STN-i-E4-BH-SR-60-L3.csv
+✅ Success: Generated metrics-STN-i-E4-BH-SR-60-L3.csv
+=== STN-i metrics generation finished at Fri Jun 20 20:03:06 -04 2025 ===

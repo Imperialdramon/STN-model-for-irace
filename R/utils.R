@@ -348,17 +348,12 @@ get_stn_i_palette_colors <- function(palette = 1) {
 #'   "circle" (circular layout),
 #'   "grid" (nodes on a grid),
 #'   "sphere" (nodes on a sphere),
-#'   "random" (random placement),
-#'   "star" (star-shaped layout),
-#'   "tree" (tree layout),
-#'   "reingold" (Reingold-Tilford tree layout),
-#'   "mds" (multidimensional scaling),
 #'   "drl" (DrL force-directed layout),
-#'   "lgl" (Large Graph Layout),
 #'   "graphopt" (force-directed using physics model),
-#'   "sugiyama" (layered layout for DAGs),
-#'   "dh" (Davidson-Harel layout).
+#'   "random" (random placement).
 #'   Default is "fr".
+#'
+#' These layouts were selected for their stability and interpretability across different graph sizes.
 #'
 #' @return A list containing the layout title, coordinates, and layout type.
 #'
@@ -393,57 +388,22 @@ get_layout_data <- function(g, layout = "fr") {
       coords = layout_on_sphere(g),
       layout_type = "sphere"
     ),
-    "random" = list(
-      title = "Random Layout",
-      coords = layout_randomly(g),
-      layout_type = "random"
-    ),
-    "star" = list(
-      title = "Star Layout",
-      coords = layout_as_star(g),
-      layout_type = "star"
-    ),
-    "tree" = list(
-      title = "Tree Layout",
-      coords = layout_as_tree(g),
-      layout_type = "tree"
-    ),
-    "reingold" = list(
-      title = "Reingold-Tilford Tree Layout",
-      coords = layout_reingold_tilford(g),
-      layout_type = "reingold"
-    ),
-    "mds" = list(
-      title = "Multidimensional Scaling Layout",
-      coords = layout_with_mds(g),
-      layout_type = "mds"
-    ),
     "drl" = list(
       title = "DrL Layout",
       coords = layout_with_drl(g),
       layout_type = "drl"
-    ),
-    "lgl" = list(
-      title = "LGL Layout",
-      coords = layout_with_lgl(g),
-      layout_type = "lgl"
     ),
     "graphopt" = list(
       title = "Graphopt Layout",
       coords = layout_with_graphopt(g),
       layout_type = "graphopt"
     ),
-    "sugiyama" = list(
-      title = "Sugiyama Layout",
-      coords = layout_with_sugiyama(g)$layout,
-      layout_type = "sugiyama"
+    "random" = list(
+      title = "Random Layout",
+      coords = layout_randomly(g),
+      layout_type = "random"
     ),
-    "dh" = list(
-      title = "Davidson-Harel Layout",
-      coords = layout_with_dh(g),
-      layout_type = "dh"
-    ),
-    stop("Invalid layout option. Choose from: fr, kk, circle, grid, sphere, random, star, tree, reingold, mds, drl, lgl, graphopt, sugiyama, dh.")
+    stop("Invalid layout option. Choose from: fr, kk, circle, grid, sphere, drl, graphopt, random.")
   )
 
   return(layout_data)
