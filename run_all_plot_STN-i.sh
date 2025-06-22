@@ -26,7 +26,7 @@ LOG_FILE="$LOG_DIR/run_plot_stn_logs.log"
 echo "=== STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
 # Define all layout types
-layouts=("fr" "kk" "random" "drl" "graphopt")
+layouts=("fr" "kk" "graphopt")
 
 # Define show combinations (show_regular, show_start_regular)
 show_combinations=(
@@ -72,7 +72,7 @@ for alg in "${!experiments[@]}"; do
     for lvl in $levels; do
 
       input_path="Experiments/$alg/$exp/STNs-i/STN-i-$exp-$lvl.RData"
-      output_dir="Experiments/$alg/$exp/Plots"
+      output_dir="Experiments/$alg/$exp/Plots/$lvl"
       mkdir -p "$output_dir"
 
       for layout in "${layouts[@]}"; do

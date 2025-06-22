@@ -23,7 +23,7 @@ LOG_FILE="$LOG_DIR/run_plot_merged_stn_logs.log"
 echo "=== Merged STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
 # Layouts to use
-layouts=("fr" "kk" "random" "drl" "graphopt")
+layouts=("fr" "kk" "graphopt")
 
 # Zoom quantile values
 zoom_levels=("NA" "0.25" "0.5" "0.75")
@@ -73,7 +73,7 @@ for alg in "${!merged_experiments[@]}"; do
 
     for lvl in $levels; do
       input_path="Experiments/$alg/$merged_case/Merged-STNs-i/merged-STN-i-$merged_label-$lvl.RData"
-      output_dir="Experiments/$alg/$merged_case/Plots"
+      output_dir="Experiments/$alg/$merged_case/Plots/$lvl"
       mkdir -p "$output_dir"
 
       for layout in "${layouts[@]}"; do
@@ -85,7 +85,7 @@ for alg in "${!merged_experiments[@]}"; do
             short_flags="${shared_reg:0:1}-${shared_mix:0:1}-${reg:0:1}-${start_reg:0:1}"
             zoom_clean="${zoom//./}"  # Remove dot for file name if needed
 
-            output_file="plotted-Merged-STN-i-$merged_label-$layout-$short_flags-$zoom_clean.pdf"
+            output_file="plotted-Merged-STN-i-$merged_label-$lvl-$layout-$short_flags-$zoom_clean.pdf"
 
             run_plot_merged_rscript \
               --input="$input_path" \

@@ -1,0 +1,1385 @@
+=== Merged STN-i generation started at Fri Jun 20 22:20:42 -04 2025 ===
+=== Processing algorithm: ACOTSP ===
+>> Generating: merged-STN-i-E1-E2-2000-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 14593 
+ - Total edges: 12591 
+ - Shared nodes: 2993 
+ - shared-elite: 119 
+ - shared-regular: 2865 
+ - shared-mixed: 9 
+ - network-elite: 617 
+ - network-regular: 10983 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Merged-STNs-i/merged-STN-i-E1-E2-2000-L1.RData
+✅ Success: Generated merged-STN-i-E1-E2-2000-L1.RData
+>> Generating: merged-STN-i-E1-E2-2000-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 14592 
+ - Total edges: 12590 
+ - Shared nodes: 2994 
+ - shared-elite: 119 
+ - shared-regular: 2866 
+ - shared-mixed: 9 
+ - network-elite: 617 
+ - network-regular: 10981 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Merged-STNs-i/merged-STN-i-E1-E2-2000-L2.RData
+✅ Success: Generated merged-STN-i-E1-E2-2000-L2.RData
+>> Generating: merged-STN-i-E1-E2-2000-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 14571 
+ - Total edges: 12581 
+ - Shared nodes: 2998 
+ - shared-elite: 119 
+ - shared-regular: 2869 
+ - shared-mixed: 10 
+ - network-elite: 615 
+ - network-regular: 10958 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Merged-STNs-i/merged-STN-i-E1-E2-2000-L3.RData
+✅ Success: Generated merged-STN-i-E1-E2-2000-L3.RData
+>> Generating: merged-STN-i-E3-E4-2000-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 29218 
+ - Total edges: 25192 
+ - Shared nodes: 5060 
+ - shared-elite: 99 
+ - shared-regular: 4950 
+ - shared-mixed: 11 
+ - network-elite: 701 
+ - network-regular: 23457 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Merged-STNs-i/merged-STN-i-E3-E4-2000-L1.RData
+✅ Success: Generated merged-STN-i-E3-E4-2000-L1.RData
+>> Generating: merged-STN-i-E3-E4-2000-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 29213 
+ - Total edges: 25189 
+ - Shared nodes: 5060 
+ - shared-elite: 99 
+ - shared-regular: 4950 
+ - shared-mixed: 11 
+ - network-elite: 701 
+ - network-regular: 23452 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Merged-STNs-i/merged-STN-i-E3-E4-2000-L2.RData
+✅ Success: Generated merged-STN-i-E3-E4-2000-L2.RData
+>> Generating: merged-STN-i-E3-E4-2000-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 29120 
+ - Total edges: 25142 
+ - Shared nodes: 5076 
+ - shared-elite: 99 
+ - shared-regular: 4966 
+ - shared-mixed: 11 
+ - network-elite: 700 
+ - network-regular: 23344 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Merged-STNs-i/merged-STN-i-E3-E4-2000-L3.RData
+✅ Success: Generated merged-STN-i-E3-E4-2000-L3.RData
+=== Processing algorithm: PSO-X ===
+>> Generating: merged-STN-i-E1-E2-Mix-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 4906 
+ - Total edges: 3521 
+ - Shared nodes: 4404 
+ - shared-elite: 347 
+ - shared-regular: 4057 
+ - shared-mixed: 0 
+ - network-elite: 37 
+ - network-regular: 465 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Merged-STNs-i/merged-STN-i-E1-E2-Mix-L1.RData
+✅ Success: Generated merged-STN-i-E1-E2-Mix-L1.RData
+>> Generating: merged-STN-i-E1-E2-Mix-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 4904 
+ - Total edges: 3520 
+ - Shared nodes: 4402 
+ - shared-elite: 346 
+ - shared-regular: 4056 
+ - shared-mixed: 0 
+ - network-elite: 37 
+ - network-regular: 465 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Merged-STNs-i/merged-STN-i-E1-E2-Mix-L2.RData
+✅ Success: Generated merged-STN-i-E1-E2-Mix-L2.RData
+>> Generating: merged-STN-i-E1-E2-Mix-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 4852 
+ - Total edges: 3503 
+ - Shared nodes: 4363 
+ - shared-elite: 345 
+ - shared-regular: 4017 
+ - shared-mixed: 1 
+ - network-elite: 36 
+ - network-regular: 453 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Merged-STNs-i/merged-STN-i-E1-E2-Mix-L3.RData
+✅ Success: Generated merged-STN-i-E1-E2-Mix-L3.RData
+>> Generating: merged-STN-i-E3-E4-Mix-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 9401 
+ - Total edges: 6747 
+ - Shared nodes: 9401 
+ - shared-elite: 415 
+ - shared-regular: 8986 
+ - shared-mixed: 0 
+ - network-elite: 0 
+ - network-regular: 0 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Merged-STNs-i/merged-STN-i-E3-E4-Mix-L1.RData
+✅ Success: Generated merged-STN-i-E3-E4-Mix-L1.RData
+>> Generating: merged-STN-i-E3-E4-Mix-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 9384 
+ - Total edges: 6736 
+ - Shared nodes: 9384 
+ - shared-elite: 414 
+ - shared-regular: 8970 
+ - shared-mixed: 0 
+ - network-elite: 0 
+ - network-regular: 0 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Merged-STNs-i/merged-STN-i-E3-E4-Mix-L2.RData
+✅ Success: Generated merged-STN-i-E3-E4-Mix-L2.RData
+>> Generating: merged-STN-i-E3-E4-Mix-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 9093 
+ - Total edges: 6598 
+ - Shared nodes: 9093 
+ - shared-elite: 408 
+ - shared-regular: 8685 
+ - shared-mixed: 0 
+ - network-elite: 0 
+ - network-regular: 0 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Merged-STNs-i/merged-STN-i-E3-E4-Mix-L3.RData
+✅ Success: Generated merged-STN-i-E3-E4-Mix-L3.RData
+>> Generating: merged-STN-i-E5-E6-Mul-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 5045 
+ - Total edges: 3594 
+ - Shared nodes: 4145 
+ - shared-elite: 335 
+ - shared-regular: 3810 
+ - shared-mixed: 0 
+ - network-elite: 74 
+ - network-regular: 826 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Merged-STNs-i/merged-STN-i-E5-E6-Mul-L1.RData
+✅ Success: Generated merged-STN-i-E5-E6-Mul-L1.RData
+>> Generating: merged-STN-i-E5-E6-Mul-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 5041 
+ - Total edges: 3593 
+ - Shared nodes: 4144 
+ - shared-elite: 336 
+ - shared-regular: 3808 
+ - shared-mixed: 0 
+ - network-elite: 73 
+ - network-regular: 824 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Merged-STNs-i/merged-STN-i-E5-E6-Mul-L2.RData
+✅ Success: Generated merged-STN-i-E5-E6-Mul-L2.RData
+>> Generating: merged-STN-i-E5-E6-Mul-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 4999 
+ - Total edges: 3578 
+ - Shared nodes: 4114 
+ - shared-elite: 335 
+ - shared-regular: 3778 
+ - shared-mixed: 1 
+ - network-elite: 71 
+ - network-regular: 814 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Merged-STNs-i/merged-STN-i-E5-E6-Mul-L3.RData
+✅ Success: Generated merged-STN-i-E5-E6-Mul-L3.RData
+>> Generating: merged-STN-i-E7-E8-Mul-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 10133 
+ - Total edges: 7349 
+ - Shared nodes: 9199 
+ - shared-elite: 400 
+ - shared-regular: 8799 
+ - shared-mixed: 0 
+ - network-elite: 43 
+ - network-regular: 891 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Merged-STNs-i/merged-STN-i-E7-E8-Mul-L1.RData
+✅ Success: Generated merged-STN-i-E7-E8-Mul-L1.RData
+>> Generating: merged-STN-i-E7-E8-Mul-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 10100 
+ - Total edges: 7334 
+ - Shared nodes: 9171 
+ - shared-elite: 400 
+ - shared-regular: 8771 
+ - shared-mixed: 0 
+ - network-elite: 43 
+ - network-regular: 886 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Merged-STNs-i/merged-STN-i-E7-E8-Mul-L2.RData
+✅ Success: Generated merged-STN-i-E7-E8-Mul-L2.RData
+>> Generating: merged-STN-i-E7-E8-Mul-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 9697 
+ - Total edges: 7160 
+ - Shared nodes: 8805 
+ - shared-elite: 393 
+ - shared-regular: 8410 
+ - shared-mixed: 2 
+ - network-elite: 41 
+ - network-regular: 851 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Merged-STNs-i/merged-STN-i-E7-E8-Mul-L3.RData
+✅ Success: Generated merged-STN-i-E7-E8-Mul-L3.RData
+>> Generating: merged-STN-i-E9-E10-Uni-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 5645 
+ - Total edges: 4197 
+ - Shared nodes: 4611 
+ - shared-elite: 358 
+ - shared-regular: 4253 
+ - shared-mixed: 0 
+ - network-elite: 83 
+ - network-regular: 951 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Merged-STNs-i/merged-STN-i-E9-E10-Uni-L1.RData
+✅ Success: Generated merged-STN-i-E9-E10-Uni-L1.RData
+>> Generating: merged-STN-i-E9-E10-Uni-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 5634 
+ - Total edges: 4194 
+ - Shared nodes: 4605 
+ - shared-elite: 357 
+ - shared-regular: 4246 
+ - shared-mixed: 2 
+ - network-elite: 81 
+ - network-regular: 948 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Merged-STNs-i/merged-STN-i-E9-E10-Uni-L2.RData
+✅ Success: Generated merged-STN-i-E9-E10-Uni-L2.RData
+>> Generating: merged-STN-i-E9-E10-Uni-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 5475 
+ - Total edges: 4147 
+ - Shared nodes: 4486 
+ - shared-elite: 347 
+ - shared-regular: 4132 
+ - shared-mixed: 7 
+ - network-elite: 74 
+ - network-regular: 915 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Merged-STNs-i/merged-STN-i-E9-E10-Uni-L3.RData
+✅ Success: Generated merged-STN-i-E9-E10-Uni-L3.RData
+>> Generating: merged-STN-i-E11-E12-Uni-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 11406 
+ - Total edges: 8488 
+ - Shared nodes: 9323 
+ - shared-elite: 403 
+ - shared-regular: 8920 
+ - shared-mixed: 0 
+ - network-elite: 83 
+ - network-regular: 2000 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Merged-STNs-i/merged-STN-i-E11-E12-Uni-L1.RData
+✅ Success: Generated merged-STN-i-E11-E12-Uni-L1.RData
+>> Generating: merged-STN-i-E11-E12-Uni-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 11220 
+ - Total edges: 8417 
+ - Shared nodes: 9197 
+ - shared-elite: 397 
+ - shared-regular: 8796 
+ - shared-mixed: 4 
+ - network-elite: 79 
+ - network-regular: 1944 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Merged-STNs-i/merged-STN-i-E11-E12-Uni-L2.RData
+✅ Success: Generated merged-STN-i-E11-E12-Uni-L2.RData
+>> Generating: merged-STN-i-E11-E12-Uni-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 10052 
+ - Total edges: 7936 
+ - Shared nodes: 8318 
+ - shared-elite: 382 
+ - shared-regular: 7918 
+ - shared-mixed: 18 
+ - network-elite: 58 
+ - network-regular: 1676 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Merged-STNs-i/merged-STN-i-E11-E12-Uni-L3.RData
+✅ Success: Generated merged-STN-i-E11-E12-Uni-L3.RData
+=== Processing algorithm: MMASQAP ===
+>> Generating: merged-STN-i-E1-E2-60-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 1851 
+ - Total edges: 1496 
+ - Shared nodes: 1371 
+ - shared-elite: 104 
+ - shared-regular: 1244 
+ - shared-mixed: 23 
+ - network-elite: 34 
+ - network-regular: 446 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Merged-STNs-i/merged-STN-i-E1-E2-60-L1.RData
+✅ Success: Generated merged-STN-i-E1-E2-60-L1.RData
+>> Generating: merged-STN-i-E1-E2-60-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 991 
+ - Total edges: 1247 
+ - Shared nodes: 868 
+ - shared-elite: 82 
+ - shared-regular: 758 
+ - shared-mixed: 28 
+ - network-elite: 2 
+ - network-regular: 121 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Merged-STNs-i/merged-STN-i-E1-E2-60-L2.RData
+✅ Success: Generated merged-STN-i-E1-E2-60-L2.RData
+>> Generating: merged-STN-i-E1-E2-60-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 382 
+ - Total edges: 838 
+ - Shared nodes: 377 
+ - shared-elite: 45 
+ - shared-regular: 324 
+ - shared-mixed: 8 
+ - network-elite: 0 
+ - network-regular: 5 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Merged-STNs-i/merged-STN-i-E1-E2-60-L3.RData
+✅ Success: Generated merged-STN-i-E1-E2-60-L3.RData
+>> Generating: merged-STN-i-E3-E4-60-L1.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 3386 
+ - Total edges: 3512 
+ - Shared nodes: 2273 
+ - shared-elite: 95 
+ - shared-regular: 2119 
+ - shared-mixed: 59 
+ - network-elite: 32 
+ - network-regular: 1081 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Merged-STNs-i/merged-STN-i-E3-E4-60-L1.RData
+✅ Success: Generated merged-STN-i-E3-E4-60-L1.RData
+>> Generating: merged-STN-i-E3-E4-60-L2.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 1354 
+ - Total edges: 2518 
+ - Shared nodes: 1222 
+ - shared-elite: 82 
+ - shared-regular: 1107 
+ - shared-mixed: 33 
+ - network-elite: 0 
+ - network-regular: 132 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Merged-STNs-i/merged-STN-i-E3-E4-60-L2.RData
+✅ Success: Generated merged-STN-i-E3-E4-60-L2.RData
+>> Generating: merged-STN-i-E3-E4-60-L3.RData
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:igraph’:
+
+    as_data_frame, groups, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:igraph’:
+
+    crossing
+
+
+Saving merged STN-i with summary metrics:
+ - Total nodes: 400 
+ - Total edges: 1404 
+ - Shared nodes: 399 
+ - shared-elite: 47 
+ - shared-regular: 342 
+ - shared-mixed: 10 
+ - network-elite: 0 
+ - network-regular: 1 
+Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Merged-STNs-i/merged-STN-i-E3-E4-60-L3.RData
+✅ Success: Generated merged-STN-i-E3-E4-60-L3.RData
+=== Merged STN-i generation finished at Fri Jun 20 22:21:20 -04 2025 ===

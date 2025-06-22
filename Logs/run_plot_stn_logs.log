@@ -1,6 +1,6 @@
-=== STN-i plotting started at Fri Jun 20 20:28:01 -04 2025 ===
+=== STN-i plotting started at Sat Jun 21 08:57:45 -04 2025 ===
 === Processing algorithm: ACOTSP ===
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -15,9 +15,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -29,9 +29,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -43,9 +43,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -57,68 +57,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -133,9 +74,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -147,9 +88,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -161,9 +102,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -175,68 +116,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-fr-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -251,9 +133,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -265,9 +147,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -279,9 +161,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -293,68 +175,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-kk-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-fr-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -369,9 +192,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -383,9 +206,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -397,9 +220,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -411,68 +234,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -487,9 +251,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -501,9 +265,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -515,9 +279,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -529,68 +293,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-circle-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -605,9 +310,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -619,9 +324,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -633,9 +338,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -647,68 +352,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-grid-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-kk-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -723,9 +369,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -737,9 +383,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -751,9 +397,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -765,68 +411,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -841,9 +428,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -855,9 +442,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -869,9 +456,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -883,68 +470,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sphere-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -959,9 +487,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -973,9 +501,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -987,9 +515,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -1001,68 +529,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-random-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L1/plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L1-graphopt-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -1077,9 +546,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -1091,9 +560,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -1105,9 +574,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -1119,68 +588,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -1195,9 +605,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -1209,9 +619,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -1223,9 +633,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -1237,68 +647,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-star-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -1313,9 +664,9 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.25.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -1327,9 +678,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.5.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.5.pdf
 
 Attaching package: ‘igraph’
 
@@ -1341,9 +692,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.75.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.75.pdf
 
 Attaching package: ‘igraph’
 
@@ -1355,68 +706,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-tree-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-NA.pdf
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-fr-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-NA.pdf
 
 Attaching package: ‘igraph’
 
@@ -1431,12 +723,1074 @@ The following object is masked from ‘package:base’:
 Warning message:
 In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
   NAs introduced by coercion
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-kk-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L2/plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L2-graphopt-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-fr-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-kk-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Plots/L3/plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E3-BH-WSR-2000-L3-graphopt-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-NA.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.25.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.5.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.75.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-NA.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.25.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.25.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.5.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.5.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.75.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Plots/L1/plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.75.pdf
+✅ Success: Generated plotted-STN-i-E4-BH-SR-2000-L1-fr-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-NA.pdf
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+Warning message:
+In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
+  NAs introduced by coercion
+
+Error in layout_with_kk(g) : 
+Calls: get_layout_data -> layout_with_kk
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-0.25.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-0.25.pdf
 
 Attaching package: ‘igraph’
 
@@ -1448,1032 +1802,385 @@ The following object is masked from ‘package:base’:
 
     union
 
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
+
+Error in layout_with_kk(g) : 
+Calls: get_layout_data -> layout_with_kk
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Error in layout_reingold_tilford(g) : 
-  could not find function "layout_reingold_tilford"
-Calls: get_layout_data
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-reingold-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Error in ec[, 3:4] <- t(sapply(seq(length.out = nrow(el)), function(x) { : 
-  incorrect number of subscripts on matrix
-Calls: save_stn_i_plot -> plot -> plot.igraph
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Error in ec[, 3:4] <- t(sapply(seq(length.out = nrow(el)), function(x) { : 
-  incorrect number of subscripts on matrix
-Calls: save_stn_i_plot -> plot -> plot.igraph
-Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-mds-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-drl-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In layout_with_lgl(g) :
-  At vendor/cigraph/src/layout/large_graph.c:179 : LGL layout does not support disconnected graphs yet.
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-lgl-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.75.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-graphopt-F-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-NA.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-Warning message:
-In ifelse(!is.null(params$zoom_quantile), as.numeric(params$zoom_quantile),  :
-  NAs introduced by coercion
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-NA.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.25.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.25.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i plot saved successfully to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Plots/plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.5.pdf
-✅ Success: Generated plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.75.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-0.5.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-T-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-NA.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-0.75.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-0.25.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-NA.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-0.5.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-0.25.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-0.5.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-0.75.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-0.5.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-T-F-0.75.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-F-F-NA.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-0.75.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-F-F-NA.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-F-F-0.25.pdf
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-NA.pdf
 
 Execution halted
-❌ Error: Failed to generate plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-F-F-0.25.pdf
->> Plotting: plotted-STN-i-E1-BL-WSR-2000-L1-sugiyama-F-F-0.5.pdf
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-0.25.pdf
 
 Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-kk-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L1-graphopt-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-fr-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-kk-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L2-graphopt-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-fr-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-kk-F-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-T-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-T-F-0.75.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-NA.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-NA.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-0.25.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-0.25.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-0.5.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-0.5.pdf
+>> Plotting: plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-0.75.pdf
+
+Execution halted
+❌ Error: Failed to generate plotted-STN-i-E4-BH-SR-2000-L3-graphopt-F-F-0.75.pdf
+=== STN-i plotting finished at Sat Jun 21 13:30:07 -04 2025 ===
