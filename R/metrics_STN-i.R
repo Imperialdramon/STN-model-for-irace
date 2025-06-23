@@ -111,4 +111,11 @@ output_file_path <- file.path(output_folder, output_file_name)
 # Save the STN-i result to the specified output file
 save_stn_i_metrics(stn_i_metrics, output_file_path)
 
+#  ---------- Clean up ----------
+
+# Clear the workspace and garbage collection
+rm(list = ls())
+gc()
+quit(save = "no")
+
 # nolint end

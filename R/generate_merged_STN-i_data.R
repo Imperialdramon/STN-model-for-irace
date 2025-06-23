@@ -140,4 +140,11 @@ output_file_path <- file.path(output_folder, output_file_name)
 # Save the merged STN-i object
 save_merged_stn_i_data(merged_stn_i_result, output_file_path)
 
+#  ---------- Clean up ----------
+
+# Clear the workspace and garbage collection
+rm(list = ls())
+gc()
+quit(save = "no")
+
 # nolint end

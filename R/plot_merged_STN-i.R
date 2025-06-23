@@ -174,4 +174,11 @@ output_file_path <- file.path(output_folder, output_file_name)
 # Save the STN-i plot as a PDF
 save_merged_stn_i_plot(output_file_path, merged_STN_i, merged_stn_i_data$network_names, layout_data, palette_colors, nsizef = size_factor, ewidthf = size_factor, asize = 0.3, ecurv = 0.3)
 
+#  ---------- Clean up ----------
+
+# Clear the workspace and garbage collection
+rm(list = ls())
+gc()
+quit(save = "no")
+
 # nolint end
