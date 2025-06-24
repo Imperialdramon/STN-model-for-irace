@@ -13,7 +13,7 @@
 #        ./run_all_metrics_merged_STN-i.sh
 #
 #   Output:
-#     - One metrics CSV per merged pair (e.g., metrics-Merged-STN-i-E1-E2-2000.csv)
+#     - One metrics CSV per merged pair and level (e.g., metrics-Merged-STN-i-E1-E2-2000-L1.csv)
 #     - Log file: Logs/run_metrics_merged_logs.log
 # ==============================================================================
 
@@ -51,22 +51,23 @@ merged_experiments["PSO-X"]="Merged-E1-E2-Mix Merged-E3-E4-Mix Merged-E5-E6-Mul 
 # Levels to process
 levels="L1 L2 L3"
 
-# Loop through each merged case and combine metrics into one CSV per case
+# Loop through each merged case and combine metrics into one CSV per case and level
 for alg in "${!merged_experiments[@]}"; do
   echo "=== Processing algorithm: $alg ===" | tee -a "$LOG_FILE"
 
   for merged_case in ${merged_experiments[$alg]}; do
     merged_label="${merged_case#Merged-}"  # Extract E1-E2-2000
 
-    # Use only the first level's file as reference for output name
-    input_path="Experiments/$alg/$merged_case/Merged-STNs-i/merged-STN-i-$merged_label-L1.RData"
-    output_dir="Experiments/$alg/$merged_case/Metrics"
-    output_file="metrics-Merged-STN-i-$merged_label.csv"
+    for level in $levels; do
+      input_path="Experiments/$alg/$merged_case/Merged-STNs-i/merged-STN-i-$merged_label-$level.RData"
+      output_dir="Experiments/$alg/$merged_case/Metrics"
+      output_file="metrics-Merged-STN-i-$merged_label-$level.csv"
 
-    run_merged_metrics_rscript \
-      --input="$input_path" \
-      --output="$output_dir" \
-      --output_file="$output_file"
+      run_merged_metrics_rscript \
+        --input="$input_path" \
+        --output="$output_dir" \
+        --output_file="$output_file"
+    done
   done
 done
 

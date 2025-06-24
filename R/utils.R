@@ -1290,7 +1290,7 @@ get_stn_i_metrics <- function(stn_i_result) {
   metrics$worsening_edges <- sum(E(STN_i)$Type == "WORSENING")
   metrics$equal_edges <- sum(E(STN_i)$Type == "EQUAL")
   metrics$improving_edges <- sum(E(STN_i)$Type == "IMPROVING")
-  metrics$global_edges_tendency <- metrics$improving_edges / (metrics$improving_edges + metrics$worsening_edges)
+  metrics$edges_tendency <- metrics$improving_edges / (metrics$improving_edges + metrics$worsening_edges)
 
   # Compute initialization process metrics
   metrics$regular_start_nodes <- sum(V(STN_i)$Topology == "START" & V(STN_i)$Quality == "REGULAR")
@@ -1317,6 +1317,7 @@ get_stn_i_metrics <- function(stn_i_result) {
   metrics$average_degree <- mean(degree(STN_i))
   metrics$average_in_degree <- mean(degree(STN_i, mode = "in"))
   metrics$average_out_degree <- mean(degree(STN_i, mode = "out"))
+
   regular_nodes <- V(STN_i)[V(STN_i)$Quality == "REGULAR"]
   if (length(regular_nodes) > 0) {
     metrics$average_regular_in_degree  <- mean(degree(STN_i, v = regular_nodes, mode = "in"), na.rm = TRUE)
@@ -1325,6 +1326,7 @@ get_stn_i_metrics <- function(stn_i_result) {
     metrics$average_regular_in_degree  <- NA
     metrics$average_regular_out_degree <- NA
   }
+
   elite_nodes <- V(STN_i)[V(STN_i)$Quality == "ELITE"]
   if (length(elite_nodes) > 0) {
     metrics$average_elite_in_degree  <- mean(degree(STN_i, v = elite_nodes, mode = "in"), na.rm = TRUE)
@@ -1333,16 +1335,25 @@ get_stn_i_metrics <- function(stn_i_result) {
     metrics$average_elite_in_degree  <- NA
     metrics$average_elite_out_degree <- NA
   }
-  start_ids <- which(V(STN_i)$Topology == "START")
+
   best_ids <- which(V(STN_i)$Quality == "BEST")
+  if (length(best_ids) == 0) {
+    metrics$average_best_in_degree <- mean(degree(STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
+    metrics$average_best_out_degree <- mean(degree(STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
+    metrics$best_strength_in <- sum(strength(STN_i, vids = best_ids,  mode="in"))
+  } else {
+    metrics$average_best_in_degree <- NA
+    metrics$average_best_out_degree <- NA
+    metrics$best_strength_in <- NA
+  }
+
+  start_ids <- which(V(STN_i)$Topology == "START")
   if (length(best_ids) > 0 & length(start_ids) > 0) {
-    metrics$best_strength <- sum(strength(STN_i, vids = best_ids,  mode="in"))
     dist_matrix <- distances(STN_i, v = start_ids, to = best_ids, mode = "out", weights = NULL)
     finite_distances <- dist_matrix[is.finite(dist_matrix)]
     metrics$average_path_length <- mean(finite_distances)
     metrics$paths <- length(finite_distances)
   } else {
-    metrics$best_strength <- NA
     metrics$average_path_length <- NA
     metrics$paths <- 0
   }
@@ -1351,6 +1362,34 @@ get_stn_i_metrics <- function(stn_i_result) {
   # Compute supervivence metrics
   run_averages <- sapply(configurations_survival_rates, function(run) mean(run, na.rm = TRUE))
   metrics$average_configurations_survival_rates <- mean(run_averages, na.rm = TRUE)
+
+  # Compute percentage metrics for nodes
+  if (metrics$nodes > 0) {
+    metrics$best_nodes_rate <- metrics$best_nodes / metrics$nodes
+    metrics$regular_nodes_rate <- metrics$regular_nodes / metrics$nodes
+    metrics$elite_nodes_rate <- metrics$elite_nodes / metrics$nodes
+    metrics$start_nodes_rate <- metrics$start_nodes / metrics$nodes
+    metrics$standard_nodes_rate <- metrics$standard_nodes / metrics$nodes
+    metrics$end_nodes_rate <- metrics$end_nodes / metrics$nodes
+  } else {
+    metrics$best_nodes_rate <- NA
+    metrics$regular_nodes_rate <- NA
+    metrics$elite_nodes_rate <- NA
+    metrics$start_nodes_rate <- NA
+    metrics$standard_nodes_rate <- NA
+    metrics$end_nodes_rate <- NA
+  }
+
+  # Compute percentage metrics for edges
+  if (metrics$edges > 0) {
+    metrics$worsening_edges_rate <- metrics$worsening_edges / metrics$edges
+    metrics$equal_edges_rate <- metrics$equal_edges / metrics$edges
+    metrics$improving_edges_rate <- metrics$improving_edges / metrics$edges
+  } else {
+    metrics$worsening_edges_rate <- NA
+    metrics$equal_edges_rate <- NA
+    metrics$improving_edges_rate <- NA
+  }
 
   return(metrics)
 }
@@ -1449,16 +1488,25 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   metrics$average_degree <- mean(degree(merged_STN_i))
   metrics$average_in_degree <- mean(degree(merged_STN_i, mode = "in"))
   metrics$average_out_degree <- mean(degree(merged_STN_i, mode = "out"))
-  start_ids <- which(V(merged_STN_i)$Topology == "START")
+
   best_ids <- which(V(merged_STN_i)$Category == "BEST")
+  if (length(best_ids) > 0) {
+    metrics$average_best_in_degree <- mean(degree(merged_STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
+    metrics$average_best_out_degree <- mean(degree(merged_STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
+    metrics$best_strength_in <- sum(strength(merged_STN_i, vids = best_ids, mode = "in"))
+  } else {
+    metrics$average_best_in_degree <- NA
+    metrics$average_best_out_degree <- NA
+    metrics$best_strength_in <- 0
+  }
+
+  start_ids <- which(V(merged_STN_i)$Topology == "START")
   if (length(best_ids) > 0 & length(start_ids) > 0) {
-    metrics$best_strength <- sum(strength(merged_STN_i, vids = best_ids,  mode="in"))
     dist_matrix <- distances(merged_STN_i, v = start_ids, to = best_ids, mode = "out", weights = NULL)
     finite_distances <- dist_matrix[is.finite(dist_matrix)]
     metrics$average_path_length <- mean(finite_distances)
     metrics$paths <- length(finite_distances)
   } else {
-    metrics$best_strength <- NA
     metrics$average_path_length <- NA
     metrics$paths <- 0
   }
@@ -1472,14 +1520,24 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   metrics$network_regular_nodes <- sum(V(merged_STN_i)$Category == "network-regular")
   metrics$network_elite_nodes <- sum(V(merged_STN_i)$Category == "network-elite")
 
-  # Compute shared percentage metrics (only merged metrics)
+  # Compute percentage metrics for nodes
   if (metrics$nodes > 0) {
+    metrics$best_nodes_rate <- metrics$best_nodes / metrics$nodes
+    metrics$start_rate <- metrics$start_nodes / metrics$nodes
+    metrics$standard_rate <- metrics$standard_nodes / metrics$nodes
+    metrics$end_rate <- metrics$end_nodes / metrics$nodes
+    metrics$shared_rate <- metrics$shared_nodes / metrics$nodes
     metrics$shared_regular_rate <- metrics$shared_regular_nodes / metrics$nodes
     metrics$shared_elite_rate <- metrics$shared_elite_nodes / metrics$nodes
     metrics$shared_mixed_rate <- metrics$shared_mixed_nodes / metrics$nodes
     metrics$network_regular_rate <- metrics$network_regular_nodes / metrics$nodes
     metrics$network_elite_rate <- metrics$network_elite_nodes / metrics$nodes
   } else {
+    metrics$best_nodes_rate <- NA
+    metrics$start_rate <- NA
+    metrics$standard_rate <- NA
+    metrics$end_rate <- NA
+    metrics$shared_rate <- NA
     metrics$shared_regular_rate <- NA
     metrics$shared_elite_rate <- NA
     metrics$shared_mixed_rate <- NA
@@ -1488,6 +1546,15 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   }
 
   # Compute degrees for shared nodes (only merged metrics)
+  shared_nodes <- V(merged_STN_i)[V(merged_STN_i)$Shared == TRUE]
+  if (length(shared_nodes) > 0) {
+    metrics$average_shared_in_degree <- mean(degree(merged_STN_i, v = shared_nodes, mode = "in"), na.rm = TRUE)
+    metrics$average_shared_out_degree <- mean(degree(merged_STN_i, v = shared_nodes, mode = "out"), na.rm = TRUE)
+  } else {
+    metrics$average_shared_in_degree <- NA
+    metrics$average_shared_out_degree <- NA
+  }
+
   shared_regular_nodes <- V(merged_STN_i)[V(merged_STN_i)$Category == "shared-regular"]
   if (length(shared_regular_nodes) > 0) {
     metrics$average_shared_regular_in_degree <- mean(degree(merged_STN_i, v = shared_regular_nodes, mode = "in"), na.rm = TRUE)
@@ -1496,6 +1563,7 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
     metrics$average_shared_regular_in_degree <- NA
     metrics$average_shared_regular_out_degree <- NA
   }
+
   shared_elite_nodes <- V(merged_STN_i)[V(merged_STN_i)$Category == "shared-elite"]
   if (length(shared_elite_nodes) > 0) {
     metrics$average_shared_elite_in_degree <- mean(degree(merged_STN_i, v = shared_elite_nodes, mode = "in"), na.rm = TRUE)
@@ -1504,6 +1572,7 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
     metrics$average_shared_elite_in_degree <- NA
     metrics$average_shared_elite_out_degree <- NA
   }
+
   shared_mixed_nodes <- V(merged_STN_i)[V(merged_STN_i)$Category == "shared-mixed"]
   if (length(shared_mixed_nodes) > 0) {
     metrics$average_shared_mixed_in_degree <- mean(degree(merged_STN_i, v = shared_mixed_nodes, mode = "in"), na.rm = TRUE)
@@ -1511,14 +1580,6 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   } else {
     metrics$average_shared_mixed_in_degree <- NA
     metrics$average_shared_mixed_out_degree <- NA
-  }
-  shared_nodes <- V(merged_STN_i)[V(merged_STN_i)$Shared == TRUE]
-  if (length(shared_nodes) > 0) {
-    metrics$average_shared_in_degree <- mean(degree(merged_STN_i, v = shared_nodes, mode = "in"), na.rm = TRUE)
-    metrics$average_shared_out_degree <- mean(degree(merged_STN_i, v = shared_nodes, mode = "out"), na.rm = TRUE)
-  } else {
-    metrics$average_shared_in_degree <- NA
-    metrics$average_shared_out_degree <- NA
   }
 
   return(metrics)

@@ -6,7 +6,7 @@
 #              visibility, and zoom configuration combinations, using parallel execution.
 #
 # Usage:
-#   chmod +x run_all_plot_merged_STN-i.sh
+#   chmod +x run_all_plot_merged_STN-i_parallelized.sh
 #   ./run_all_plot_merged_STN-i_parallelized.sh
 #
 # Output:
@@ -15,7 +15,7 @@
 # ==============================================================================
 
 # Maximum number of parallel jobs
-MAX_JOBS=4
+MAX_JOBS=2
 
 LOG_DIR="./Logs"
 mkdir -p "$LOG_DIR"
@@ -23,7 +23,13 @@ LOG_FILE="$LOG_DIR/run_plot_merged_stn_parallelized_logs.log"
 echo "=== Merged STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
 layouts=("fr" "kk" "graphopt")
-zoom_levels=("NA" "0.25" "0.5" "0.75")
+
+#zoom_levels=("NA" "0.25" "0.5" "0.75")
+
+# Define zoom levels
+# NA: No zoom, original size
+# 0.25: 25% of the best nodes, 25% of the original size
+zoom_levels=("NA" "0.25")
 
 show_combinations=(
   "TRUE TRUE TRUE TRUE"
@@ -83,9 +89,8 @@ for alg in "${!merged_experiments[@]}"; do
             read -r shared_reg shared_mix reg start_reg <<< "$show_config"
 
             short_flags="${shared_reg:0:1}-${shared_mix:0:1}-${reg:0:1}-${start_reg:0:1}"
-            zoom_clean="${zoom//./}"
 
-            output_file="plotted-Merged-STN-i-$merged_label-$lvl-$layout-$short_flags-$zoom_clean.pdf"
+            output_file="plotted-Merged-STN-i-$merged_label-$lvl-$layout-$short_flags-$zoom.pdf"
 
             wait_for_jobs
             run_plot_merged_rscript --input="$input_path" \

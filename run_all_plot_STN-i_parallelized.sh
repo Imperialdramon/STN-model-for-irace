@@ -88,7 +88,6 @@ for alg in "${!experiments[@]}"; do
           read -r show_regular show_start_regular <<< "$show_pair"
 
           for zoom in "${zoom_levels[@]}"; do
-            zoom_label="${zoom//./}"
             output_file="plotted-STN-i-$exp-$lvl-$layout-${show_regular:0:1}-${show_start_regular:0:1}-$zoom.pdf"
 
             wait_for_jobs
