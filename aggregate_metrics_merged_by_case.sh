@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: aggregate_metrics_merged_by_case.sh
-# Description: Aggregates merged metrics across levels into a single CSV per
-#              merged experiment (e.g., E1-E2-2000), preserving naming.
+# Script: aggregate_all_merged_metrics_per_algorithm.sh
+# Description: Aggregates merged STN-i metrics into one file per algorithm,
+#              preserving naming based on the merged case size (2000, 60, Mix, etc.).
 #
 # Output:
-#   Metrics-Merged-STN-i/metrics-Merged-STN-i-<merged_case>.csv
+#   Metrics-Merged-STN-i/Metrics-Merged-<Algorithm>-STN-i.csv
 # ==============================================================================
 
 # Output directory
-OUTPUT_DIR="./Metrics-Merged-STN-i"
-mkdir -p "$OUTPUT_DIR"
+FINAL_OUTPUT_DIR="./Metrics-Merged-STN-i"
+mkdir -p "$FINAL_OUTPUT_DIR"
 
 # Define merged cases per algorithm
 declare -A merged_experiments
@@ -22,16 +22,21 @@ merged_experiments["PSO-X"]="Merged-E1-E2-Mix Merged-E3-E4-Mix Merged-E5-E6-Mul 
 # Levels to process
 levels="L1 L2 L3"
 
-# Iterate through each merged case
+# Loop over algorithms
 for alg in "${!merged_experiments[@]}"; do
+
+  # Get size token from first merged case (e.g., 2000, 60, Mix, etc.)
+  first_case=${merged_experiments[$alg]%% *}
+  size_token=$(echo "$first_case" | rev | cut -d'-' -f1 | rev)
+
+  output_file="$FINAL_OUTPUT_DIR/Metrics-Merged-${alg}-STN-i.csv"
+  header_written=false
+
   for merged_case in ${merged_experiments[$alg]}; do
+    merged_label="${merged_case#Merged-}"
 
-    merged_label="${merged_case#Merged-}"  # e.g., E1-E2-2000
-    output_file="$OUTPUT_DIR/$alg/metrics-Merged-STN-i-${merged_label}.csv"
-    header_written=false
-
-    for level in $levels; do
-      metrics_file="Experiments/$alg/$merged_case/Metrics/metrics-Merged-STN-i-${merged_label}-${level}.csv"
+    for lvl in $levels; do
+      metrics_file="Experiments/$alg/$merged_case/Metrics/metrics-Merged-STN-i-${merged_label}-${lvl}.csv"
 
       if [[ -f "$metrics_file" ]]; then
         if ! $header_written; then
@@ -40,11 +45,12 @@ for alg in "${!merged_experiments[@]}"; do
         fi
         tail -n +2 "$metrics_file" >> "$output_file"
       else
-        echo "⚠️ Warning: Missing file $metrics_file"
+        echo "⚠️ Missing file: $metrics_file"
       fi
     done
-
   done
+
+  echo "✅ Saved: $output_file"
 done
 
-echo "✅ Aggregation of merged STN-i metrics complete. Files saved in: $OUTPUT_DIR"
+echo "🎉 All merged metrics aggregated to $FINAL_OUTPUT_DIR"

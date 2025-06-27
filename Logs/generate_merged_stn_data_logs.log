@@ -1,4 +1,4 @@
-=== Merged STN-i generation started at Fri Jun 20 22:20:42 -04 2025 ===
+=== Merged STN-i generation started at Fri Jun 27 05:43:21 -04 2025 ===
 === Processing algorithm: ACOTSP ===
 >> Generating: merged-STN-i-E1-E2-2000-L1.RData
 
@@ -45,6 +45,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 617 
  - network-regular: 10983 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Merged-STNs-i/merged-STN-i-E1-E2-2000-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  647453 34.6    1330261 71.1  1330261 71.1
+Vcells 1585903 12.1    8388608 64.0  6767672 51.7
 ✅ Success: Generated merged-STN-i-E1-E2-2000-L1.RData
 >> Generating: merged-STN-i-E1-E2-2000-L2.RData
 
@@ -91,6 +94,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 617 
  - network-regular: 10981 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Merged-STNs-i/merged-STN-i-E1-E2-2000-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  647452 34.6    1330261 71.1  1330261 71.1
+Vcells 1585877 12.1    8388608 64.0  6767409 51.7
 ✅ Success: Generated merged-STN-i-E1-E2-2000-L2.RData
 >> Generating: merged-STN-i-E1-E2-2000-L3.RData
 
@@ -137,6 +143,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 615 
  - network-regular: 10958 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Merged-STNs-i/merged-STN-i-E1-E2-2000-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  647431 34.6    1330261 71.1  1330261 71.1
+Vcells 1585299 12.1    8388608 64.0  6772088 51.7
 ✅ Success: Generated merged-STN-i-E1-E2-2000-L3.RData
 >> Generating: merged-STN-i-E3-E4-2000-L1.RData
 
@@ -183,6 +192,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 701 
  - network-regular: 23457 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Merged-STNs-i/merged-STN-i-E3-E4-2000-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  662078 35.4    1330261 71.1  1330261 71.1
+Vcells 2078610 15.9    8388608 64.0  8387961 64.0
 ✅ Success: Generated merged-STN-i-E3-E4-2000-L1.RData
 >> Generating: merged-STN-i-E3-E4-2000-L2.RData
 
@@ -229,6 +241,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 701 
  - network-regular: 23452 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Merged-STNs-i/merged-STN-i-E3-E4-2000-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  662073 35.4    1330261 71.1  1330261 71.1
+Vcells 2078461 15.9    8388608 64.0  8386747 64.0
 ✅ Success: Generated merged-STN-i-E3-E4-2000-L2.RData
 >> Generating: merged-STN-i-E3-E4-2000-L3.RData
 
@@ -275,6 +290,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 700 
  - network-regular: 23344 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Merged-STNs-i/merged-STN-i-E3-E4-2000-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  661980 35.4    1330261 71.1  1330261 71.1
+Vcells 2075787 15.9    8388608 64.0  8387971 64.0
 ✅ Success: Generated merged-STN-i-E3-E4-2000-L3.RData
 === Processing algorithm: PSO-X ===
 >> Generating: merged-STN-i-E1-E2-Mix-L1.RData
@@ -322,6 +340,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 37 
  - network-regular: 465 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Merged-STNs-i/merged-STN-i-E1-E2-Mix-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  637751 34.1    1330261 71.1  1330261 71.1
+Vcells 1282596  9.8    8388608 64.0  4108026 31.4
 ✅ Success: Generated merged-STN-i-E1-E2-Mix-L1.RData
 >> Generating: merged-STN-i-E1-E2-Mix-L2.RData
 
@@ -368,6 +389,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 37 
  - network-regular: 465 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Merged-STNs-i/merged-STN-i-E1-E2-Mix-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  637769 34.1    1330261 71.1  1330261 71.1
+Vcells 1282518  9.8    8388608 64.0  4107665 31.4
 ✅ Success: Generated merged-STN-i-E1-E2-Mix-L2.RData
 >> Generating: merged-STN-i-E1-E2-Mix-L3.RData
 
@@ -414,6 +438,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 36 
  - network-regular: 453 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Merged-STNs-i/merged-STN-i-E1-E2-Mix-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  637718 34.1    1330261 71.1  1330261 71.1
+Vcells 1280678  9.8    8388608 64.0  4102743 31.4
 ✅ Success: Generated merged-STN-i-E1-E2-Mix-L3.RData
 >> Generating: merged-STN-i-E3-E4-Mix-L1.RData
 
@@ -460,6 +487,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 0 
  - network-regular: 0 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Merged-STNs-i/merged-STN-i-E3-E4-Mix-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  642260 34.4    1330261 71.1  1330261 71.1
+Vcells 1474339 11.3    8388608 64.0  6725218 51.4
 ✅ Success: Generated merged-STN-i-E3-E4-Mix-L1.RData
 >> Generating: merged-STN-i-E3-E4-Mix-L2.RData
 
@@ -506,6 +536,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 0 
  - network-regular: 0 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Merged-STNs-i/merged-STN-i-E3-E4-Mix-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  642243 34.3    1330261 71.1  1330261 71.1
+Vcells 1473640 11.3    8388608 64.0  6722779 51.3
 ✅ Success: Generated merged-STN-i-E3-E4-Mix-L2.RData
 >> Generating: merged-STN-i-E3-E4-Mix-L3.RData
 
@@ -552,6 +585,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 0 
  - network-regular: 0 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Merged-STNs-i/merged-STN-i-E3-E4-Mix-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  641958 34.3    1330261 71.1  1330261 71.1
+Vcells 1462325 11.2    8388608 64.0  6775810 51.7
 ✅ Success: Generated merged-STN-i-E3-E4-Mix-L3.RData
 >> Generating: merged-STN-i-E5-E6-Mul-L1.RData
 
@@ -598,6 +634,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 74 
  - network-regular: 826 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Merged-STNs-i/merged-STN-i-E5-E6-Mul-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  637910 34.1    1330161 71.1  1330161 71.1
+Vcells 1284175  9.8    8388608 64.0  4082929 31.2
 ✅ Success: Generated merged-STN-i-E5-E6-Mul-L1.RData
 >> Generating: merged-STN-i-E5-E6-Mul-L2.RData
 
@@ -644,6 +683,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 73 
  - network-regular: 824 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Merged-STNs-i/merged-STN-i-E5-E6-Mul-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  637906 34.1    1330261 71.1  1330261 71.1
+Vcells 1284051  9.8    8388608 64.0  3828736 29.3
 ✅ Success: Generated merged-STN-i-E5-E6-Mul-L2.RData
 >> Generating: merged-STN-i-E5-E6-Mul-L3.RData
 
@@ -690,6 +732,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 71 
  - network-regular: 814 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Merged-STNs-i/merged-STN-i-E5-E6-Mul-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  637865 34.1    1330261 71.1  1330261 71.1
+Vcells 1282564  9.8    8388608 64.0  4014879 30.7
 ✅ Success: Generated merged-STN-i-E5-E6-Mul-L3.RData
 >> Generating: merged-STN-i-E7-E8-Mul-L1.RData
 
@@ -736,6 +781,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 43 
  - network-regular: 891 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Merged-STNs-i/merged-STN-i-E7-E8-Mul-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  642998 34.4    1330261 71.1  1330261 71.1
+Vcells 1496222 11.5    8388608 64.0  6789686 51.9
 ✅ Success: Generated merged-STN-i-E7-E8-Mul-L1.RData
 >> Generating: merged-STN-i-E7-E8-Mul-L2.RData
 
@@ -782,6 +830,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 43 
  - network-regular: 886 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Merged-STNs-i/merged-STN-i-E7-E8-Mul-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  642965 34.4    1330261 71.1  1330261 71.1
+Vcells 1494989 11.5    8388608 64.0  6779494 51.8
 ✅ Success: Generated merged-STN-i-E7-E8-Mul-L2.RData
 >> Generating: merged-STN-i-E7-E8-Mul-L3.RData
 
@@ -828,6 +879,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 41 
  - network-regular: 851 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Merged-STNs-i/merged-STN-i-E7-E8-Mul-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  642563 34.4    1330261 71.1  1330261 71.1
+Vcells 1479795 11.3    8388608 64.0  6677034 51.0
 ✅ Success: Generated merged-STN-i-E7-E8-Mul-L3.RData
 >> Generating: merged-STN-i-E9-E10-Uni-L1.RData
 
@@ -874,6 +928,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 83 
  - network-regular: 951 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Merged-STNs-i/merged-STN-i-E9-E10-Uni-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  638510 34.2    1330261 71.1  1330261 71.1
+Vcells 1309429 10.0    8388608 64.0  4450331 34.0
 ✅ Success: Generated merged-STN-i-E9-E10-Uni-L1.RData
 >> Generating: merged-STN-i-E9-E10-Uni-L2.RData
 
@@ -920,6 +977,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 81 
  - network-regular: 948 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Merged-STNs-i/merged-STN-i-E9-E10-Uni-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  638501 34.1    1330261 71.1  1330261 71.1
+Vcells 1309062 10.0    8388608 64.0  4448323 34.0
 ✅ Success: Generated merged-STN-i-E9-E10-Uni-L2.RData
 >> Generating: merged-STN-i-E9-E10-Uni-L3.RData
 
@@ -966,6 +1026,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 74 
  - network-regular: 915 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Merged-STNs-i/merged-STN-i-E9-E10-Uni-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  638342 34.1    1330261 71.1  1330261 71.1
+Vcells 1303473 10.0    8388608 64.0  4413084 33.7
 ✅ Success: Generated merged-STN-i-E9-E10-Uni-L3.RData
 >> Generating: merged-STN-i-E11-E12-Uni-L1.RData
 
@@ -1012,6 +1075,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 83 
  - network-regular: 2000 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Merged-STNs-i/merged-STN-i-E11-E12-Uni-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  644271 34.5    1330261 71.1  1330261 71.1
+Vcells 1539755 11.8    8388608 64.0  7242849 55.3
 ✅ Success: Generated merged-STN-i-E11-E12-Uni-L1.RData
 >> Generating: merged-STN-i-E11-E12-Uni-L2.RData
 
@@ -1058,6 +1124,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 79 
  - network-regular: 1944 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Merged-STNs-i/merged-STN-i-E11-E12-Uni-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  644081 34.4    1330261 71.1  1330261 71.1
+Vcells 1533178 11.7    8388608 64.0  7340701 56.1
 ✅ Success: Generated merged-STN-i-E11-E12-Uni-L2.RData
 >> Generating: merged-STN-i-E11-E12-Uni-L3.RData
 
@@ -1104,6 +1173,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 58 
  - network-regular: 1676 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Merged-STNs-i/merged-STN-i-E11-E12-Uni-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  642919 34.4    1330261 71.1  1330261 71.1
+Vcells 1490989 11.4    8388608 64.0  6749457 51.5
 ✅ Success: Generated merged-STN-i-E11-E12-Uni-L3.RData
 === Processing algorithm: MMASQAP ===
 >> Generating: merged-STN-i-E1-E2-60-L1.RData
@@ -1151,6 +1223,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 34 
  - network-regular: 446 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Merged-STNs-i/merged-STN-i-E1-E2-60-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  634719 33.9    1330261 71.1  1330261 71.1
+Vcells 1150916  8.8    8388608 64.0  2828550 21.6
 ✅ Success: Generated merged-STN-i-E1-E2-60-L1.RData
 >> Generating: merged-STN-i-E1-E2-60-L2.RData
 
@@ -1197,6 +1272,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 2 
  - network-regular: 121 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Merged-STNs-i/merged-STN-i-E1-E2-60-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  633852 33.9    1330261 71.1  1330261 71.1
+Vcells 1124909  8.6    8388608 64.0  2336425 17.9
 ✅ Success: Generated merged-STN-i-E1-E2-60-L2.RData
 >> Generating: merged-STN-i-E1-E2-60-L3.RData
 
@@ -1243,6 +1321,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 0 
  - network-regular: 5 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Merged-STNs-i/merged-STN-i-E1-E2-60-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  633250 33.9    1330261 71.1  1330261 71.1
+Vcells 1103510  8.5    8388608 64.0  1923841 14.7
 ✅ Success: Generated merged-STN-i-E1-E2-60-L3.RData
 >> Generating: merged-STN-i-E3-E4-60-L1.RData
 
@@ -1289,6 +1370,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 32 
  - network-regular: 1081 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Merged-STNs-i/merged-STN-i-E3-E4-60-L1.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  636253 34.0    1330261 71.1  1330261 71.1
+Vcells 1209032  9.3    8388608 64.0  3212462 24.6
 ✅ Success: Generated merged-STN-i-E3-E4-60-L1.RData
 >> Generating: merged-STN-i-E3-E4-60-L2.RData
 
@@ -1335,6 +1419,9 @@ Saving merged STN-i with summary metrics:
  - network-elite: 0 
  - network-regular: 132 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Merged-STNs-i/merged-STN-i-E3-E4-60-L2.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  634222 33.9    1330261 71.1  1330261 71.1
+Vcells 1146232  8.8    8388608 64.0  2796190 21.4
 ✅ Success: Generated merged-STN-i-E3-E4-60-L2.RData
 >> Generating: merged-STN-i-E3-E4-60-L3.RData
 
@@ -1381,5 +1468,8 @@ Saving merged STN-i with summary metrics:
  - network-elite: 0 
  - network-regular: 1 
 Merged STN-i data saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Merged-STNs-i/merged-STN-i-E3-E4-60-L3.RData
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  633267 33.9    1330261 71.1  1330261 71.1
+Vcells 1108990  8.5    8388608 64.0  2072074 15.9
 ✅ Success: Generated merged-STN-i-E3-E4-60-L3.RData
-=== Merged STN-i generation finished at Fri Jun 20 22:21:20 -04 2025 ===
+=== Merged STN-i generation finished at Fri Jun 27 05:43:57 -04 2025 ===

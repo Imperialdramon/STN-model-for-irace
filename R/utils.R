@@ -701,6 +701,7 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
 
   snts_i <- stns_i_data$graphs
   num_networks <- length(snts_i)
+  number_of_runs <- sum(stns_i_data$number_of_runs)
   network_names <- stns_i_data$names
   problem_type <- stns_i_data$problem_type
   best_known_solutions <- stns_i_data$best_known_solutions
@@ -803,7 +804,8 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
     num_networks = num_networks,
     network_names = network_names,
     problem_type = problem_type,
-    best_known_solutions = best_known_solutions
+    best_known_solutions = best_known_solutions,
+    number_of_runs = number_of_runs
   ))
 }
 
@@ -870,7 +872,8 @@ get_merged_stn_i_data <- function(input_file) {
     "num_networks",
     "network_names",
     "problem_type",
-    "best_known_solutions"
+    "best_known_solutions",
+    "number_of_runs"
   )
 
   if (!is.list(merged_stn_i_data) || !all(expected_fields %in% names(merged_stn_i_data))) {
@@ -1340,7 +1343,7 @@ get_stn_i_metrics <- function(stn_i_result) {
   if (length(best_ids) > 0) {
     metrics$average_best_in_degree <- mean(degree(STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
     metrics$average_best_out_degree <- mean(degree(STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
-    metrics$best_strength_in <- sum(strength(STN_i, vids = best_ids,  mode="in"))
+    metrics$best_strength_in <- sum(strength(STN_i, vids = best_ids,  mode="in")) / number_of_runs
   } else {
     metrics$average_best_in_degree <- NA
     metrics$average_best_out_degree <- NA
@@ -1457,6 +1460,7 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   num_networks <- merged_stn_i_data$num_networks
   network_names <- merged_stn_i_data$network_names
   problem_type <- merged_stn_i_data$problem_type
+  number_of_runs <- merged_stn_i_data$number_of_runs
 
   # Identify and assign BEST node(s)
   fitness_vals <- V(merged_STN_i)$Fitness
@@ -1493,11 +1497,11 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   if (length(best_ids) > 0) {
     metrics$average_best_in_degree <- mean(degree(merged_STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
     metrics$average_best_out_degree <- mean(degree(merged_STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
-    metrics$best_strength_in <- sum(strength(merged_STN_i, vids = best_ids, mode = "in"))
+    metrics$best_strength_in <- sum(strength(merged_STN_i, vids = best_ids,  mode="in")) / number_of_runs
   } else {
     metrics$average_best_in_degree <- NA
     metrics$average_best_out_degree <- NA
-    metrics$best_strength_in <- 0
+    metrics$best_strength_in <- NA
   }
 
   start_ids <- which(V(merged_STN_i)$Topology == "START")
