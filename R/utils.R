@@ -1337,7 +1337,7 @@ get_stn_i_metrics <- function(stn_i_result) {
   }
 
   best_ids <- which(V(STN_i)$Quality == "BEST")
-  if (length(best_ids) == 0) {
+  if (length(best_ids) > 0) {
     metrics$average_best_in_degree <- mean(degree(STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
     metrics$average_best_out_degree <- mean(degree(STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
     metrics$best_strength_in <- sum(strength(STN_i, vids = best_ids,  mode="in"))
