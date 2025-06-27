@@ -1296,8 +1296,8 @@ get_stn_i_metrics <- function(stn_i_result) {
   metrics$regular_start_nodes <- sum(V(STN_i)$Topology == "START" & V(STN_i)$Quality == "REGULAR")
   metrics$elite_start_nodes <- sum(V(STN_i)$Topology == "START" & V(STN_i)$Quality == "ELITE")
   if (total_configurations > 0) {
-    metrics$regular_start_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "REGULAR" & classification_summary$Origin_Type == "START"]) / total_configurations
-    metrics$elite_start_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "ELITE" & classification_summary$Origin_Type == "START"]) / total_configurations
+    metrics$regular_start_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "REGULAR" & classification_summary$Type == "START"]) / total_configurations
+    metrics$elite_start_configuration_rate <- sum(classification_summary$Count[classification_summary$Origin_Elite == "ELITE" & classification_summary$Type == "START"]) / total_configurations
   } else {
     metrics$regular_start_configuration_rate <- NA
     metrics$elite_start_configuration_rate <- NA
