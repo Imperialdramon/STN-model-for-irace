@@ -1344,10 +1344,16 @@ get_stn_i_metrics <- function(stn_i_result) {
     metrics$average_best_in_degree <- mean(degree(STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
     metrics$average_best_out_degree <- mean(degree(STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
     metrics$best_strength_in <- sum(strength(STN_i, vids = best_ids,  mode="in")) / number_of_runs
+    metrics$start_best_nodes <- sum(V(STN_i)$Topology == "START" & V(STN_i)$Quality == "BEST")
+    metrics$standard_best_nodes <- sum(V(STN_i)$Topology == "STANDARD" & V(STN_i)$Quality == "BEST")
+    metrics$end_best_nodes <- sum(V(STN_i)$Topology == "END" & V(STN_i)$Quality == "BEST")
   } else {
     metrics$average_best_in_degree <- NA
     metrics$average_best_out_degree <- NA
     metrics$best_strength_in <- NA
+    metrics$start_best_nodes <- NA
+    metrics$standard_best_nodes <- NA
+    metrics$end_best_nodes <- NA
   }
 
   start_ids <- which(V(STN_i)$Topology == "START")
@@ -1358,7 +1364,7 @@ get_stn_i_metrics <- function(stn_i_result) {
     metrics$paths <- length(finite_distances)
   } else {
     metrics$average_path_length <- NA
-    metrics$paths <- 0
+    metrics$paths <- NA
   }
   metrics$components <- components(STN_i)$no
 
@@ -1485,10 +1491,16 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
     metrics$average_best_in_degree <- mean(degree(merged_STN_i, v = best_ids, mode = "in"), na.rm = TRUE)
     metrics$average_best_out_degree <- mean(degree(merged_STN_i, v = best_ids, mode = "out"), na.rm = TRUE)
     metrics$best_strength_in <- sum(strength(merged_STN_i, vids = best_ids,  mode="in")) / number_of_runs
+    metrics$start_best_nodes <- sum(V(merged_STN_i)$Topology == "START" & V(merged_STN_i)$Category == "BEST")
+    metrics$standard_best_nodes <- sum(V(merged_STN_i)$Topology == "STANDARD" & V(merged_STN_i)$Category == "BEST")
+    metrics$end_best_nodes <- sum(V(merged_STN_i)$Topology == "END" & V(merged_STN_i)$Category == "BEST")
   } else {
     metrics$average_best_in_degree <- NA
     metrics$average_best_out_degree <- NA
     metrics$best_strength_in <- NA
+    metrics$start_best_nodes <- NA
+    metrics$standard_best_nodes <- NA
+    metrics$end_best_nodes <- NA
   }
 
   start_ids <- which(V(merged_STN_i)$Topology == "START")
@@ -1499,7 +1511,7 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
     metrics$paths <- length(finite_distances)
   } else {
     metrics$average_path_length <- NA
-    metrics$paths <- 0
+    metrics$paths <- NA
   }
   metrics$components <- components(merged_STN_i)$no
 
