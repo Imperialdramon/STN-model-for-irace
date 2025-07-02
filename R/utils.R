@@ -614,7 +614,7 @@ save_stn_i_plot <- function(output_file_path, STN_i, layout_data, palette_colors
 #' - `graphs`: A list of merged STN-i graph objects.
 #' - `names`: Names of the algorithms extracted from the file names.
 #' - `problem_type`: The type of problem (min or max) from the first file.
-#' - `best_known_solutions`: Best known solutions from each file.
+#' - `best_known_solution`: Best known solutions from each file.
 #' - `number_of_runs`: Number of runs for each algorithm.
 #'
 #' @examples
@@ -633,7 +633,6 @@ get_stns_i_data <- function(input_folder) {
   graphs <- list()
   names <- character(length(files))
   problem_types <- c()
-  best_known_solutions <- c()
   number_of_runs_vec <- c()
 
   for (i in seq_along(files)) {
@@ -650,7 +649,6 @@ get_stns_i_data <- function(input_folder) {
     graphs[[i]] <- STN_i
     names[i] <- stn_i_result$network_name
     problem_types <- c(problem_types, stn_i_result$problem_type)
-    best_known_solutions <- c(best_known_solutions, stn_i_result$best_known_solution)
     number_of_runs_vec <- c(number_of_runs_vec, stn_i_result$number_of_runs)
   }
 
@@ -662,7 +660,6 @@ get_stns_i_data <- function(input_folder) {
     graphs = graphs,
     names = names,
     problem_type = unique(problem_types),
-    best_known_solutions = best_known_solutions,
     number_of_runs = number_of_runs_vec
   ))
 }
@@ -678,7 +675,6 @@ get_stns_i_data <- function(input_folder) {
 #'   - `graphs`: list of STN-i igraph objects
 #'   - `names`: character vector of network names
 #'   - `problem_type`: "min" or "max"
-#'   - `best_known_solutions`: vector of best known solutions
 #'   - `number_of_runs`: vector with number of runs per network
 #' @param criteria One of: "min", "max", "mean", "median", "mode" to resolve Fitness conflicts
 #'
@@ -686,7 +682,7 @@ get_stns_i_data <- function(input_folder) {
 #'   - `stnm`: the merged igraph object
 #'   - `num_networks`: number of merged networks
 #'   - `network_names`: names of the original networks
-#'   - `best_known_solutions`: best known solutions
+#'   - `best_known_solution`: best known solutions
 #'
 #' @examples
 #' \dontrun{
@@ -704,7 +700,6 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
   number_of_runs <- sum(stns_i_data$number_of_runs)
   network_names <- stns_i_data$names
   problem_type <- stns_i_data$problem_type
-  best_known_solutions <- stns_i_data$best_known_solutions
 
   # Collect all nodes
   node_df_list <- list()
@@ -751,9 +746,13 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
 
   merged_nodes$Shared <- merged_nodes$n_networks > 1
   merged_nodes$Category <- mapply(function(q, shared) {
-    tags <- unlist(strsplit(q, "(?<=REGULAR)|(?<=ELITE)", perl = TRUE))
+    # Split the Quality string into tags
+    tags <- unlist(strsplit(q, "(?<=REGULAR)|(?<=ELITE)|(?<=BEST)", perl = TRUE))
+    
+    # Count occurrences of each tag (ignore BEST for this classification because it always changes)
     elite_count <- sum(tags == "ELITE")
     regular_count <- sum(tags == "REGULAR")
+    #best_count <- sum(tags == "BEST")
 
     if (shared && elite_count > 0 && regular_count == 0) {
       "shared-elite"
@@ -799,12 +798,26 @@ merge_stns_i_data <- function(stns_i_data, criteria = "mean") {
   # Create final graph
   merged_STN_i <- graph_from_data_frame(d = merged_edges, vertices = merged_nodes, directed = TRUE)
 
+  # Identify and assign BEST node(s)
+  fitness_vals <- V(merged_STN_i)$Fitness
+  best_known_solution <- if (problem_type == "min") {
+    best_known_solution <- min(fitness_vals)
+  } else {
+    best_known_solution <- max(fitness_vals)
+  }
+  best_ids <- if (problem_type == "min") {
+    which(fitness_vals <= best_known_solution)
+  } else {
+    which(fitness_vals >= best_known_solution)
+  }
+  V(merged_STN_i)[best_ids]$Category <- "BEST"
+
   return(list(
     merged_STN_i = merged_STN_i,
     num_networks = num_networks,
     network_names = network_names,
     problem_type = problem_type,
-    best_known_solutions = best_known_solutions,
+    best_known_solution = best_known_solution,
     number_of_runs = number_of_runs
   ))
 }
@@ -872,7 +885,7 @@ get_merged_stn_i_data <- function(input_file) {
     "num_networks",
     "network_names",
     "problem_type",
-    "best_known_solutions",
+    "best_known_solution",
     "number_of_runs"
   )
 
@@ -1004,6 +1017,7 @@ merged_stn_i_decorate <- function(merged_STN_i, network_names, problem_type = "m
   V(merged_STN_i)[Category == "shared-regular"]$color <- palette_colors$shared_regular
   V(merged_STN_i)[Category == "shared-elite"]$color <- palette_colors$shared_elite
   V(merged_STN_i)[Category == "shared-mixed"]$color <- palette_colors$shared_mixed
+  V(merged_STN_i)[Category == "BEST"]$color <- palette_colors$best
 
   for (i in seq_along(network_names)) {
     network_name <- network_names[i]
@@ -1013,21 +1027,6 @@ merged_stn_i_decorate <- function(merged_STN_i, network_names, problem_type = "m
     V(merged_STN_i)[Category == "network-elite" & Network == network_name]$color <- elite_color
     V(merged_STN_i)[Category == "network-regular" & Network == network_name]$color <- regular_color
   }
-
-  # Identify and assign BEST node(s)
-  fitness_vals <- V(merged_STN_i)$Fitness
-  best_known_solution <- if (problem_type == "min") {
-    best_known_solution <- min(fitness_vals)
-  } else {
-    best_known_solution <- max(fitness_vals)
-  }
-  best_ids <- if (problem_type == "min") {
-    which(fitness_vals <= best_known_solution)
-  } else {
-    which(fitness_vals >= best_known_solution)
-  }
-  V(merged_STN_i)[best_ids]$Category <- "BEST"
-  V(merged_STN_i)[best_ids]$color <- palette_colors$best
 
   # Set node shapes by topology
   V(merged_STN_i)$shape <- "circle"
@@ -1462,20 +1461,7 @@ get_merged_stn_i_metrics <- function(merged_stn_i_data) {
   network_names <- merged_stn_i_data$network_names
   problem_type <- merged_stn_i_data$problem_type
   number_of_runs <- merged_stn_i_data$number_of_runs
-
-  # Identify and assign BEST node(s)
-  fitness_vals <- V(merged_STN_i)$Fitness
-  best_known_solution <- if (problem_type == "min") {
-    best_known_solution <- min(fitness_vals)
-  } else {
-    best_known_solution <- max(fitness_vals)
-  }
-  best_ids <- if (problem_type == "min") {
-    which(fitness_vals <= best_known_solution)
-  } else {
-    which(fitness_vals >= best_known_solution)
-  }
-  V(merged_STN_i)[best_ids]$Category <- "BEST"
+  best_known_solution <- merged_stn_i_data$best_known_solution
 
   # General metrics
   metrics$network_names <- paste(network_names, collapse = ", ")
