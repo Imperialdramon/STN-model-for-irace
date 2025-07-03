@@ -26,7 +26,8 @@ LOG_FILE="$LOG_DIR/run_plot_stn_logs.log"
 echo "=== STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
 # Define all layout types
-layouts=("fr" "kk" "graphopt")
+#layouts=("fr" "kk" "graphopt")
+layouts=("fr")
 
 # Define show combinations (show_regular, show_start_regular)
 show_combinations=(
@@ -36,7 +37,8 @@ show_combinations=(
 )
 
 # Define zoom levels
-zoom_levels=("NA" "0.25" "0.5" "0.75")
+#zoom_levels=("NA" "0.25" "0.5" "0.75")
+zoom_levels=("NA")
 
 # Function to execute plotting and log
 run_plot_rscript() {

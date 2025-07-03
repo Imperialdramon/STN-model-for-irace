@@ -60,7 +60,9 @@ for alg in "${!experiments[@]}"; do
       input_path="Experiments/$alg/$exp/Data/STN-i-$exp-$lvl.txt"
       output_dir="Experiments/$alg/$exp/STNs-i"
       output_file="STN-i-$exp-$lvl.RData"
-      network_name="${exp%%-*}-${lvl}"
+      network_base="${exp#*-}"
+      network_base="${network_base%-*}"
+      network_name="${network_base}"
 
       run_generate_rdata \
         --input="$input_path" \

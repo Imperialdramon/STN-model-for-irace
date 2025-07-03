@@ -22,23 +22,24 @@ mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/run_plot_merged_stn_parallelized_logs.log"
 echo "=== Merged STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
-layouts=("fr" "kk" "graphopt")
-
-#zoom_levels=("NA" "0.25" "0.5" "0.75")
+#layouts=("fr" "kk" "graphopt")
+layouts=("fr")
 
 # Define zoom levels
 # NA: No zoom, original size
 # 0.25: 25% of the best nodes, 25% of the original size
-zoom_levels=("NA" "0.25")
+#zoom_levels=("NA" "0.25" "0.5" "0.75")
+#zoom_levels=("NA" "0.25")
+zoom_levels=("NA")
 
 show_combinations=(
   "TRUE TRUE TRUE TRUE"
   "TRUE TRUE TRUE FALSE"
-  "TRUE TRUE FALSE TRUE"
+#  "TRUE TRUE FALSE TRUE"
   "FALSE TRUE FALSE FALSE"
-  "FALSE FALSE FALSE FALSE"
-  "TRUE FALSE TRUE TRUE"
-  "TRUE FALSE TRUE FALSE"
+#  "FALSE FALSE FALSE FALSE"
+#  "TRUE FALSE TRUE TRUE"
+#  "TRUE FALSE TRUE FALSE"
 )
 
 # Function to wait if too many background jobs are running
