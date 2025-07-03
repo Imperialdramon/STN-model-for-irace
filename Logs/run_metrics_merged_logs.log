@@ -1,4 +1,4 @@
-=== Merged STN-i metrics generation started at Tue Jul  1 23:30:03 -04 2025 ===
+=== Merged STN-i metrics generation started at Thu Jul  3 19:04:28 -04 2025 ===
 === Processing algorithm: ACOTSP ===
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-2000-L1.csv
 
@@ -14,8 +14,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Metrics/metrics-Merged-STN-i-E1-E2-2000-L1.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516228 27.6    1128815 60.3   692242   37
-Vcells 1080393  8.3    8388608 64.0  8381399   64
+Ncells  516227 27.6    1128812 60.3   692242   37
+Vcells 1080376  8.3    8388608 64.0  8380780   64
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-2000-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-2000-L2.csv
 
@@ -31,8 +31,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Metrics/metrics-Merged-STN-i-E1-E2-2000-L2.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516227 27.6    1128812 60.3   692242   37
-Vcells 1080376  8.3    8388608 64.0  8380780   64
+Ncells  516134 27.6    1128547 60.3   692242   37
+Vcells 1079154  8.3    8388608 64.0  8386423   64
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-2000-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-2000-L3.csv
 
@@ -48,8 +48,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E1-E2-2000/Metrics/metrics-Merged-STN-i-E1-E2-2000-L3.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516206 27.6    1128752 60.3   692242   37
-Vcells 1080105  8.3    8388608 64.0  8385311   64
+Ncells  515167 27.6    1125784 60.2   692242   37
+Vcells 1067350  8.2    8388608 64.0  8375933   64
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-2000-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-2000-L1.csv
 
@@ -65,8 +65,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Metrics/metrics-Merged-STN-i-E3-E4-2000-L1.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  530850 28.4    1170592 62.6   692242   37
-Vcells 1292677  9.9    8388608 64.0  8376658   64
+Ncells  530845 28.4    1170578 62.6   692242   37
+Vcells 1292611  9.9    8388608 64.0  8388098   64
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-2000-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-2000-L2.csv
 
@@ -82,8 +82,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Metrics/metrics-Merged-STN-i-E3-E4-2000-L2.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  530845 28.4    1170578 62.6   692242   37
-Vcells 1292611  9.9    8388608 64.0  8388098   64
+Ncells  530156 28.4    1168610 62.5   692242   37
+Vcells 1283814  9.8    8388608 64.0  8388603   64
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-2000-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-2000-L3.csv
 
@@ -99,8 +99,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/Merged-E3-E4-2000/Metrics/metrics-Merged-STN-i-E3-E4-2000-L3.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  530752 28.4    1170312 62.6   692242   37
-Vcells 1291375  9.9    8388608 64.0  8379010   64
+Ncells  526020 28.1    1156792 61.8   692242   37
+Vcells 1231980  9.4    8388608 64.0  8382009   64
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-2000-L3.csv
 === Processing algorithm: PSO-X ===
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-Mix-L1.csv
@@ -117,8 +117,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Metrics/metrics-Merged-STN-i-E1-E2-Mix-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 506885 27.1    1102121 58.9   692242 37.0
-Vcells 938040  7.2    8388608 64.0  4159044 31.8
+Ncells 506883 27.1    1102115 58.9   692242 37.0
+Vcells 938013  7.2    8388608 64.0  4157765 31.8
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-Mix-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-Mix-L2.csv
 
@@ -134,8 +134,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Metrics/metrics-Merged-STN-i-E1-E2-Mix-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 506883 27.1    1102115 58.9   692242 37.0
-Vcells 938013  7.2    8388608 64.0  4157765 31.8
+Ncells 506332 27.1    1100541 58.8   692242 37.0
+Vcells 934633  7.2    8388608 64.0  4174729 31.9
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-Mix-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-Mix-L3.csv
 
@@ -151,8 +151,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E1-E2-Mix/Metrics/metrics-Merged-STN-i-E1-E2-Mix-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 506484 27.1    1100975 58.8   692242 37.0
-Vcells 936557  7.2    8388608 64.0  4272978 32.7
+Ncells 505655 27.1    1098607 58.7   692242 37.0
+Vcells 926006  7.1    8388608 64.0  3675435 28.1
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-Mix-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-Mix-L1.csv
 
@@ -168,8 +168,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Metrics/metrics-Merged-STN-i-E3-E4-Mix-L1.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  511376 27.4    1114952 59.6   692242   37
-Vcells 1001021  7.7    8388608 64.0  8386726   64
+Ncells  511359 27.4    1114904 59.6   692242   37
+Vcells 1000785  7.7    8388608 64.0  8387026   64
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-Mix-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-Mix-L2.csv
 
@@ -184,9 +184,9 @@ The following object is masked from ‘package:base’:
     union
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Metrics/metrics-Merged-STN-i-E3-E4-Mix-L2.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  511359 27.4    1114904 59.6   692242   37
-Vcells 1000785  7.7    8388608 64.0  8387026   64
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 510403 27.3    1112172 59.4   692242   37
+Vcells 988300  7.6    8388608 64.0  7994943   61
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-Mix-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-Mix-L3.csv
 
@@ -202,8 +202,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E3-E4-Mix/Metrics/metrics-Merged-STN-i-E3-E4-Mix-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511068 27.3    1114072 59.5   692242   37
-Vcells 996957  7.7    8388608 64.0  8382940   64
+Ncells 508749 27.2    1107447 59.2   692242 37.0
+Vcells 966455  7.4    8388608 64.0  6060152 46.3
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-Mix-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E5-E6-Mul-L1.csv
 
@@ -219,8 +219,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Metrics/metrics-Merged-STN-i-E5-E6-Mul-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507024 27.1    1102518 58.9   692242 37.0
-Vcells 939895  7.2    8388608 64.0  4299574 32.9
+Ncells 507020 27.1    1102507 58.9   692242 37.0
+Vcells 939846  7.2    8388608 64.0  4297204 32.8
 ✅ Success: Generated metrics-Merged-STN-i-E5-E6-Mul-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E5-E6-Mul-L2.csv
 
@@ -236,8 +236,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Metrics/metrics-Merged-STN-i-E5-E6-Mul-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507020 27.1    1102507 58.9   692242 37.0
-Vcells 939846  7.2    8388608 64.0  4297204 32.8
+Ncells 506481 27.1    1100967 58.8   692242 37.0
+Vcells 936632  7.2    8388608 64.0  4256743 32.5
 ✅ Success: Generated metrics-Merged-STN-i-E5-E6-Mul-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E5-E6-Mul-L3.csv
 
@@ -253,8 +253,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E5-E6-Mul/Metrics/metrics-Merged-STN-i-E5-E6-Mul-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 506631 27.1    1101395 58.9   692242 37.0
-Vcells 938511  7.2    8388608 64.0  4422585 33.8
+Ncells 505865 27.1    1099207 58.8   692243 37.0
+Vcells 928837  7.1    8388608 64.0  3861256 29.5
 ✅ Success: Generated metrics-Merged-STN-i-E5-E6-Mul-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E7-E8-Mul-L1.csv
 
@@ -270,8 +270,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Metrics/metrics-Merged-STN-i-E7-E8-Mul-L1.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  512112 27.4    1117055 59.7   692242   37
-Vcells 1011550  7.8    8388608 64.0  8382436   64
+Ncells  512079 27.4    1116961 59.7   692242   37
+Vcells 1011116  7.8    8388608 64.0  8387990   64
 ✅ Success: Generated metrics-Merged-STN-i-E7-E8-Mul-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E7-E8-Mul-L2.csv
 
@@ -286,9 +286,9 @@ The following object is masked from ‘package:base’:
     union
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Metrics/metrics-Merged-STN-i-E7-E8-Mul-L2.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  512079 27.4    1116961 59.7   692242   37
-Vcells 1011116  7.8    8388608 64.0  8387990   64
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 510507 27.3    1112470 59.5   692242   37
+Vcells 994295  7.6    8388608 64.0  8384837   64
 ✅ Success: Generated metrics-Merged-STN-i-E7-E8-Mul-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E7-E8-Mul-L3.csv
 
@@ -303,9 +303,9 @@ The following object is masked from ‘package:base’:
     union
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E7-E8-Mul/Metrics/metrics-Merged-STN-i-E7-E8-Mul-L3.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  511329 27.4    1114818 59.6   692242   37
-Vcells 1005075  7.7    8388608 64.0  8384941   64
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508749 27.2    1107447 59.2   692242 37.0
+Vcells 970718  7.5    8388608 64.0  6722795 51.3
 ✅ Success: Generated metrics-Merged-STN-i-E7-E8-Mul-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E9-E10-Uni-L1.csv
 
@@ -321,8 +321,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Metrics/metrics-Merged-STN-i-E9-E10-Uni-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507624 27.2    1104232   59   692242 37.0
-Vcells 948906  7.3    8388608   64  4771449 36.5
+Ncells 507267 27.1    1103212   59   692242 37.0
+Vcells 947970  7.3    8388608   64  4935706 37.7
 ✅ Success: Generated metrics-Merged-STN-i-E9-E10-Uni-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E9-E10-Uni-L2.csv
 
@@ -338,8 +338,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Metrics/metrics-Merged-STN-i-E9-E10-Uni-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507267 27.1    1103212   59   692242 37.0
-Vcells 947970  7.3    8388608   64  4935706 37.7
+Ncells 506682 27.1    1101541 58.9   692242 37.0
+Vcells 940548  7.2    8388608 64.0  4477681 34.2
 ✅ Success: Generated metrics-Merged-STN-i-E9-E10-Uni-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E9-E10-Uni-L3.csv
 
@@ -355,8 +355,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E9-E10-Uni/Metrics/metrics-Merged-STN-i-E9-E10-Uni-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507108 27.1    1102758 58.9   692243 37.0
-Vcells 945979  7.3    8388608 64.0  4826662 36.9
+Ncells 505708 27.1    1098758 58.7   692242 37.0
+Vcells 927653  7.1    8388608 64.0  3749818 28.7
 ✅ Success: Generated metrics-Merged-STN-i-E9-E10-Uni-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E11-E12-Uni-L1.csv
 
@@ -372,8 +372,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Metrics/metrics-Merged-STN-i-E11-E12-Uni-L1.csv
           used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  513385 27.5    1120692 59.9   692242   37
-Vcells 1030174  7.9    8388608 64.0  8385764   64
+Ncells  512853 27.4    1119172 59.8   692242   37
+Vcells 1026990  7.9    8388608 64.0  8387605   64
 ✅ Success: Generated metrics-Merged-STN-i-E11-E12-Uni-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E11-E12-Uni-L2.csv
 
@@ -388,9 +388,9 @@ The following object is masked from ‘package:base’:
     union
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Metrics/metrics-Merged-STN-i-E11-E12-Uni-L2.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  512853 27.4    1119172 59.8   692242   37
-Vcells 1026990  7.9    8388608 64.0  8387605   64
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 510374 27.3    1112090 59.4   692242   37
+Vcells 994437  7.6    8388608 64.0  8388547   64
 ✅ Success: Generated metrics-Merged-STN-i-E11-E12-Uni-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E11-E12-Uni-L3.csv
 
@@ -405,9 +405,9 @@ The following object is masked from ‘package:base’:
     union
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/Merged-E11-E12-Uni/Metrics/metrics-Merged-STN-i-E11-E12-Uni-L3.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  511685 27.4    1115835 59.6   692242   37
-Vcells 1011874  7.8    8388608 64.0  8382523   64
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508430 27.2    1106535 59.1   692242 37.0
+Vcells 966810  7.4    8388608 64.0  6251040 47.7
 ✅ Success: Generated metrics-Merged-STN-i-E11-E12-Uni-L3.csv
 === Processing algorithm: MMASQAP ===
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-60-L1.csv
@@ -424,8 +424,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Metrics/metrics-Merged-STN-i-E1-E2-60-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 503485 26.9    1092407 58.4   692242 37.0
-Vcells 889473  6.8    8388608 64.0  1966664 15.1
+Ncells 502624 26.9    1089947 58.3   692242 37.0
+Vcells 881290  6.8    8388608 64.0  1923841 14.7
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-60-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-60-L2.csv
 
@@ -441,8 +441,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Metrics/metrics-Merged-STN-i-E1-E2-60-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 502624 26.9    1089947 58.3   692242 37.0
-Vcells 881290  6.8    8388608 64.0  1923841 14.7
+Ncells 501825 26.9    1087664 58.1   692242 37.0
+Vcells 872170  6.7    8388608 64.0  1923841 14.7
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-60-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E1-E2-60-L3.csv
 
@@ -458,8 +458,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E1-E2-60/Metrics/metrics-Merged-STN-i-E1-E2-60-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 502015 26.9    1088207 58.2   692242 37.0
-Vcells 874681  6.7    8388608 64.0  1923841 14.7
+Ncells 502042 26.9    1088284 58.2   692242 37.0
+Vcells 870695  6.7    8388608 64.0  1923841 14.7
 ✅ Success: Generated metrics-Merged-STN-i-E1-E2-60-L3.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-60-L1.csv
 
@@ -475,8 +475,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Metrics/metrics-Merged-STN-i-E3-E4-60-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 505019   27    1096790 58.6   692242 37.0
-Vcells 909573    7    8388608 64.0  2997210 22.9
+Ncells 502987 26.9    1090984 58.3   692242 37.0
+Vcells 888823  6.8    8388608 64.0  1923841 14.7
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-60-L1.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-60-L2.csv
 
@@ -492,8 +492,8 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Metrics/metrics-Merged-STN-i-E3-E4-60-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 502987 26.9    1090984 58.3   692242 37.0
-Vcells 888823  6.8    8388608 64.0  1923841 14.7
+Ncells 501827 26.9    1087670 58.1   692242 37.0
+Vcells 872926  6.7    8388608 64.0  1923841 14.7
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-60-L2.csv
 >> Generating metrics: metrics-Merged-STN-i-E3-E4-60-L3.csv
 
@@ -509,7 +509,7 @@ The following object is masked from ‘package:base’:
 
 Merged STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/Merged-E3-E4-60/Metrics/metrics-Merged-STN-i-E3-E4-60-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 502032 26.9    1088255 58.2   692242 37.0
-Vcells 876813  6.7    8388608 64.0  1923841 14.7
+Ncells 502041 26.9    1088281 58.2   692242 37.0
+Vcells 870921  6.7    8388608 64.0  1923841 14.7
 ✅ Success: Generated metrics-Merged-STN-i-E3-E4-60-L3.csv
-=== Merged STN-i metrics generation finished at Tue Jul  1 23:30:14 -04 2025 ===
+=== Merged STN-i metrics generation finished at Thu Jul  3 19:04:39 -04 2025 ===
