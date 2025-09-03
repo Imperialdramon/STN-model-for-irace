@@ -1,6 +1,6 @@
-=== STN-i metrics generation started at Thu Jul  3 19:03:14 -04 2025 ===
+=== STN-i metrics generation started at Tue Sep  2 21:00:22 -04 2025 ===
 === Processing algorithm: ACOTSP ===
->> Generating metrics: metrics-STN-i-E1-BL-WSR-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E5-BL-22-2000-L1.csv
 
 Attaching package: ‘igraph’
 
@@ -12,12 +12,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Metrics/metrics-STN-i-E1-BL-WSR-2000-L1.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E5-BL-22-2000/Metrics/metrics-STN-i-E5-BL-22-2000-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 516138 27.6    1128558 60.3   692242   37
-Vcells 998159  7.7    8388608 64.0  8383967   64
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-2000-L1.csv
->> Generating metrics: metrics-STN-i-E1-BL-WSR-2000-L2.csv
+Ncells 507832 27.2    1104827 59.1   692242 37.0
+Vcells 888091  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E5-BL-22-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E5-BL-22-2000-L2.csv
 
 Attaching package: ‘igraph’
 
@@ -29,12 +29,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Metrics/metrics-STN-i-E1-BL-WSR-2000-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E5-BL-22-2000/Metrics/metrics-STN-i-E5-BL-22-2000-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 516103 27.6    1128458 60.3   692242   37
-Vcells 997729  7.7    8388608 64.0  8383346   64
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-2000-L2.csv
->> Generating metrics: metrics-STN-i-E1-BL-WSR-2000-L3.csv
+Ncells 507806 27.2    1104752 59.1   692242 37.0
+Vcells 887762  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E5-BL-22-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E5-BL-22-2000-L3.csv
 
 Attaching package: ‘igraph’
 
@@ -46,12 +46,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E1-BL-WSR-2000/Metrics/metrics-STN-i-E1-BL-WSR-2000-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E5-BL-22-2000/Metrics/metrics-STN-i-E5-BL-22-2000-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515774 27.6    1127518 60.3   692242   37
-Vcells 993963  7.6    8388608 64.0  8380971   64
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-2000-L3.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-2000-L1.csv
+Ncells 507747 27.2    1104584   59   692242 37.0
+Vcells 886989  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E5-BL-22-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E5-BL-22-2000-L4.csv
 
 Attaching package: ‘igraph’
 
@@ -63,12 +63,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E2-BL-SR-2000/Metrics/metrics-STN-i-E2-BL-SR-2000-L1.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E5-BL-22-2000/Metrics/metrics-STN-i-E5-BL-22-2000-L4.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 516144 27.6    1128575 60.3   692242   37
-Vcells 998243  7.7    8388608 64.0  8384819   64
-✅ Success: Generated metrics-STN-i-E2-BL-SR-2000-L1.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-2000-L2.csv
+Ncells 507713 27.2    1104487   59   692242 37.0
+Vcells 886573  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E5-BL-22-2000-L4.csv
+>> Generating metrics: metrics-STN-i-E5-BL-22-2000-L5.csv
 
 Attaching package: ‘igraph’
 
@@ -80,12 +80,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E2-BL-SR-2000/Metrics/metrics-STN-i-E2-BL-SR-2000-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E5-BL-22-2000/Metrics/metrics-STN-i-E5-BL-22-2000-L5.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 516114 27.6    1128490 60.3   692242   37
-Vcells 997869  7.7    8388608 64.0  8383586   64
-✅ Success: Generated metrics-STN-i-E2-BL-SR-2000-L2.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-2000-L3.csv
+Ncells 507683 27.2    1104401   59   692242 37.0
+Vcells 886125  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E5-BL-22-2000-L5.csv
+>> Generating metrics: metrics-STN-i-E6-BL-45-2000-L1.csv
 
 Attaching package: ‘igraph’
 
@@ -97,12 +97,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E2-BL-SR-2000/Metrics/metrics-STN-i-E2-BL-SR-2000-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E6-BL-45-2000/Metrics/metrics-STN-i-E6-BL-45-2000-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515786 27.6    1127552 60.3   692242   37
-Vcells 994134  7.6    8388608 64.0  8383674   64
-✅ Success: Generated metrics-STN-i-E2-BL-SR-2000-L3.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-2000-L1.csv
+Ncells 507964 27.2    1105204 59.1   692242 37.0
+Vcells 889778  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E6-BL-45-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E6-BL-45-2000-L2.csv
 
 Attaching package: ‘igraph’
 
@@ -114,12 +114,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Metrics/metrics-STN-i-E3-BH-WSR-2000-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  524515 28.1    1152492 61.6   692242   37
-Vcells 1108960  8.5    8388608 64.0  8383907   64
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-2000-L1.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-2000-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E6-BL-45-2000/Metrics/metrics-STN-i-E6-BL-45-2000-L2.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507961 27.2    1105195 59.1   692242 37.0
+Vcells 889740  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E6-BL-45-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E6-BL-45-2000-L3.csv
 
 Attaching package: ‘igraph’
 
@@ -131,12 +131,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Metrics/metrics-STN-i-E3-BH-WSR-2000-L2.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  524263 28.0    1151772 61.6   692242   37
-Vcells 1105901  8.5    8388608 64.0  8386243   64
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-2000-L2.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-2000-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E6-BL-45-2000/Metrics/metrics-STN-i-E6-BL-45-2000-L3.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507937 27.2    1105127 59.1   692242 37.0
+Vcells 889439  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E6-BL-45-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E6-BL-45-2000-L4.csv
 
 Attaching package: ‘igraph’
 
@@ -148,12 +148,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E3-BH-WSR-2000/Metrics/metrics-STN-i-E3-BH-WSR-2000-L3.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  522721 28.0    1147367 61.3   692242   37
-Vcells 1087425  8.3    8388608 64.0  8378516   64
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-2000-L3.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-2000-L1.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E6-BL-45-2000/Metrics/metrics-STN-i-E6-BL-45-2000-L4.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507909 27.2    1105047 59.1   692242 37.0
+Vcells 889096  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E6-BL-45-2000-L4.csv
+>> Generating metrics: metrics-STN-i-E6-BL-45-2000-L5.csv
 
 Attaching package: ‘igraph’
 
@@ -165,12 +165,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Metrics/metrics-STN-i-E4-BH-SR-2000-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  524460 28.1    1152335 61.6   692242   37
-Vcells 1108198  8.5    8388608 64.0  8375545   64
-✅ Success: Generated metrics-STN-i-E4-BH-SR-2000-L1.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-2000-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E6-BL-45-2000/Metrics/metrics-STN-i-E6-BL-45-2000-L5.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507848 27.2    1104872 59.1   692242 37.0
+Vcells 888347  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E6-BL-45-2000-L5.csv
+>> Generating metrics: metrics-STN-i-E7-BH-45-2000-L1.csv
 
 Attaching package: ‘igraph’
 
@@ -182,12 +182,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Metrics/metrics-STN-i-E4-BH-SR-2000-L2.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  524166 28.0    1151495 61.5   692242 37.0
-Vcells 1104659  8.5    8388608 64.0  8375403 63.9
-✅ Success: Generated metrics-STN-i-E4-BH-SR-2000-L2.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-2000-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E7-BH-45-2000/Metrics/metrics-STN-i-E7-BH-45-2000-L1.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508321 27.2    1106224 59.1   692242 37.0
+Vcells 894780  6.9    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E7-BH-45-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E7-BH-45-2000-L2.csv
 
 Attaching package: ‘igraph’
 
@@ -199,13 +199,149 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E4-BH-SR-2000/Metrics/metrics-STN-i-E4-BH-SR-2000-L3.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  522609 28.0    1147047 61.3   692242   37
-Vcells 1086417  8.3    8388608 64.0  8385250   64
-✅ Success: Generated metrics-STN-i-E4-BH-SR-2000-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E7-BH-45-2000/Metrics/metrics-STN-i-E7-BH-45-2000-L2.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508187 27.2    1105841 59.1   692242 37.0
+Vcells 893016  6.9    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E7-BH-45-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E7-BH-45-2000-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E7-BH-45-2000/Metrics/metrics-STN-i-E7-BH-45-2000-L3.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507991 27.2    1105281 59.1   692242 37.0
+Vcells 890402  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E7-BH-45-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E7-BH-45-2000-L4.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E7-BH-45-2000/Metrics/metrics-STN-i-E7-BH-45-2000-L4.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507931 27.2    1105110 59.1   692242 37.0
+Vcells 889530  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E7-BH-45-2000-L4.csv
+>> Generating metrics: metrics-STN-i-E7-BH-45-2000-L5.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E7-BH-45-2000/Metrics/metrics-STN-i-E7-BH-45-2000-L5.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 507922 27.2    1105084 59.1   692242 37.0
+Vcells 889477  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E7-BH-45-2000-L5.csv
+>> Generating metrics: metrics-STN-i-E8-BH-90-2000-L1.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E8-BH-90-2000/Metrics/metrics-STN-i-E8-BH-90-2000-L1.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508554 27.2    1106890 59.2   692242 37.0
+Vcells 897723  6.9    8388608 64.0  2121569 16.2
+✅ Success: Generated metrics-STN-i-E8-BH-90-2000-L1.csv
+>> Generating metrics: metrics-STN-i-E8-BH-90-2000-L2.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E8-BH-90-2000/Metrics/metrics-STN-i-E8-BH-90-2000-L2.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508521 27.2    1106795 59.2   692242   37
+Vcells 897318  6.9    8388608 64.0  2095349   16
+✅ Success: Generated metrics-STN-i-E8-BH-90-2000-L2.csv
+>> Generating metrics: metrics-STN-i-E8-BH-90-2000-L3.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E8-BH-90-2000/Metrics/metrics-STN-i-E8-BH-90-2000-L3.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508370 27.2    1106364 59.1   692242   37
+Vcells 895315  6.9    8388608 64.0  1953601   15
+✅ Success: Generated metrics-STN-i-E8-BH-90-2000-L3.csv
+>> Generating metrics: metrics-STN-i-E8-BH-90-2000-L4.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E8-BH-90-2000/Metrics/metrics-STN-i-E8-BH-90-2000-L4.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508278 27.2    1106101 59.1   692242 37.0
+Vcells 894209  6.9    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E8-BH-90-2000-L4.csv
+>> Generating metrics: metrics-STN-i-E8-BH-90-2000-L5.csv
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/ACOTSP/E8-BH-90-2000/Metrics/metrics-STN-i-E8-BH-90-2000-L5.csv
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 508180 27.2    1105821 59.1   692242 37.0
+Vcells 892886  6.9    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E8-BH-90-2000-L5.csv
 === Processing algorithm: PSO-X ===
->> Generating metrics: metrics-STN-i-E1-BL-WSR-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E13-BH-32-Mix-L1.csv
 
 Attaching package: ‘igraph’
 
@@ -217,12 +353,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E1-BL-WSR-Mix/Metrics/metrics-STN-i-E1-BL-WSR-Mix-L1.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E13-BH-32-Mix/Metrics/metrics-STN-i-E13-BH-32-Mix-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 512005 27.4    1116750 59.7   692242 37.0
-Vcells 942055  7.2    8388608 64.0  5505492 42.1
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-Mix-L1.csv
->> Generating metrics: metrics-STN-i-E1-BL-WSR-Mix-L2.csv
+Ncells 507829 27.2    1104818 59.1   692242 37.0
+Vcells 887987  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E13-BH-32-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E13-BH-32-Mix-L2.csv
 
 Attaching package: ‘igraph’
 
@@ -234,12 +370,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E1-BL-WSR-Mix/Metrics/metrics-STN-i-E1-BL-WSR-Mix-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E13-BH-32-Mix/Metrics/metrics-STN-i-E13-BH-32-Mix-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511820 27.4    1116221 59.7   692242 37.0
-Vcells 939902  7.2    8388608 64.0  5351026 40.9
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-Mix-L2.csv
->> Generating metrics: metrics-STN-i-E1-BL-WSR-Mix-L3.csv
+Ncells 507732 27.2    1104541   59   692242 37.0
+Vcells 886730  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E13-BH-32-Mix-L2.csv
+>> Generating metrics: metrics-STN-i-E13-BH-32-Mix-L3.csv
 
 Attaching package: ‘igraph’
 
@@ -251,12 +387,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E1-BL-WSR-Mix/Metrics/metrics-STN-i-E1-BL-WSR-Mix-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E13-BH-32-Mix/Metrics/metrics-STN-i-E13-BH-32-Mix-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511191 27.4    1114424 59.6   692242 37.0
-Vcells 932524  7.2    8388608 64.0  4801167 36.7
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-Mix-L3.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-Mix-L1.csv
+Ncells 507664 27.2    1104347   59   692242 37.0
+Vcells 885820  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E13-BH-32-Mix-L3.csv
+>> Generating metrics: metrics-STN-i-E13-BH-32-Mix-L4.csv
 
 Attaching package: ‘igraph’
 
@@ -268,12 +404,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E2-BL-SR-Mix/Metrics/metrics-STN-i-E2-BL-SR-Mix-L1.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E13-BH-32-Mix/Metrics/metrics-STN-i-E13-BH-32-Mix-L4.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511997 27.4    1116727 59.7   692242   37
-Vcells 941943  7.2    8388608 64.0  5498952   42
-✅ Success: Generated metrics-STN-i-E2-BL-SR-Mix-L1.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-Mix-L2.csv
+Ncells 507625 27.2    1104235   59   692242 37.0
+Vcells 885285  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E13-BH-32-Mix-L4.csv
+>> Generating metrics: metrics-STN-i-E13-BH-32-Mix-L5.csv
 
 Attaching package: ‘igraph’
 
@@ -285,12 +421,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E2-BL-SR-Mix/Metrics/metrics-STN-i-E2-BL-SR-Mix-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E13-BH-32-Mix/Metrics/metrics-STN-i-E13-BH-32-Mix-L5.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511818 27.4    1116215 59.7   692242 37.0
-Vcells 939860  7.2    8388608 64.0  5348000 40.9
-✅ Success: Generated metrics-STN-i-E2-BL-SR-Mix-L2.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-Mix-L3.csv
+Ncells 507598 27.2    1104158   59   692242 37.0
+Vcells 884871  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E13-BH-32-Mix-L5.csv
+>> Generating metrics: metrics-STN-i-E14-BH-65-Mix-L1.csv
 
 Attaching package: ‘igraph’
 
@@ -302,12 +438,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E2-BL-SR-Mix/Metrics/metrics-STN-i-E2-BL-SR-Mix-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E14-BH-65-Mix/Metrics/metrics-STN-i-E14-BH-65-Mix-L1.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511207 27.4    1114470 59.6   692242 37.0
-Vcells 932706  7.2    8388608 64.0  4815118 36.8
-✅ Success: Generated metrics-STN-i-E2-BL-SR-Mix-L3.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-Mix-L1.csv
+Ncells 508072 27.2    1105512 59.1   692242 37.0
+Vcells 891154  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E14-BH-65-Mix-L1.csv
+>> Generating metrics: metrics-STN-i-E14-BH-65-Mix-L2.csv
 
 Attaching package: ‘igraph’
 
@@ -319,29 +455,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E3-BH-WSR-Mix/Metrics/metrics-STN-i-E3-BH-WSR-Mix-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516732 27.6    1130255 60.4   692242   37
-Vcells 1003577  7.7    8388608 64.0  8386664   64
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-Mix-L1.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-Mix-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E3-BH-WSR-Mix/Metrics/metrics-STN-i-E3-BH-WSR-Mix-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E14-BH-65-Mix/Metrics/metrics-STN-i-E14-BH-65-Mix-L2.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515776 27.6    1127524 60.3   692242   37
-Vcells 992048  7.6    8388608 64.0  8383935   64
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-Mix-L2.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-Mix-L3.csv
+Ncells 507977 27.2    1105241 59.1   692242 37.0
+Vcells 889957  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E14-BH-65-Mix-L2.csv
+>> Generating metrics: metrics-STN-i-E14-BH-65-Mix-L3.csv
 
 Attaching package: ‘igraph’
 
@@ -353,12 +472,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E3-BH-WSR-Mix/Metrics/metrics-STN-i-E3-BH-WSR-Mix-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E14-BH-65-Mix/Metrics/metrics-STN-i-E14-BH-65-Mix-L3.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 514122 27.5    1122798   60   692242 37.0
-Vcells 971857  7.5    8388608   64  7657136 58.5
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-Mix-L3.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-Mix-L1.csv
+Ncells 507898 27.2    1105015 59.1   692242 37.0
+Vcells 888893  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E14-BH-65-Mix-L3.csv
+>> Generating metrics: metrics-STN-i-E14-BH-65-Mix-L4.csv
 
 Attaching package: ‘igraph’
 
@@ -370,29 +489,12 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E4-BH-SR-Mix/Metrics/metrics-STN-i-E4-BH-SR-Mix-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516732 27.6    1130255 60.4   692242   37
-Vcells 1003577  7.7    8388608 64.0  8386698   64
-✅ Success: Generated metrics-STN-i-E4-BH-SR-Mix-L1.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-Mix-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E4-BH-SR-Mix/Metrics/metrics-STN-i-E4-BH-SR-Mix-L2.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E14-BH-65-Mix/Metrics/metrics-STN-i-E14-BH-65-Mix-L4.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515776 27.6    1127524 60.3   692242   37
-Vcells 992048  7.6    8388608 64.0  8383911   64
-✅ Success: Generated metrics-STN-i-E4-BH-SR-Mix-L2.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-Mix-L3.csv
+Ncells 507839 27.2    1104847 59.1   692242 37.0
+Vcells 888067  6.8    8388608 64.0  1923841 14.7
+✅ Success: Generated metrics-STN-i-E14-BH-65-Mix-L4.csv
+>> Generating metrics: metrics-STN-i-E14-BH-65-Mix-L5.csv
 
 Attaching package: ‘igraph’
 
@@ -404,622 +506,9 @@ The following object is masked from ‘package:base’:
 
     union
 
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E4-BH-SR-Mix/Metrics/metrics-STN-i-E4-BH-SR-Mix-L3.csv
+STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E14-BH-65-Mix/Metrics/metrics-STN-i-E14-BH-65-Mix-L5.csv
          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 514122 27.5    1122798   60   692242 37.0
-Vcells 971857  7.5    8388608   64  7657135 58.5
-✅ Success: Generated metrics-STN-i-E4-BH-SR-Mix-L3.csv
->> Generating metrics: metrics-STN-i-E5-BL-WSR-Mul-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E5-BL-WSR-Mul/Metrics/metrics-STN-i-E5-BL-WSR-Mul-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511940 27.4    1116564 59.7   692242 37.0
-Vcells 941144  7.2    8388608 64.0  5441531 41.6
-✅ Success: Generated metrics-STN-i-E5-BL-WSR-Mul-L1.csv
->> Generating metrics: metrics-STN-i-E5-BL-WSR-Mul-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E5-BL-WSR-Mul/Metrics/metrics-STN-i-E5-BL-WSR-Mul-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511779 27.4    1116104 59.7   692242 37.0
-Vcells 939269  7.2    8388608 64.0  5305536 40.5
-✅ Success: Generated metrics-STN-i-E5-BL-WSR-Mul-L2.csv
->> Generating metrics: metrics-STN-i-E5-BL-WSR-Mul-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E5-BL-WSR-Mul/Metrics/metrics-STN-i-E5-BL-WSR-Mul-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511245 27.4    1114578 59.6   692242   37
-Vcells 933021  7.2    8388608 64.0  4838491   37
-✅ Success: Generated metrics-STN-i-E5-BL-WSR-Mul-L3.csv
->> Generating metrics: metrics-STN-i-E6-BL-SR-Mul-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E6-BL-SR-Mul/Metrics/metrics-STN-i-E6-BL-SR-Mul-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511941 27.4    1116567 59.7   692242 37.0
-Vcells 941162  7.2    8388608 64.0  5442872 41.6
-✅ Success: Generated metrics-STN-i-E6-BL-SR-Mul-L1.csv
->> Generating metrics: metrics-STN-i-E6-BL-SR-Mul-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E6-BL-SR-Mul/Metrics/metrics-STN-i-E6-BL-SR-Mul-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511788 27.4    1116130 59.7   692242 37.0
-Vcells 939380  7.2    8388608 64.0  5313420 40.6
-✅ Success: Generated metrics-STN-i-E6-BL-SR-Mul-L2.csv
->> Generating metrics: metrics-STN-i-E6-BL-SR-Mul-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E6-BL-SR-Mul/Metrics/metrics-STN-i-E6-BL-SR-Mul-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511248 27.4    1114587 59.6   692242   37
-Vcells 933059  7.2    8388608 64.0  4841790   37
-✅ Success: Generated metrics-STN-i-E6-BL-SR-Mul-L3.csv
->> Generating metrics: metrics-STN-i-E7-BH-WSR-Mul-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E7-BH-WSR-Mul/Metrics/metrics-STN-i-E7-BH-WSR-Mul-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516997 27.7    1131012 60.5   692242   37
-Vcells 1007333  7.7    8388608 64.0  8384590   64
-✅ Success: Generated metrics-STN-i-E7-BH-WSR-Mul-L1.csv
->> Generating metrics: metrics-STN-i-E7-BH-WSR-Mul-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E7-BH-WSR-Mul/Metrics/metrics-STN-i-E7-BH-WSR-Mul-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515837 27.6    1127698 60.3   692242   37
-Vcells 993281  7.6    8388608 64.0  8380629   64
-✅ Success: Generated metrics-STN-i-E7-BH-WSR-Mul-L2.csv
->> Generating metrics: metrics-STN-i-E7-BH-WSR-Mul-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E7-BH-WSR-Mul/Metrics/metrics-STN-i-E7-BH-WSR-Mul-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 514186 27.5    1122981   60   692242   37
-Vcells 972767  7.5    8388608   64  7723313   59
-✅ Success: Generated metrics-STN-i-E7-BH-WSR-Mul-L3.csv
->> Generating metrics: metrics-STN-i-E8-BH-SR-Mul-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E8-BH-SR-Mul/Metrics/metrics-STN-i-E8-BH-SR-Mul-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  516970 27.7    1130935 60.4   692242   37
-Vcells 1006958  7.7    8388608 64.0  8383706   64
-✅ Success: Generated metrics-STN-i-E8-BH-SR-Mul-L1.csv
->> Generating metrics: metrics-STN-i-E8-BH-SR-Mul-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E8-BH-SR-Mul/Metrics/metrics-STN-i-E8-BH-SR-Mul-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515797 27.6    1127584 60.3   692242   37
-Vcells 992780  7.6    8388608 64.0  8386051   64
-✅ Success: Generated metrics-STN-i-E8-BH-SR-Mul-L2.csv
->> Generating metrics: metrics-STN-i-E8-BH-SR-Mul-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E8-BH-SR-Mul/Metrics/metrics-STN-i-E8-BH-SR-Mul-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 514133 27.5    1122830   60   692242 37.0
-Vcells 972078  7.5    8388608   64  7673643 58.6
-✅ Success: Generated metrics-STN-i-E8-BH-SR-Mul-L3.csv
->> Generating metrics: metrics-STN-i-E9-BL-WSR-Uni-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E9-BL-WSR-Uni/Metrics/metrics-STN-i-E9-BL-WSR-Uni-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 512469 27.4    1118075 59.8   692242 37.0
-Vcells 948579  7.3    8388608 64.0  5975100 45.6
-✅ Success: Generated metrics-STN-i-E9-BL-WSR-Uni-L1.csv
->> Generating metrics: metrics-STN-i-E9-BL-WSR-Uni-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E9-BL-WSR-Uni/Metrics/metrics-STN-i-E9-BL-WSR-Uni-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511976 27.4    1116667 59.7   692242 37.0
-Vcells 942747  7.2    8388608 64.0  5557732 42.5
-✅ Success: Generated metrics-STN-i-E9-BL-WSR-Uni-L2.csv
->> Generating metrics: metrics-STN-i-E9-BL-WSR-Uni-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E9-BL-WSR-Uni/Metrics/metrics-STN-i-E9-BL-WSR-Uni-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511113 27.3    1114201 59.6   692242 37.0
-Vcells 932199  7.2    8388608 64.0  4778178 36.5
-✅ Success: Generated metrics-STN-i-E9-BL-WSR-Uni-L3.csv
->> Generating metrics: metrics-STN-i-E10-BL-SR-Uni-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E10-BL-SR-Uni/Metrics/metrics-STN-i-E10-BL-SR-Uni-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 512466 27.4    1118067 59.8   692242 37.0
-Vcells 948529  7.3    8388608 64.0  5971493 45.6
-✅ Success: Generated metrics-STN-i-E10-BL-SR-Uni-L1.csv
->> Generating metrics: metrics-STN-i-E10-BL-SR-Uni-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E10-BL-SR-Uni/Metrics/metrics-STN-i-E10-BL-SR-Uni-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511956 27.4    1116610 59.7   692242 37.0
-Vcells 942516  7.2    8388608 64.0  5541236 42.3
-✅ Success: Generated metrics-STN-i-E10-BL-SR-Uni-L2.csv
->> Generating metrics: metrics-STN-i-E10-BL-SR-Uni-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E10-BL-SR-Uni/Metrics/metrics-STN-i-E10-BL-SR-Uni-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 511099 27.3    1114161 59.6   692242 37.0
-Vcells 931957  7.2    8388608 64.0  4760809 36.4
-✅ Success: Generated metrics-STN-i-E10-BL-SR-Uni-L3.csv
->> Generating metrics: metrics-STN-i-E11-BH-WSR-Uni-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E11-BH-WSR-Uni/Metrics/metrics-STN-i-E11-BH-WSR-Uni-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  517538 27.7    1132558 60.5   692242   37
-Vcells 1015183  7.8    8388608 64.0  8379305   64
-✅ Success: Generated metrics-STN-i-E11-BH-WSR-Uni-L1.csv
->> Generating metrics: metrics-STN-i-E11-BH-WSR-Uni-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E11-BH-WSR-Uni/Metrics/metrics-STN-i-E11-BH-WSR-Uni-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515327 27.6    1126241 60.2   692242   37
-Vcells 988433  7.6    8388608 64.0  8387922   64
-✅ Success: Generated metrics-STN-i-E11-BH-WSR-Uni-L2.csv
->> Generating metrics: metrics-STN-i-E11-BH-WSR-Uni-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E11-BH-WSR-Uni/Metrics/metrics-STN-i-E11-BH-WSR-Uni-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 513612 27.5    1121341 59.9   692242   37
-Vcells 965578  7.4    8388608 64.0  7206512   55
-✅ Success: Generated metrics-STN-i-E11-BH-WSR-Uni-L3.csv
->> Generating metrics: metrics-STN-i-E12-BH-SR-Uni-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E12-BH-SR-Uni/Metrics/metrics-STN-i-E12-BH-SR-Uni-L1.csv
-          used (Mb) gc trigger (Mb) max used (Mb)
-Ncells  517575 27.7    1132664 60.5   692242   37
-Vcells 1015684  7.8    8388608 64.0  8386363   64
-✅ Success: Generated metrics-STN-i-E12-BH-SR-Uni-L1.csv
->> Generating metrics: metrics-STN-i-E12-BH-SR-Uni-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E12-BH-SR-Uni/Metrics/metrics-STN-i-E12-BH-SR-Uni-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 515375 27.6    1126378 60.2   692242   37
-Vcells 988773  7.6    8388608 64.0  8387178   64
-✅ Success: Generated metrics-STN-i-E12-BH-SR-Uni-L2.csv
->> Generating metrics: metrics-STN-i-E12-BH-SR-Uni-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/PSO-X/E12-BH-SR-Uni/Metrics/metrics-STN-i-E12-BH-SR-Uni-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 513619 27.5    1121361 59.9   692242 37.0
-Vcells 965687  7.4    8388608 64.0  7214349 55.1
-✅ Success: Generated metrics-STN-i-E12-BH-SR-Uni-L3.csv
-=== Processing algorithm: MMASQAP ===
->> Generating metrics: metrics-STN-i-E1-BL-WSR-60-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E1-BL-WSR-60/Metrics/metrics-STN-i-E1-BL-WSR-60-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 508286 27.2    1106124 59.1   692242 37.0
-Vcells 891875  6.9    8388608 64.0  1923841 14.7
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-60-L1.csv
->> Generating metrics: metrics-STN-i-E1-BL-WSR-60-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E1-BL-WSR-60/Metrics/metrics-STN-i-E1-BL-WSR-60-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507542 27.2    1103998   59   692242 37.0
-Vcells 884650  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-60-L2.csv
->> Generating metrics: metrics-STN-i-E1-BL-WSR-60-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E1-BL-WSR-60/Metrics/metrics-STN-i-E1-BL-WSR-60-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507412 27.1    1103627   59   692242 37.0
-Vcells 882751  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E1-BL-WSR-60-L3.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-60-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E2-BL-SR-60/Metrics/metrics-STN-i-E2-BL-SR-60-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 508269 27.2    1106075 59.1   692242 37.0
-Vcells 891888  6.9    8388608 64.0  1923841 14.7
-✅ Success: Generated metrics-STN-i-E2-BL-SR-60-L1.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-60-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E2-BL-SR-60/Metrics/metrics-STN-i-E2-BL-SR-60-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507542 27.2    1103998   59   692242 37.0
-Vcells 884702  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E2-BL-SR-60-L2.csv
->> Generating metrics: metrics-STN-i-E2-BL-SR-60-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E2-BL-SR-60/Metrics/metrics-STN-i-E2-BL-SR-60-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507412 27.1    1103627   59   692242 37.0
-Vcells 882737  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E2-BL-SR-60-L3.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-60-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E3-BH-WSR-60/Metrics/metrics-STN-i-E3-BH-WSR-60-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 508619 27.2    1107075 59.2   692242 37.0
-Vcells 896578  6.9    8388608 64.0  2290075 17.5
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-60-L1.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-60-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E3-BH-WSR-60/Metrics/metrics-STN-i-E3-BH-WSR-60-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507544 27.2    1104004   59   692242 37.0
-Vcells 885127  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-60-L2.csv
->> Generating metrics: metrics-STN-i-E3-BH-WSR-60-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E3-BH-WSR-60/Metrics/metrics-STN-i-E3-BH-WSR-60-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507412 27.1    1103627   59   692242 37.0
-Vcells 882873  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E3-BH-WSR-60-L3.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-60-L1.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E4-BH-SR-60/Metrics/metrics-STN-i-E4-BH-SR-60-L1.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 508653 27.2    1107172 59.2   692242 37.0
-Vcells 898229  6.9    8388608 64.0  2412286 18.5
-✅ Success: Generated metrics-STN-i-E4-BH-SR-60-L1.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-60-L2.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E4-BH-SR-60/Metrics/metrics-STN-i-E4-BH-SR-60-L2.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507544 27.2    1104004   59   692242 37.0
-Vcells 885459  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E4-BH-SR-60-L2.csv
->> Generating metrics: metrics-STN-i-E4-BH-SR-60-L3.csv
-
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
-STN-i metrics saved to: /home/imperialdramon/Tesis/STN-model-for-irace/Experiments/MMASQAP/E4-BH-SR-60/Metrics/metrics-STN-i-E4-BH-SR-60-L3.csv
-         used (Mb) gc trigger (Mb) max used (Mb)
-Ncells 507412 27.1    1103627   59   692242 37.0
-Vcells 882985  6.8    8388608   64  1923841 14.7
-✅ Success: Generated metrics-STN-i-E4-BH-SR-60-L3.csv
-=== STN-i metrics generation finished at Thu Jul  3 19:03:38 -04 2025 ===
+Ncells 507788 27.2    1104701   59   692242 37.0
+Vcells 887437  6.8    8388608   64  1923841 14.7
+✅ Success: Generated metrics-STN-i-E14-BH-65-Mix-L5.csv
+=== STN-i metrics generation finished at Tue Sep  2 21:00:33 -04 2025 ===

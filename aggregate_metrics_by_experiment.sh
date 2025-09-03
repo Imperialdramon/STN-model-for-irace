@@ -15,12 +15,15 @@ mkdir -p "$FINAL_OUTPUT_DIR"
 
 # Define experiments per algorithm
 declare -A experiments
-experiments["ACOTSP"]="E1-BL-WSR-2000 E2-BL-SR-2000 E3-BH-WSR-2000 E4-BH-SR-2000"
-experiments["MMASQAP"]="E1-BL-WSR-60 E2-BL-SR-60 E3-BH-WSR-60 E4-BH-SR-60"
-experiments["PSO-X"]="E1-BL-WSR-Mix E2-BL-SR-Mix E3-BH-WSR-Mix E4-BH-SR-Mix E5-BL-WSR-Mul E6-BL-SR-Mul E7-BH-WSR-Mul E8-BH-SR-Mul E9-BL-WSR-Uni E10-BL-SR-Uni E11-BH-WSR-Uni E12-BH-SR-Uni"
+#experiments["ACOTSP"]="E1-BL-WSR-2000 E2-BL-SR-2000 E3-BH-WSR-2000 E4-BH-SR-2000"
+#experiments["MMASQAP"]="E1-BL-WSR-60 E2-BL-SR-60 E3-BH-WSR-60 E4-BH-SR-60"
+#experiments["PSO-X"]="E1-BL-WSR-Mix E2-BL-SR-Mix E3-BH-WSR-Mix E4-BH-SR-Mix E5-BL-WSR-Mul E6-BL-SR-Mul E7-BH-WSR-Mul E8-BH-SR-Mul E9-BL-WSR-Uni E10-BL-SR-Uni E11-BH-WSR-Uni E12-BH-SR-Uni"
+experiments["ACOTSP"]="E5-BL-22-2000 E6-BL-45-2000 E7-BH-45-2000 E8-BH-90-2000"
+experiments["PSO-X"]="E13-BH-32-Mix E14-BH-65-Mix"
 
 # Levels used in each experiment
-levels="L1 L2 L3"
+#levels="L1 L2 L3"
+levels="L1 L2 L3 L4 L5"
 
 # Loop over algorithms
 for alg in "${!experiments[@]}"; do

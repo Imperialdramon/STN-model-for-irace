@@ -19,7 +19,7 @@
 # ==============================================================================
 
 # Maximum number of parallel jobs
-MAX_JOBS=4
+MAX_JOBS=2
 
 LOG_DIR="./Logs"
 mkdir -p "$LOG_DIR"
@@ -27,7 +27,7 @@ LOG_FILE="$LOG_DIR/run_plot_stn_parallelized_logs.log"
 echo "=== STN-i plotting started at $(date) ===" > "$LOG_FILE"
 
 #layouts=("fr" "kk" "graphopt")
-layouts=("fr")
+layouts=("fr" "kk")
 
 show_combinations=(
   "TRUE TRUE"
@@ -38,9 +38,9 @@ show_combinations=(
 # Define zoom levels
 # NA: No zoom, original size
 # 0.25: 25% of the best nodes, 25% of the original size
-#zoom_levels=("NA" "0.25" "0.5" "0.75")
+zoom_levels=("NA" "0.25" "0.5" "0.75")
 #zoom_levels=("NA" "0.25")
-zoom_levels=("NA")
+#zoom_levels=("NA")
 
 # Function to wait if too many background jobs are running
 wait_for_jobs() {
@@ -68,11 +68,14 @@ run_plot_rscript() {
 
 # Define experiments per algorithm
 declare -A experiments
-experiments["ACOTSP"]="E1-BL-WSR-2000 E2-BL-SR-2000 E3-BH-WSR-2000 E4-BH-SR-2000"
-experiments["MMASQAP"]="E1-BL-WSR-60 E2-BL-SR-60 E3-BH-WSR-60 E4-BH-SR-60"
-experiments["PSO-X"]="E1-BL-WSR-Mix E2-BL-SR-Mix E3-BH-WSR-Mix E4-BH-SR-Mix E5-BL-WSR-Mul E6-BL-SR-Mul E7-BH-WSR-Mul E8-BH-SR-Mul E9-BL-WSR-Uni E10-BL-SR-Uni E11-BH-WSR-Uni E12-BH-SR-Uni"
+#experiments["ACOTSP"]="E1-BL-WSR-2000 E2-BL-SR-2000 E3-BH-WSR-2000 E4-BH-SR-2000"
+#experiments["MMASQAP"]="E1-BL-WSR-60 E2-BL-SR-60 E3-BH-WSR-60 E4-BH-SR-60"
+#experiments["PSO-X"]="E1-BL-WSR-Mix E2-BL-SR-Mix E3-BH-WSR-Mix E4-BH-SR-Mix E5-BL-WSR-Mul E6-BL-SR-Mul E7-BH-WSR-Mul E8-BH-SR-Mul E9-BL-WSR-Uni E10-BL-SR-Uni E11-BH-WSR-Uni E12-BH-SR-Uni"
+experiments["ACOTSP"]="E5-BL-22-2000 E6-BL-45-2000 E7-BH-45-2000 E8-BH-90-2000"
+experiments["PSO-X"]="E13-BH-32-Mix E14-BH-65-Mix"
 
-levels="L1 L2 L3"
+#levels="L1 L2 L3"
+levels="L1 L2 L3 L4 L5"
 
 # Loop over all combinations and run in parallel
 for alg in "${!experiments[@]}"; do
